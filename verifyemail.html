@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email - Just In Takt</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./global.css">
+     <link rel="stylesheet" href="./dist/output.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'jit-yellow': '#FFD600',
+                        'jit-red': '#EB433C',
+                        'jit-bg-yellow': '#FFF7DB',
+                        'jit-border-yellow': '#F2DD8F',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic styles to mimic Figma layout */
+        body {
+            background: radial-gradient(circle at top left, rgba(255, 214, 0, 0.05), transparent 30%),
+                        radial-gradient(circle at bottom right, rgba(0, 128, 0, 0.05), transparent 30%);
+            background-color: #FAFAFA;
+        }
+        
+        /* Specific height and width for inputs to match image */
+        .verification-input {
+            width: 48px;
+            height: 56px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            background-color: white;
+            transition: border-color 0.15s ease-in-out;
+        }
+        .verification-input:focus {
+            outline: none;
+            border-color: #3B82F6; /* Basic blue focus ring */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 480px) {
+            .verification-input {
+                width: 38px;
+                height: 48px;
+                font-size: 20px;
+                border-radius: 8px;
+            }
+            .code-inputs-container {
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center min-h-screen px-4 py-10 md:py-16">
+    
+    <div class="text-center mb-10 md:mb-12">
+        <h1 class="text-[32px] font-bold text-black mb-1">Just In Takt</h1>
+        <p class="text-[15px] text-[#6B7280]">Verify Your Email</p>
+    </div>
+    
+    <div class="w-full max-w-[480px] bg-white p-8 md:p-12 rounded-[32px] shadow-[0_15px_60px_-15px_rgba(0,0,0,0.08)] mb-10">
+        
+        <div class="flex justify-center mb-8">
+            <div class="w-16 h-16 bg-jit-yellow rounded-full flex items-center justify-center">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 6L12 13L2 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="text-center mb-10">
+            <h2 class="text-[28px] font-bold text-black mb-3">Check Your Email</h2>
+            <p class="text-[15px] text-[#6B7280] leading-relaxed mb-1">
+                We've sent a 6-digit verification code to
+            </p>
+            <p class="text-[15px] font-semibold text-black">john@company.com</p>
+        </div>
+        
+        <form class="space-y-6">
+            <div class="space-y-4">
+                <label class="block text-center text-sm font-medium text-black">Enter Verification Code</label>
+                
+                <div class="flex justify-center gap-2 md:gap-3 code-inputs-container">
+                    <input type="text" maxlength="1" class="verification-input" required>
+                    <input type="text" maxlength="1" class="verification-input" required>
+                    <input type="text" maxlength="1" class="verification-input" required>
+                    <input type="text" maxlength="1" class="verification-input" required>
+                    <input type="text" maxlength="1" class="verification-input" required>
+                    <input type="text" maxlength="1" class="verification-input" required>
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-[#6B7280]">
+                Didn't receive the code? <span class="font-semibold text-black">Resend in 58s</span>
+            </p>
+            
+            <a href="/login.html" style="cursor: pointer;" type="submit" class="w-full h-14 flex items-center justify-center gap-2.5 rounded-full bg-[#EB433C] text-white font-semibold text-base hover:opacity-90 transition">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Verify Email
+        </a>
+        </form>
+        
+        <div class="border-t border-[#E5E7EB] my-8"></div>
+        
+        <div class="bg-jit-bg-yellow border border-jit-border-yellow rounded-2xl p-5 mb-8">
+            <p class="text-xs text-[#555] leading-relaxed">
+                💡 <span class="font-semibold text-black">Tip:</span> Check your spam folder if you don't see the email<br>
+                For demo purposes, use code: <span class="font-semibold text-black">123456</span>
+            </p>
+        </div>
+        
+        <div class="text-center">
+            <a href="/signup.html" class="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] hover:opacity-75">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Sign Up
+            </a>
+        </div>
+    </div>
+    
+    <div class="text-center text-sm space-y-4">
+        <p class="text-[#6B7280]">
+            Need help? <a href="#" class="font-medium text-jit-red hover:underline">Contact Support</a>
+        </p>
+        <a href="#" class="inline-flex items-center gap-2 text-[#6B7280] font-medium hover:opacity-75">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 19L5 12L12 5" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Homepage
+        </a>
+    </div>
+
+</body>
+</html>

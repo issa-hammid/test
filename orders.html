@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>My Orders</title>
+
+  <!-- Tailwind -->
+  <link rel="stylesheet" href="./global.css">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+     <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    body{
+      background: rgba(251, 249, 244, 1);
+      font-family: Inter, sans-serif;
+    }
+
+    .card-shadow{
+      box-shadow:
+        0px 18px 40px rgba(0,0,0,0.08),
+        0px 3px 10px rgba(0,0,0,0.04);
+    }
+
+    .divider{
+      border-color: rgba(0,0,0,0.06);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- HEADER -->
+    <div class="flex items-start gap-4 mb-8">
+
+      <!-- Back -->
+      <button style="cursor: pointer;" onclick="window.location.href='accountdashboard.html'" class="w-11 h-11 rounded-full border border-[#DED9D4] bg-white flex items-center justify-center shrink-0 hover:bg-gray-50 transition">
+        <i class="fa-solid fa-arrow-left text-sm text-black"></i>
+      </button>
+
+      <!-- Title -->
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-black leading-tight">
+          My Orders
+        </h1>
+
+        <p class="text-sm text-gray-500 mt-1">
+          View your purchases, invoices, and order history
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- ORDER CARD -->
+    <!-- ========================= -->
+    <div class="bg-white rounded-[30px] p-5 sm:p-7 card-shadow mb-6">
+
+      <!-- TOP -->
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+
+        <!-- LEFT -->
+        <div>
+
+          <div class="flex flex-wrap items-center gap-3">
+
+            <h2 class="text-base sm:text-xl font-bold text-black">
+  Order ORD-2026-0523
+</h2>
+
+            <!-- Badge -->
+            <div class="h-7 px-3 rounded-full flex items-center gap-2 text-xs font-semibold"
+                 style="background: rgba(1, 189, 50, 0.2); color: rgba(1, 189, 50, 1);">
+
+              <span class="w-2 h-2 rounded-full"
+                    style="background: rgba(1, 189, 50, 1);"></span>
+
+              Completed
+            </div>
+
+          </div>
+
+          <p class="text-sm text-gray-500 mt-2">
+            Order placed on May 23, 2026
+          </p>
+
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="flex items-center gap-3">
+
+          <!-- Invoice -->
+          <button class="h-11 px-5 rounded-full border border-[#E6E1DB] bg-white text-sm font-semibold flex items-center gap-2 hover:bg-gray-50 transition">
+
+            <i class="fa-solid fa-download text-xs"></i>
+
+            Invoice
+          </button>
+
+          <!-- View -->
+          <button class="h-11 px-6 rounded-full text-white text-sm font-semibold flex items-center gap-2 transition hover:opacity-90"
+                  style="background: rgba(235, 67, 60, 1);">
+
+            <i class="fa-regular fa-eye text-xs"></i>
+
+            View Details
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="border-t divider my-6"></div>
+
+      <!-- ITEMS -->
+      <div class="space-y-6">
+
+        <!-- ITEM -->
+        <div class="flex items-center justify-between gap-4">
+
+          <div class="flex items-center gap-4 min-w-0">
+
+            <!-- Icon -->
+            <div class="w-12 h-12 rounded-2xl bg-[#FFD600] flex items-center justify-center shrink-0">
+
+              <img src="/images/box.svg" alt="">
+            </div>
+
+            <!-- Content -->
+            <div class="min-w-0">
+
+              <h3 class="font-bold text-black text-sm sm:text-base truncate">
+                TAKT Fundamentals
+              </h3>
+
+              <p class="text-sm text-gray-500 mt-1">
+                Course
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Price -->
+          <div class="text-xl font-bold text-black shrink-0">
+            $499
+          </div>
+
+        </div>
+
+        <!-- ITEM -->
+        <div class="flex items-center justify-between gap-4">
+
+          <div class="flex items-center gap-4 min-w-0">
+
+            <!-- Icon -->
+            <div class="w-12 h-12 rounded-2xl bg-[#16C341] flex items-center justify-center shrink-0">
+
+              <img src="/images/boxwhite.svg" alt="">
+            </div>
+
+            <!-- Content -->
+            <div class="min-w-0">
+
+              <h3 class="font-bold text-black text-sm sm:text-base truncate">
+                Project Planning Template Pack
+              </h3>
+
+              <p class="text-sm text-gray-500 mt-1">
+                Resource
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Price -->
+          <div class="text-xl font-bold text-black shrink-0">
+            $99
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="border-t divider mt-8 pt-5">
+
+        <div class="flex items-center justify-between gap-4">
+
+          <p class="text-sm text-gray-500">
+            Payment Method
+          </p>
+
+          <div class="flex items-center gap-2 text-sm font-semibold text-black">
+
+            <i class="fa-regular fa-credit-card text-gray-500"></i>
+
+            Credit Card ****1234
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TOTAL -->
+      <div class="border-t divider mt-4 pt-4">
+
+        <div class="flex items-center justify-between">
+
+          <h3 class="text-xl font-bold text-black">
+            Total
+          </h3>
+
+          <div class="text-2xl font-bold text-black">
+            $598
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- ORDER CARD 2 -->
+    <!-- ========================= -->
+    <div class="bg-white rounded-[30px] p-5 sm:p-7 card-shadow mb-6">
+
+      <!-- TOP -->
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+
+        <div>
+
+          <div class="flex flex-wrap items-center gap-3">
+
+            <h2 class="text-base sm:text-xl font-bold text-black">
+              Order ORD-2026-0415
+            </h2>
+
+            <div class="h-7 px-3 rounded-full flex items-center gap-2 text-xs font-semibold"
+                 style="background: rgba(1, 189, 50, 0.2); color: rgba(1, 189, 50, 1);">
+
+              <span class="w-2 h-2 rounded-full"
+                    style="background: rgba(1, 189, 50, 1);"></span>
+
+              Completed
+            </div>
+
+          </div>
+
+          <p class="text-sm text-gray-500 mt-2">
+            Order placed on April 15, 2026
+          </p>
+
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="flex items-center gap-3">
+
+          <button class="h-11 px-5 rounded-full border border-[#E6E1DB] bg-white text-sm font-semibold flex items-center gap-2 hover:bg-gray-50 transition">
+            <i class="fa-solid fa-download text-xs"></i>
+            Invoice
+          </button>
+
+          <button class="h-11 px-6 rounded-full text-white text-sm font-semibold flex items-center gap-2 transition hover:opacity-90"
+                  style="background: rgba(235, 67, 60, 1);">
+
+            <i class="fa-regular fa-eye text-xs"></i>
+
+            View Details
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="border-t divider my-6"></div>
+
+      <!-- ITEM -->
+      <div class="flex items-center justify-between gap-4">
+
+        <div class="flex items-center gap-4 min-w-0">
+
+          <div class="w-12 h-12 rounded-2xl bg-[#FFD600] flex items-center justify-center shrink-0">
+            <img src="/images/box.svg" alt="">
+          </div>
+
+          <div class="min-w-0">
+
+            <h3 class="font-semibold text-black text-sm sm:text-base truncate">
+              Advanced Planning Techniques
+            </h3>
+
+            <p class="text-sm text-gray-500 mt-1">
+              Course
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="text-xl font-bold text-black shrink-0">
+          $699
+        </div>
+
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="border-t divider mt-8 pt-5">
+
+        <div class="flex items-center justify-between gap-4">
+
+          <p class="text-sm text-gray-500">
+            Payment Method
+          </p>
+
+          <div class="flex items-center gap-2 text-sm font-semibold text-black">
+
+            <i class="fa-regular fa-credit-card text-gray-500"></i>
+
+            Credit Card ****1234
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TOTAL -->
+      <div class="border-t divider mt-4 pt-4">
+
+        <div class="flex items-center justify-between">
+
+          <h3 class="text-xl font-bold text-black">
+            Total
+          </h3>
+
+          <div class="text-2xl font-bold text-black">
+            $699
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- ORDER CARD 3 -->
+    <!-- ========================= -->
+    <div class="bg-white rounded-[30px] p-5 sm:p-7 card-shadow">
+
+      <!-- TOP -->
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+
+        <div>
+
+          <div class="flex flex-wrap items-center gap-3">
+
+            <h2 class="text-base sm:text-xl font-bold text-black">
+              Order ORD-2026-0310
+            </h2>
+
+            <!-- Pending -->
+            <div class="h-7 px-3 rounded-full flex items-center gap-2 text-xs font-semibold bg-[#FFE9A7] text-[#8A6700]">
+
+              <img src="/images/clock.svg" alt="">
+
+              Pending
+            </div>
+
+          </div>
+
+          <p class="text-sm text-gray-500 mt-2">
+            Order placed on March 10, 2026
+          </p>
+
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="flex items-center gap-3">
+
+          <button class="h-11 px-5 rounded-full border border-[#E6E1DB] bg-white text-sm font-semibold flex items-center gap-2 hover:bg-gray-50 transition">
+            <i class="fa-solid fa-download text-xs"></i>
+            Invoice
+          </button>
+
+          <button class="h-11 px-6 rounded-full text-white text-sm font-semibold flex items-center gap-2 transition hover:opacity-90"
+                  style="background: rgba(235, 67, 60, 1);">
+
+            <i class="fa-regular fa-eye text-xs"></i>
+
+            View Details
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="border-t divider my-6"></div>
+
+      <!-- ITEM -->
+      <div class="flex items-center justify-between gap-4">
+
+        <div class="flex items-center gap-4 min-w-0">
+
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+               style="background: rgba(235, 67, 60, 1);">
+
+            <img src="/images/boxwhite.svg" alt="">
+          </div>
+
+          <div class="min-w-0">
+
+            <h3 class="font-semibold text-black text-sm sm:text-base truncate">
+              TAKT Summit 2026 - Premium Pass
+            </h3>
+
+            <p class="text-sm text-gray-500 mt-1">
+              Event
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="text-xl font-bold text-black shrink-0">
+          $399
+        </div>
+
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="border-t divider mt-8 pt-5">
+
+        <div class="flex items-center justify-between gap-4">
+
+          <p class="text-sm text-gray-500">
+            Payment Method
+          </p>
+
+          <div class="flex items-center gap-2 text-sm font-semibold text-black">
+
+            <img src="/images/card.svg" alt="">
+
+            Bank Transfer
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TOTAL -->
+      <div class="border-t divider mt-4 pt-4">
+
+        <div class="flex items-center justify-between">
+
+         <h3 class="text-xl font-bold text-black">
+            Total
+          </h3>
+
+          <div class="text-2xl font-bold text-black">
+            $399
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

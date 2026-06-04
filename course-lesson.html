@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKT Planning Fundamentals</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="./global.css">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="./dist/output.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f6f6f7]">
+    <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
+     <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+    <div class="max-w-400 mx-auto">
+      <nav id="main-nav"
+        class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
+        aria-label="Main navigation">
+
+        <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
+          <a href="../" aria-label="Arab Talk Home">
+           <img
+  class="site-logo"
+  src="./images/lightmodelogo.png"
+  data-light="./images/lightmodelogo.png"
+  data-dark="./images/Darkmode.png"
+  alt="Logo">
+          </a>
+        </div>
+
+        <ul
+          class="hidden lg:flex flex-1 items-center justify-center
+         gap-3 xl:gap-5 2xl:gap-7
+         mx-4 xl:mx-6
+         text-[#1a1a1a]
+         font-bold
+         text-[12px] xl:text-[13px] 2xl:text-[14px]
+         whitespace-nowrap">
+          <li>
+            <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
+          </li>
+          <li>
+            <a href="/portfolio" class="hover:opacity-70 transition-opacity nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="/resources" class="hover:opacity-70 transition-opacity nav-link">Resources</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:opacity-70 transition-opacity nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a href="/events"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <path
+                d="M6.92592 11.8698H12.8626M6.92592 8.9024H12.8626M0.989258 2.96755V13.6503C0.989258 14.7582 0.989258 15.3116 1.20495 15.7348C1.39466 16.107 1.69718 16.4105 2.06952 16.6001C2.49242 16.8156 3.04631 16.8156 4.15241 16.8156H15.6367C16.7427 16.8156 17.2959 16.8156 17.7188 16.6001C18.0911 16.4105 18.394 16.1074 18.5837 15.7352C18.7994 15.312 18.7994 14.758 18.7994 13.6501V6.13259C18.7994 5.02464 18.7994 4.47067 18.5837 4.04749C18.394 3.67525 18.0905 3.37283 17.7182 3.18317C17.2949 2.96755 16.7412 2.96755 15.633 2.96755H9.89424M0.989258 2.96755H9.89424M0.989258 2.96755C0.989258 1.87497 1.87524 0.989258 2.96814 0.989258H6.60386C7.08788 0.989258 7.33074 0.989258 7.55849 1.04391C7.76041 1.09238 7.95281 1.17251 8.12986 1.28098C8.3295 1.40328 8.50093 1.57466 8.84296 1.91658L9.89424 2.96755"
+                stroke="white" stroke-width="1.97859" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Events
+          </a>
+          <a href="/podcast"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#f05041] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M17.6239 0.989075C18.612 1.9106 19.4009 3.02482 19.9417 4.26302C20.4826 5.50122 20.7641 6.83713 20.7689 8.18832C20.7736 9.53952 20.5014 10.8773 19.9691 12.1193C19.4369 13.3613 18.6559 14.4809 17.6743 15.4093M14.9259 3.88259C15.5188 4.4355 15.9921 5.10403 16.3167 5.84695C16.6412 6.58987 16.8101 7.39142 16.813 8.20214C16.8157 9.01285 16.6524 9.81556 16.3332 10.5607C16.0138 11.3059 15.5452 11.9777 14.9561 12.5347M6.40917 11.5926L8.06594 13.6431C8.92962 14.7119 9.36146 15.2465 9.7398 15.3047C10.0673 15.3549 10.3983 15.238 10.6214 14.9929C10.8791 14.7098 10.8791 14.0226 10.8791 12.6484V3.7973C10.8791 2.42302 10.8791 1.73587 10.6214 1.4528C10.3983 1.20775 10.0673 1.09073 9.7398 1.14108C9.36146 1.19927 8.92962 1.73373 8.06594 2.80264L6.40917 4.85314C6.2347 5.06907 6.14745 5.17705 6.03951 5.25474C5.94388 5.32357 5.83672 5.37476 5.72308 5.40589C5.59482 5.44103 5.45602 5.44103 5.17841 5.44103H3.77077C3.0229 5.44103 2.64896 5.44103 2.34677 5.54087C1.75207 5.73735 1.28556 6.20392 1.08909 6.79869C0.989258 7.10091 0.989258 7.4749 0.989258 8.22285C0.989258 8.97081 0.989258 9.34478 1.08909 9.64701C1.28556 10.2418 1.75207 10.7084 2.34677 10.9048C2.64896 11.0047 3.0229 11.0047 3.77077 11.0047H5.17841C5.45602 11.0047 5.59482 11.0047 5.72308 11.0398C5.83672 11.071 5.94388 11.1221 6.03951 11.1909C6.14745 11.2687 6.2347 11.3767 6.40917 11.5926Z"
+                stroke="white" stroke-width="1.97808" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Podcast
+          </a>
+          <a href="/training"
+            class="btn-dark flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Training
+          </a>
+        </div>
+
+       <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu (Tablet + Mobile only) -->
+<div id="mobile-menu"
+     class="lg:hidden hidden mt-4">
+
+  <div
+    class="rounded-3xl
+           bg-white dark:bg-[#111827]
+           border border-gray-200 dark:border-white/10
+           shadow-2xl
+           overflow-hidden">
+
+    <!-- Links -->
+    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+
+      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
+      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
+      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
+      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
+      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
+      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+
+    </ul>
+
+    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
+    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+
+      <a href="/events"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
+        Events
+      </a>
+
+      <a href="/podcast"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#f05041] text-white rounded-full font-bold shadow-xl">
+        Podcast
+      </a>
+
+      <a href="/training"
+         class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
+        Training
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button>
+
+  <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+    </div>
+  </header>
+
+<div class="max-w-7xl mx-auto p-4 md:p-6 mt-40">
+
+    <!-- Header -->
+    <div class="flex items-start justify-between mb-6">
+        <div class="flex gap-4 items-start">
+            <button class="w-11 h-11 bg-white rounded-full shadow-sm flex items-center justify-center">
+                <img src="images/rowback.svg" alt="Back" class="">
+            </button>
+
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900">
+                    TAKT Planning Fundamentals
+                </h1>
+
+                <p class="text-sm text-gray-500 mt-1">
+                    12 of 32 lessons completed • 4h 30min total time
+                </p>
+            </div>
+        </div>
+
+        <button class="hidden md:block px-5 py-2 bg-white rounded-full shadow-sm text-sm font-medium">
+            My Dashboard
+        </button>
+    </div>
+
+    <!-- Progress -->
+    <div class="bg-white rounded-3xl p-5 shadow-sm mb-6">
+        <div class="flex justify-between items-center mb-3">
+            <span class="text-sm font-semibold">Course Progress</span>
+            <span class="font-semibold text-sm">45%</span>
+        </div>
+
+        <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+            <div
+                class="h-full w-[45%] rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+
+        <!-- Content -->
+        <div class="xl:col-span-8">
+
+            <!-- Video -->
+            <div class="bg-black rounded-3xl overflow-hidden relative aspect-video">
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button
+                        class="w-20 h-20 rounded-full bg-red-500 text-white text-3xl flex items-center justify-center shadow-xl">
+                        ▶
+                    </button>
+                </div>
+
+                <div
+                    class="absolute bottom-5 left-5 right-5 flex justify-between items-center text-white">
+                    <h2 class="text-xl font-semibold">
+                        What is TAKT Planning?
+                    </h2>
+
+                    <span class="text-sm">8:30</span>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="bg-white rounded-3xl shadow-sm mt-6">
+
+                <div class="border-b border-gray-200 px-6 py-5 ">
+                    <div class="flex gap-8">
+                        <button
+                            class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full text-sm">
+                            Overview
+                        </button>
+
+                        <button class="text-gray-500 text-sm">
+                            Notes
+                        </button>
+
+                        <button class="text-gray-500 text-sm">
+                            Resources
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-6">
+
+                    <!-- Lesson Overview -->
+                    <h3 class="font-bold text-lg mb-4">
+                        Lesson Overview
+                    </h3>
+
+                    <p class="text-gray-600 leading-8">
+                        In this lesson, you'll learn the fundamental concepts of
+                        TAKT planning and how it differs from traditional
+                        construction scheduling methods. We'll explore
+                        real-world examples and discuss how TAKT creates
+                        predictable workflows.
+                    </p>
+
+                    <!-- Objectives -->
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 mt-8 border border-gray-100">
+
+                        <h4
+                            class="text-xs uppercase tracking-wider font-bold mb-5 text-gray-700">
+                            Learning Objectives
+                        </h4>
+
+                        <div class="space-y-4">
+
+                            <div class="flex gap-3 items-center">
+                                <div
+                                    class="">
+                                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
+                                </div>
+
+                                <span class="text-sm">
+                                    Understand the core principles of TAKT
+                                    planning
+                                </span>
+                            </div>
+
+                            <div class="flex gap-3 items-center">
+                                <div
+                                    class="">
+                                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
+                                </div>
+
+                                <span class="text-sm">
+                                    Identify key differences from traditional
+                                    methods
+                                </span>
+                            </div>
+
+                            <div class="flex gap-3 items-center">
+                                <div
+                                    class="">
+                                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
+                                </div>
+
+                                <span class="text-sm">
+                                    Recognize situations where TAKT planning is
+                                    beneficial
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Footer Actions -->
+                    <div
+                        class="flex flex-col sm:flex-row gap-4 justify-between mt-8">
+
+                       <button class="px-5 py-3 bg-white border border-gray-300 rounded-full text-sm font-medium flex items-center gap-2">
+  <img src="images/rowback.svg" alt="Back" class="w-4 h-4">
+  Previous Lesson
+</button>
+
+                       <button class="px-8 py-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500 text-white font-medium flex items-center justify-between gap-4">
+  <span>Mark Complete & Continue</span>
+  <img src="images/rowright.svg" alt="Next" class="w-3 h-3">
+</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="xl:col-span-4">
+
+            <div class="bg-white rounded-3xl shadow-sm p-4">
+
+                <div class="flex items-center gap-3 mb-5">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                        ☰
+                    </div>
+
+                    <h3 class="font-bold">
+                        Course Content
+                    </h3>
+                </div>
+
+                <!-- Section -->
+                <div class="border border-gray-100 rounded-2xl overflow-hidden mb-4">
+
+                    <div
+                        class="flex items-center justify-between p-4 bg-gray-50">
+                        <div>
+                            <h4 class="font-semibold text-sm">
+                                Introduction to TAKT Planning
+                            </h4>
+                            <span class="text-xs text-gray-500">
+                                5 lessons
+                            </span>
+                        </div>
+
+                        <span><img src="images/rowup.svg" alt="Up" class="w-5 h-5" /></span>
+                    </div>
+
+                    <div class="p-3 space-y-2">
+
+                        <div
+                            class="bg-yellow-100 rounded-xl px-3 py-3 flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center text-xs">
+                                <img src="images/play.svg" alt="Play" class="w-3 h-3" />
+                            </span>
+
+                            <span class="text-sm font-medium">
+                                What is TAKT Planning?
+                            </span>
+                        </div>
+
+                        <div class="flex gap-3 items-center px-3 py-2">
+                            <span ><img src="images/truegreen.svg" alt="Completed" class="w-5 h-5" /></span>
+                            <span class="text-sm text-gray-600">
+                                History and Evolution
+                            </span>
+                        </div>
+
+                        <div class="flex gap-3 items-center px-3 py-2">
+                            <span ><img src="images/truegreen.svg" alt="Completed" class="w-5 h-5" /></span>
+                            <span class="text-sm text-gray-600">
+                                Benefits and Applications
+                            </span>
+                        </div>
+
+                        <div class="flex gap-3 items-center px-3 py-2">
+                            <span class="text-gray-300"><img src="images/lock.svg" alt="Locked" class="w-5 h-5" /></span>
+                            <span class="text-sm text-gray-400">
+                                Key Principles
+                            </span>
+                        </div>
+
+                        <div class="flex gap-3 items-center px-3 py-2">
+                            <span class="text-gray-300"><img src="images/lock.svg" alt="Locked" class="w-5 h-5" /></span>
+                            <span class="text-sm text-gray-400">
+                                Industry Use Cases
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div
+                    class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center mb-3">
+                    <div>
+                        <h4 class="font-semibold text-sm">
+                            TAKT Planning Fundamentals
+                        </h4>
+                        <span class="text-xs text-gray-500">
+                            6 lessons
+                        </span>
+                    </div>
+
+                    <span><img src="images/rowdown.svg" alt="Down" class="w-5 h-5" /></span>
+                </div>
+
+                <div
+                    class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-sm">
+                            Practical Implementation
+                        </h4>
+                        <span class="text-xs text-gray-500">
+                            3 lessons
+                        </span>
+                    </div>
+
+                    <span><img src="images/rowdown.svg" alt="Down" class="w-5 h-5" /></span>
+                </div>
+
+                <!-- Certificate Card -->
+                <div
+                    class="bg-gray-50 rounded-2xl p-4 mt-8">
+
+                    <div class="flex gap-3 items-start">
+                        <div
+                            class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                            <img src="images/Complete.svg" alt="Complete" class="w-5 h-5">
+                        </div>
+
+                        <div>
+                            <h5 class="font-semibold text-sm">
+                                Complete all lessons to earn your certificate
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <div
+                            class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div
+                                class="h-full w-[45%] bg-yellow-400 rounded-full">
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex justify-end mt-2 text-xs text-gray-500">
+                            45% COMPLETE
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="./js/animations.js"></script>
+  <script src="./js/language.js"></script>
+  <script src="./js/theme.js"></script>
+</body>
+</html>

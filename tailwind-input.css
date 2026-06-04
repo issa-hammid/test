@@ -1,0 +1,19 @@
+/* @import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef8ff;
+  --color-brand-100: #d8efff;
+  --color-brand-200: #b9e2ff;
+  --color-brand-300: #88cfff;
+  --color-brand-400: #4eb2ff;
+  --color-brand-500: #2694ff;
+  --color-brand-600: #0f77f0;
+  --color-brand-700: #0f60dc;
+  --color-brand-800: #134fae;
+  --color-brand-900: #174687;
+  
+  --container-maxWidth-2xl: 1272px;
+}
+
+@import "./styles.css"; */
+@import "tailwindcss";

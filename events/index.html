@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="../global.css" />
+  <!-- <link rel="stylesheet" href="../test.css"> -->
+
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
+
+  <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+    <div class="max-w-400 mx-auto">
+      <nav id="main-nav"
+        class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
+        aria-label="Main navigation">
+
+        <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
+          <a href="../" aria-label="Arab Talk Home">
+            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+          </a>
+        </div>
+
+        <ul
+          class="hidden lg:flex flex-1 items-center justify-center
+         gap-3 xl:gap-5 2xl:gap-7
+         mx-4 xl:mx-6
+         text-[#1a1a1a]
+         font-bold
+         text-[12px] xl:text-[13px] 2xl:text-[14px]
+         whitespace-nowrap">
+          <li>
+            <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
+          </li>
+          <li>
+            <a href="/portfolio" class="hover:opacity-70 transition-opacity nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="/resources" class="hover:opacity-70 transition-opacity nav-link">Resources</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:opacity-70 transition-opacity nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+      <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a href="/events"
+            class="nav-btn flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <path
+                d="M6.92592 11.8698H12.8626M6.92592 8.9024H12.8626M0.989258 2.96755V13.6503C0.989258 14.7582 0.989258 15.3116 1.20495 15.7348C1.39466 16.107 1.69718 16.4105 2.06952 16.6001C2.49242 16.8156 3.04631 16.8156 4.15241 16.8156H15.6367C16.7427 16.8156 17.2959 16.8156 17.7188 16.6001C18.0911 16.4105 18.394 16.1074 18.5837 15.7352C18.7994 15.312 18.7994 14.758 18.7994 13.6501V6.13259C18.7994 5.02464 18.7994 4.47067 18.5837 4.04749C18.394 3.67525 18.0905 3.37283 17.7182 3.18317C17.2949 2.96755 16.7412 2.96755 15.633 2.96755H9.89424M0.989258 2.96755H9.89424M0.989258 2.96755C0.989258 1.87497 1.87524 0.989258 2.96814 0.989258H6.60386C7.08788 0.989258 7.33074 0.989258 7.55849 1.04391C7.76041 1.09238 7.95281 1.17251 8.12986 1.28098C8.3295 1.40328 8.50093 1.57466 8.84296 1.91658L9.89424 2.96755"
+                stroke="white" stroke-width="1.97859" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Events
+          </a>
+          <a href="/podcast"
+            class="nav-btn flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#f05041] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M17.6239 0.989075C18.612 1.9106 19.4009 3.02482 19.9417 4.26302C20.4826 5.50122 20.7641 6.83713 20.7689 8.18832C20.7736 9.53952 20.5014 10.8773 19.9691 12.1193C19.4369 13.3613 18.6559 14.4809 17.6743 15.4093M14.9259 3.88259C15.5188 4.4355 15.9921 5.10403 16.3167 5.84695C16.6412 6.58987 16.8101 7.39142 16.813 8.20214C16.8157 9.01285 16.6524 9.81556 16.3332 10.5607C16.0138 11.3059 15.5452 11.9777 14.9561 12.5347M6.40917 11.5926L8.06594 13.6431C8.92962 14.7119 9.36146 15.2465 9.7398 15.3047C10.0673 15.3549 10.3983 15.238 10.6214 14.9929C10.8791 14.7098 10.8791 14.0226 10.8791 12.6484V3.7973C10.8791 2.42302 10.8791 1.73587 10.6214 1.4528C10.3983 1.20775 10.0673 1.09073 9.7398 1.14108C9.36146 1.19927 8.92962 1.73373 8.06594 2.80264L6.40917 4.85314C6.2347 5.06907 6.14745 5.17705 6.03951 5.25474C5.94388 5.32357 5.83672 5.37476 5.72308 5.40589C5.59482 5.44103 5.45602 5.44103 5.17841 5.44103H3.77077C3.0229 5.44103 2.64896 5.44103 2.34677 5.54087C1.75207 5.73735 1.28556 6.20392 1.08909 6.79869C0.989258 7.10091 0.989258 7.4749 0.989258 8.22285C0.989258 8.97081 0.989258 9.34478 1.08909 9.64701C1.28556 10.2418 1.75207 10.7084 2.34677 10.9048C2.64896 11.0047 3.0229 11.0047 3.77077 11.0047H5.17841C5.45602 11.0047 5.59482 11.0047 5.72308 11.0398C5.83672 11.071 5.94388 11.1221 6.03951 11.1909C6.14745 11.2687 6.2347 11.3767 6.40917 11.5926Z"
+                stroke="white" stroke-width="1.97808" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Podcast
+          </a>
+          <a href="/training"
+            class="nav-btn btn-dark flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Training
+          </a>
+        </div>
+
+        <button class="xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button>
+
+  <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+    </div>
+  </header>
+  <main class="relative w-full max-w-400 mx-auto mt-32 md:mt-40 lg:mt-48">
+    <section class="mb-8 px-4 md:px-12 lg:px-24">
+      <div class="text-center mb-12">
+        <h1
+          class="text-6xl md:text-[60px] font-[700] tracking-tighter t-heading mb-4 opacity-0 animate-fade-up delay-100">
+          Upcoming Events
+        </h1>
+        <p class="t-muted font-medium text-lg opacity-0 animate-fade-up delay-200">
+          Reserve your spot at our next learning opportunity
+        </p>
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto mb-16 px-4 py-2 border border-gray-100 dark:border-white/10 rounded-full flex items-center justify-between gap-2 overflow-x-auto no-scrollbar opacity-0 animate-fade-up delay-300">
+        <button
+          class="px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-sm font-bold shadow-lg transition-all hover:scale-105 active:scale-95">
+          All
+        </button>
+        <button
+          class="px-6 py-2.5 t-muted hover:t-heading rounded-full text-sm font-bold transition-all whitespace-nowrap">
+          Upcoming
+        </button>
+        <button
+          class="px-6 py-2.5 t-muted hover:t-heading rounded-full text-sm font-bold transition-all whitespace-nowrap">
+          Workshops
+        </button>
+        <button
+          class="px-6 py-2.5 t-muted hover:t-heading rounded-full text-sm font-bold transition-all whitespace-nowrap">
+          Webinars
+        </button>
+        <button
+          class="px-6 py-2.5 t-muted hover:t-heading rounded-full text-sm font-bold transition-all whitespace-nowrap">
+          Conferences
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[28px] overflow-hidden shadow-sm flex flex-col premium-hover-lift h-full">
+          <div class="relative h-56 shrink-0">
+            <img src="../images/event-masterclass.svg" alt="Masterclass" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 right-4 px-4 py-1.5 bg-[#00c93a] text-white text-[11px] font-[600] rounded-full shadow-md">Workshop</span>
+          </div>
+          <div class="p-7 flex flex-col flex-grow">
+            <h3 class="text-[24px] font-[700] t-heading mb-5 leading-tight">
+              TAKT Planning Masterclass
+            </h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <p class="text-[12px] font-[600] t-heading leading-none mb-1">March 15, 2026</p>
+                  <p class="text-[11px] font-semibold t-muted">9:00 AM – 5:00 PM EST</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">New York, NY</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">45 spots left</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-5 border-t border-[var(--border-card)] mt-auto">
+              <span class="text-[26px] font-[700] t-heading">$599</span>
+              <a href="/events/details"
+                class="px-7 py-3 bg-[#00c93a] text-white rounded-full text-[12px] font-[600] shadow-md hover:brightness-105 active:scale-95 transition-all cursor-pointer inline-block premium-button-hover">
+                Register Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[28px] overflow-hidden shadow-sm flex flex-col premium-hover-lift h-full">
+          <div class="relative h-56 shrink-0">
+            <img src="../images/event-summit.svg" alt="Webinar" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 right-4 px-4 py-1.5 bg-[#00c93a] text-white text-[11px] font-[600] rounded-full shadow-md">Webinar</span>
+          </div>
+          <div class="p-7 flex flex-col flex-grow">
+            <h3 class="text-[24px] font-[700] t-heading mb-5 leading-tight">
+              Digital Construction Tools Webinar
+            </h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <p class="text-[12px] font-[600] t-heading leading-none mb-1">March 8, 2026</p>
+                  <p class="text-[11px] font-semibold t-muted">2:00 PM – 3:30 PM EST</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">Online</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">200 spots left</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-5 border-t border-[var(--border-card)] mt-auto">
+              <span class="text-[26px] font-[700] t-heading">Free</span>
+              <button
+                class="px-7 py-3 bg-[#00c93a] text-white rounded-full text-[12px] font-[600] shadow-md hover:brightness-105 active:scale-95 transition-all premium-button-hover">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[28px] overflow-hidden shadow-sm flex flex-col premium-hover-lift h-full">
+          <div class="relative h-56 shrink-0">
+            <img src="../images/event-summit.svg" alt="Summit" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 right-4 px-4 py-1.5 bg-[#00c93a] text-white text-[11px] font-[600] rounded-full shadow-md">Conference</span>
+          </div>
+          <div class="p-7 flex flex-col flex-grow">
+            <h3 class="text-[24px] font-[700] t-heading mb-5 leading-tight">
+              Construction Excellence Summit 2026
+            </h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <p class="text-[12px] font-[600] t-heading leading-none mb-1">April 12–14, 2026</p>
+                  <p class="text-[11px] font-semibold t-muted">Full Day Event</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">Chicago, IL</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">150 spots left</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-5 border-t border-[var(--border-card)] mt-auto">
+              <span class="text-[26px] font-[700] t-heading">$1,299</span>
+              <button
+                class="px-7 py-3 bg-[#00c93a] text-white rounded-full text-[12px] font-[600] shadow-md hover:brightness-105 active:scale-95 transition-all premium-button-hover">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[28px] overflow-hidden shadow-sm flex flex-col premium-hover-lift h-full">
+          <div class="relative h-56 shrink-0">
+            <img src="../images/blog-team.svg" alt="Lean Construction" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 right-4 px-4 py-1.5 bg-[#00c93a] text-white text-[11px] font-[600] rounded-full shadow-md">Workshop</span>
+          </div>
+          <div class="p-7 flex flex-col flex-grow">
+            <h3 class="text-[24px] font-[700] t-heading mb-5 leading-tight">
+              Lean Construction Fundamentals
+            </h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <p class="text-[12px] font-[600] t-heading leading-none mb-1">March 22, 2026</p>
+                  <p class="text-[11px] font-semibold t-muted">10:00 AM – 4:00 PM EST</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">Austin, TX</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">30 spots left</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-5 border-t border-[var(--border-card)] mt-auto">
+              <span class="text-[26px] font-[700] t-heading">$499</span>
+              <button
+                class="px-7 py-3 bg-[#00c93a] text-white rounded-full text-[12px] font-[600] shadow-md hover:brightness-105 active:scale-95 transition-all premium-button-hover">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[28px] overflow-hidden shadow-sm flex flex-col premium-hover-lift h-full">
+          <div class="relative h-56 shrink-0">
+            <img src="../images/blog-construction.svg" alt="Project Planning" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 right-4 px-4 py-1.5 bg-[#00c93a] text-white text-[11px] font-[600] rounded-full shadow-md">Webinar</span>
+          </div>
+          <div class="p-7 flex flex-col flex-grow">
+            <h3 class="text-[24px] font-[700] t-heading mb-5 leading-tight">
+              Project Planning Best Practices
+            </h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <p class="text-[12px] font-[600] t-heading leading-none mb-1">March 18, 2026</p>
+                  <p class="text-[11px] font-semibold t-muted">1:00 PM – 2:00 PM EST</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">Online</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">Unlimited</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-5 border-t border-[var(--border-card)] mt-auto">
+              <span class="text-[26px] font-[700] t-heading">Free</span>
+              <button
+                class="px-7 py-3 bg-[#00c93a] text-white rounded-full text-[12px] font-[600] shadow-md hover:brightness-105 active:scale-95 transition-all premium-button-hover">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[28px] overflow-hidden shadow-sm flex flex-col premium-hover-lift h-full">
+          <div class="relative h-56 shrink-0">
+            <img src="../images/event-implementation.svg" alt="Advanced TAKT" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 right-4 px-4 py-1.5 bg-[#00c93a] text-white text-[11px] font-[600] rounded-full shadow-md">Workshop</span>
+          </div>
+          <div class="p-7 flex flex-col flex-grow">
+            <h3 class="text-[24px] font-[700] t-heading mb-5 leading-tight">
+              Advanced TAKT Implementation
+            </h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <p class="text-[12px] font-[600] t-heading leading-none mb-1">April 5, 2026</p>
+                  <p class="text-[11px] font-semibold t-muted">9:00 AM – 6:00 PM EST</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">Seattle, WA</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="t-muted shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                <p class="text-[12px] font-semibold t-body">25 spots left</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-5 border-t border-[var(--border-card)] mt-auto">
+              <span class="text-[26px] font-[700] t-heading">$799</span>
+              <button
+                class="px-7 py-3 bg-[#00c93a] text-white rounded-full text-[12px] font-[600] shadow-md hover:brightness-105 active:scale-95 transition-all premium-button-hover">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 py-24 section-white">
+      <div class="text-center mb-16">
+        <h2
+          class="text-5xl md:text-[60px] font-[700] tracking-tighter t-heading mb-4 opacity-0 animate-fade-up delay-100">
+          Events & Community
+        </h2>
+        <p class="max-w-3xl mx-auto t-body font-medium text-lg leading-relaxed opacity-0 animate-fade-up delay-200">
+          Join our workshops, webinars, and conferences to deepen your
+          understanding of TAKT methodology and connect with construction
+          industry leaders worldwide.
+        </p>
+      </div>
+
+      <div class="text-center mb-16 opacity-0 animate-fade-up delay-300">
+        <h3 class="text-4xl md:text-5xl font-[700] t-heading mb-3">
+          Our Impact in Numbers
+        </h3>
+        <p class="t-muted font-bold tracking-widest text-sm">
+          Building a global community of construction excellence
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-10 flex gap-6 items-start shadow-sm premium-hover-lift h-full">
+          <div
+            class="w-14 h-14 shrink-0 bg-[#00c93a] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#00c93a]/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M9 21v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-3xl font-[700] t-heading mb-1">2,500+</h4>
+            <p class="text-sm font-[600] t-heading mb-3">Total Attendees</p>
+            <p class="text-[13px] font-medium t-body leading-relaxed">
+              Professionals trained in TAKT methodology
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-10 flex gap-6 items-start shadow-sm premium-hover-lift h-full">
+          <div
+            class="w-14 h-14 shrink-0 bg-[#00c93a] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#00c93a]/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-3xl font-[700] t-heading mb-1">48</h4>
+            <p class="text-sm font-[600] t-heading mb-3">Events Hosted</p>
+            <p class="text-[13px] font-medium t-body leading-relaxed">
+              Workshops, webinars, and conferences worldwide
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-10 flex gap-6 items-start shadow-sm premium-hover-lift h-full">
+          <div
+            class="w-14 h-14 shrink-0 bg-[#00c93a] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#00c93a]/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-3xl font-[700] t-heading mb-1">95%</h4>
+            <p class="text-sm font-[600] t-heading mb-3">Satisfaction Rate</p>
+            <p class="text-[13px] font-medium t-body leading-relaxed">
+              Average rating from attendee feedback
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-10 flex gap-6 items-start shadow-sm premium-hover-lift h-full">
+          <div
+            class="w-14 h-14 shrink-0 bg-[#00c93a] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#00c93a]/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-3xl font-[700] t-heading mb-1">32</h4>
+            <p class="text-sm font-[600] t-heading mb-3">Countries Reached</p>
+            <p class="text-[13px] font-medium t-body leading-relaxed">
+              Global impact across construction markets
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-10 flex gap-6 items-start shadow-sm premium-hover-lift h-full">
+          <div
+            class="w-14 h-14 shrink-0 bg-[#00c93a] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#00c93a]/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-3xl font-[700] t-heading mb-1">1,200+</h4>
+            <p class="text-sm font-[600] t-heading mb-3">Certified Professionals</p>
+            <p class="text-[13px] font-medium t-body leading-relaxed">
+              TAKT practitioners and experts certified
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-10 flex gap-6 items-start shadow-sm premium-hover-lift h-full">
+          <div
+            class="w-14 h-14 shrink-0 bg-[#00c93a] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#00c93a]/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-3xl font-[700] t-heading mb-1">24hrs</h4>
+            <p class="text-sm font-[600] t-heading mb-3">Average Response Time</p>
+            <p class="text-[13px] font-medium t-body leading-relaxed">
+              Quick support for all event inquiries
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 py-24 bg-[var(--bg-page)] transition-colors duration-400">
+      <div class="text-center mb-16">
+        <h2
+          class="text-5xl md:text-[36px] font-[700] tracking-tighter text-[var(--text-heading)] mb-4 opacity-0 animate-fade-up delay-100">
+          Past Events Coverage
+        </h2>
+        <p class="text-[var(--text-muted)] font-medium opacity-0 animate-fade-up delay-200">
+          Highlights from our recent successful events
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] overflow-hidden flex flex-col md:flex-row shadow-sm premium-hover-lift">
+          <div class="md:w-2/5 relative h-64 md:h-auto">
+            <img src="../images/past-event-summit.svg" alt="Summit 2025" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 left-4 px-3 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-[600] rounded-full">Conference</span>
+          </div>
+          <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4">
+                TAKT Transformation Summit 2025
+              </h3>
+              <div class="space-y-2 mb-6 text-[var(--text-muted)]">
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg>
+                  <span class="text-[11px] font-bold">December 10-12, 2025</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class="text-[11px] font-bold">Dubai, UAE</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.6665 1.56942C7.0248 1.16322 7.49829 0.875754 8.02398 0.745277C8.54967 0.614801 9.10262 0.647497 9.60927 0.839016C10.1159 1.03054 10.5522 1.3718 10.8602 1.81739C11.1681 2.26298 11.333 2.79178 11.333 3.33342C11.333 3.87505 11.1681 4.40385 10.8602 4.84944C10.5522 5.29504 10.1159 5.6363 9.60927 5.82781C9.10262 6.01933 8.54967 6.05203 8.02398 5.92155C7.49829 5.79108 7.0248 5.50361 6.6665 5.09742M8.6665 12.6667H0.666504V12.0001C0.666504 10.9392 1.08793 9.9218 1.83808 9.17166C2.58822 8.42151 3.60564 8.00008 4.6665 8.00008C5.72737 8.00008 6.74479 8.42151 7.49493 9.17166C8.24508 9.9218 8.6665 10.9392 8.6665 12.0001V12.6667ZM8.6665 12.6667H12.6665V12.0001C12.6666 11.2979 12.4819 10.608 12.1308 9.99988C11.7798 9.39173 11.2748 8.8867 10.6667 8.53556C10.0587 8.18442 9.36884 7.99954 8.66665 7.99952C7.96445 7.99949 7.27462 8.18432 6.6665 8.53542M7.33317 3.33342C7.33317 4.04066 7.05222 4.71894 6.55212 5.21903C6.05203 5.71913 5.37375 6.00008 4.6665 6.00008C3.95926 6.00008 3.28098 5.71913 2.78089 5.21903C2.28079 4.71894 1.99984 4.04066 1.99984 3.33342C1.99984 2.62617 2.28079 1.94789 2.78089 1.4478C3.28098 0.9477 3.95926 0.666749 4.6665 0.666749C5.37375 0.666749 6.05203 0.9477 6.55212 1.4478C7.05222 1.94789 7.33317 2.62617 7.33317 3.33342Z"
+                      stroke="currentColor" stroke-opacity="0.6" stroke-width="1.33333" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span class="text-[11px] font-bold">450 Attendees</span>
+                </div>
+              </div>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-8">
+                Keynote by industry leaders, 25+ sessions, networking gala
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-6 border-t border-[var(--border-card)]">
+              <div class="flex items-center gap-2">
+                <div class="flex text-[#00c93a]">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-[600] text-[var(--text-heading)]">4.9/5.0</span>
+              </div>
+              <a href="#" class="text-[#00c93a] text-[11px] font-[600] hover:underline">View Gallery →</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] overflow-hidden flex flex-col md:flex-row shadow-sm premium-hover-lift">
+          <div class="md:w-2/5 relative h-64 md:h-auto">
+            <img src="../images/past-event-workshop.svg" alt="Innovation Workshop" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 left-4 px-3 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-[600] rounded-full">Workshop</span>
+          </div>
+          <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4">
+                Construction Innovation Workshop
+              </h3>
+              <div class="space-y-2 mb-6 text-[var(--text-muted)]">
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <path d="M3 10h18" />
+                  </svg>
+                  <span class="text-[11px] font-bold">November 18, 2025</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class="text-[11px] font-bold">San Francisco, CA</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.6665 1.56942C7.0248 1.16322 7.49829 0.875754 8.02398 0.745277C8.54967 0.614801 9.10262 0.647497 9.60927 0.839016C10.1159 1.03054 10.5522 1.3718 10.8602 1.81739C11.1681 2.26298 11.333 2.79178 11.333 3.33342C11.333 3.87505 11.1681 4.40385 10.8602 4.84944C10.5522 5.29504 10.1159 5.6363 9.60927 5.82781C9.10262 6.01933 8.54967 6.05203 8.02398 5.92155C7.49829 5.79108 7.0248 5.50361 6.6665 5.09742M8.6665 12.6667H0.666504V12.0001C0.666504 10.9392 1.08793 9.9218 1.83808 9.17166C2.58822 8.42151 3.60564 8.00008 4.6665 8.00008C5.72737 8.00008 6.74479 8.42151 7.49493 9.17166C8.24508 9.9218 8.6665 10.9392 8.6665 12.0001V12.6667ZM8.6665 12.6667H12.6665V12.0001C12.6666 11.2979 12.4819 10.608 12.1308 9.99988C11.7798 9.39173 11.2748 8.8867 10.6667 8.53556C10.0587 8.18442 9.36884 7.99954 8.66665 7.99952C7.96445 7.99949 7.27462 8.18432 6.6665 8.53542M7.33317 3.33342C7.33317 4.04066 7.05222 4.71894 6.55212 5.21903C6.05203 5.71913 5.37375 6.00008 4.6665 6.00008C3.95926 6.00008 3.28098 5.71913 2.78089 5.21903C2.28079 4.71894 1.99984 4.04066 1.99984 3.33342C1.99984 2.62617 2.28079 1.94789 2.78089 1.4478C3.28098 0.9477 3.95926 0.666749 4.6665 0.666749C5.37375 0.666749 6.05203 0.9477 6.55212 1.4478C7.05222 1.94789 7.33317 2.62617 7.33317 3.33342Z"
+                      stroke="currentColor" stroke-opacity="0.6" stroke-width="1.33333" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span class="text-[11px] font-bold">580 Attendees</span>
+                </div>
+              </div>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-8">
+                Hands-on TAKT planning, digital tools integration
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-6 border-t border-[var(--border-card)]">
+              <div class="flex items-center gap-2">
+                <div class="flex text-[#00c93a]">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-[600] text-[var(--text-heading)]">4.8/5.0</span>
+              </div>
+              <a href="#" class="text-[#00c93a] text-[11px] font-[600] hover:underline">View Gallery →</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] overflow-hidden flex flex-col md:flex-row shadow-sm premium-hover-lift">
+          <div class="md:w-2/5 relative h-64 md:h-auto">
+            <img src="../images/past-event-forum.svg" alt="Leadership Forum" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 left-4 px-3 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-[600] rounded-full">Conference</span>
+          </div>
+          <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4 tracking-tighter leading-tight">
+                Global Construction Leadership Forum
+              </h3>
+              <div class="space-y-2 mb-6 text-[var(--text-muted)]">
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg>
+                  <span class="text-[11px] font-bold">October 5-7, 2025</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class="text-[11px] font-bold">London, UK</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.6665 1.56942C7.0248 1.16322 7.49829 0.875754 8.02398 0.745277C8.54967 0.614801 9.10262 0.647497 9.60927 0.839016C10.1159 1.03054 10.5522 1.3718 10.8602 1.81739C11.1681 2.26298 11.333 2.79178 11.333 3.33342C11.333 3.87505 11.1681 4.40385 10.8602 4.84944C10.5522 5.29504 10.1159 5.6363 9.60927 5.82781C9.10262 6.01933 8.54967 6.05203 8.02398 5.92155C7.49829 5.79108 7.0248 5.50361 6.6665 5.09742M8.6665 12.6667H0.666504V12.0001C0.666504 10.9392 1.08793 9.9218 1.83808 9.17166C2.58822 8.42151 3.60564 8.00008 4.6665 8.00008C5.72737 8.00008 6.74479 8.42151 7.49493 9.17166C8.24508 9.9218 8.6665 10.9392 8.6665 12.0001V12.6667ZM8.6665 12.6667H12.6665V12.0001C12.6666 11.2979 12.4819 10.608 12.1308 9.99988C11.7798 9.39173 11.2748 8.8867 10.6667 8.53556C10.0587 8.18442 9.36884 7.99954 8.66665 7.99952C7.96445 7.99949 7.27462 8.18432 6.6665 8.53542M7.33317 3.33342C7.33317 4.04066 7.05222 4.71894 6.55212 5.21903C6.05203 5.71913 5.37375 6.00008 4.6665 6.00008C3.95926 6.00008 3.28098 5.71913 2.78089 5.21903C2.28079 4.71894 1.99984 4.04066 1.99984 3.33342C1.99984 2.62617 2.28079 1.94789 2.78089 1.4478C3.28098 0.9477 3.95926 0.666749 4.6665 0.666749C5.37375 0.666749 6.05203 0.9477 6.55212 1.4478C7.05222 1.94789 7.33317 2.62617 7.33317 3.33342Z"
+                      stroke="currentColor" stroke-opacity="0.6" stroke-width="1.33333" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span class="text-[11px] font-bold">450 Attendees</span>
+                </div>
+              </div>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-8">
+                Keynote by industry leaders, 25+ sessions, networking gala
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-6 border-t border-[var(--border-card)]">
+              <div class="flex items-center gap-2">
+                <div class="flex text-[#00c93a]">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-[600] text-[var(--text-heading)]">4.9/5.0</span>
+              </div>
+              <a href="#" class="text-[#00c93a] text-[11px] font-[600] hover:underline">View Gallery →</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="stagger-item bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] overflow-hidden flex flex-col md:flex-row shadow-sm premium-hover-lift">
+          <div class="md:w-2/5 relative h-64 md:h-auto">
+            <img src="../images/past-event-networking.svg" alt="Networking Event" class="w-full h-full object-cover" />
+            <span
+              class="absolute top-4 left-4 px-3 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-[600] rounded-full">Networking</span>
+          </div>
+          <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4 tracking-tighter leading-tight">
+                Building Excellence Networking Event
+              </h3>
+              <div class="space-y-2 mb-6 text-[var(--text-muted)]">
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg>
+                  <span class="text-[11px] font-bold">September 22, 2025</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class="text-[11px] font-bold">Boston, MA</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.6665 1.56942C7.0248 1.16322 7.49829 0.875754 8.02398 0.745277C8.54967 0.614801 9.10262 0.647497 9.60927 0.839016C10.1159 1.03054 10.5522 1.3718 10.8602 1.81739C11.1681 2.26298 11.333 2.79178 11.333 3.33342C11.333 3.87505 11.1681 4.40385 10.8602 4.84944C10.5522 5.29504 10.1159 5.6363 9.60927 5.82781C9.10262 6.01933 8.54967 6.05203 8.02398 5.92155C7.49829 5.79108 7.0248 5.50361 6.6665 5.09742M8.6665 12.6667H0.666504V12.0001C0.666504 10.9392 1.08793 9.9218 1.83808 9.17166C2.58822 8.42151 3.60564 8.00008 4.6665 8.00008C5.72737 8.00008 6.74479 8.42151 7.49493 9.17166C8.24508 9.9218 8.6665 10.9392 8.6665 12.0001V12.6667ZM8.6665 12.6667H12.6665V12.0001C12.6666 11.2979 12.4819 10.608 12.1308 9.99988C11.7798 9.39173 11.2748 8.8867 10.6667 8.53556C10.0587 8.18442 9.36884 7.99954 8.66665 7.99952C7.96445 7.99949 7.27462 8.18432 6.6665 8.53542M7.33317 3.33342C7.33317 4.04066 7.05222 4.71894 6.55212 5.21903C6.05203 5.71913 5.37375 6.00008 4.6665 6.00008C3.95926 6.00008 3.28098 5.71913 2.78089 5.21903C2.28079 4.71894 1.99984 4.04066 1.99984 3.33342C1.99984 2.62617 2.28079 1.94789 2.78089 1.4478C3.28098 0.9477 3.95926 0.666749 4.6665 0.666749C5.37375 0.666749 6.05203 0.9477 6.55212 1.4478C7.05222 1.94789 7.33317 2.62617 7.33317 3.33342Z"
+                      stroke="currentColor" stroke-opacity="0.6" stroke-width="1.33333" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span class="text-[11px] font-bold">200 Attendees</span>
+                </div>
+              </div>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-8">
+                Industry networking, partnership opportunities, panel discussions
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-6 border-t border-[var(--border-card)]">
+              <div class="flex items-center gap-2">
+                <div class="flex text-[#00c93a]">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-[600] text-[var(--text-heading)]">4.7/5.0</span>
+              </div>
+              <a href="#" class="text-[#00c93a] text-[11px] font-[600] hover:underline">View Gallery →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pb-24 bg-[var(--bg-page)] transition-colors duration-400">
+
+      <div class="w-full opacity-0 animate-fade-up delay-300">
+
+        <div
+          class="w-full theme-newsletter bg-gradient-to-br from-[#E9F7EF] to-white rounded-[60px] p-12 md:p-20 text-center border border-[var(--border-card)] shadow-sm premium-hover-lift">
+
+          <h2 class="text-4xl md:text-[36px] font-[700] text-[var(--text-heading)] mb-6 tracking-tighter">
+            Don't Miss Our Next Event
+          </h2>
+          <p
+            class="max-w-2xl mx-auto text-[var(--text-muted)] text-[16px] md:text-[18px] leading-relaxed font-medium mb-12">
+            Subscribe to our newsletter to receive updates about upcoming
+            events, exclusive offers, and the latest insights in construction
+            excellence.
+          </p>
+
+          <form class="flex flex-col md:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+            <div class="w-full md:flex-1">
+              <input type="email" placeholder="Enter your email"
+                class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-500 focus:outline-none focus:border-[#FFB82E] transition-colors"
+                required />
+            </div>
+            <button type="submit"
+              class="w-full md:w-auto px-10 py-5 bg-[#00c93a] text-white rounded-full text-[16px] font-bold shadow-lg premium-button-hover active:scale-95 whitespace-nowrap">
+              Subscribe Now
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full max-w-400 mx-auto px-4 pt-8 pb-4">
+    <div class="footer-box rounded-[50px] p-12 md:p-16 mb-6 opacity-0 animate-fade-in delay-200">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Home Locator</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="../">Home</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="/about/">About</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="/podcast/">Podcast</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Services</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">TAKT-Based System Implementation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Lean Construction Transformation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Digital Construction & PMIS Solutions</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Performance & Change Management</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Contact</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li>
+              <a href="mailto:info@arabtakt.com" class="hover:text-[#FFB82E] transition-colors">info@arabtakt.com</a>
+            </li>
+            <li>
+              <a href="tel:+966538292878" class="hover:text-[#FFB82E] transition-colors">+966 53 82 92 878</a>
+            </li>
+            <li class="leading-relaxed">
+              Alsadhan Building, Khurais<br />Branch, Al Manar Dist.<br />Riyadh
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Subscribe</h4>
+          <div class="mb-6">
+            <input type="email" placeholder="Email"
+              class="footer-input w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#FFB82E]" />
+          </div>
+          <div class="flex gap-3">
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 transition-all duration-150 ease-out hover:shadow-lg">f</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 transition-all duration-150 ease-out hover:shadow-lg">x</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 transition-all duration-150 ease-out hover:shadow-lg">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="shrink-0">
+          <img src="../images/Layer_2.svg" alt="ATM Logo" class="h-14 w-auto site-logo" />
+        </div>
+        <div class="text-center md:text-right">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-[600] tracking-tighter t-heading">
+            Building More Profitable Companies
+          </h2>
+        </div>
+      </div>
+      <div class="mt-12 t-body font-medium text-xs md:text-sm">
+        <p>© 2026 Construction Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/animations.js"></script>
+  <script src="../js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../dist/output.css">
+  <link rel="stylesheet" href="../../global.css">
+  <!-- <link rel="stylesheet" href="../../test.css"> -->
+
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
+
+  <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+    <div class="max-w-400 mx-auto">
+      <nav id="main-nav"
+        class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
+        aria-label="Main navigation">
+
+        <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
+          <a href="../" aria-label="Arab Talk Home">
+            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+          </a>
+        </div>
+
+        <ul
+          class="hidden lg:flex flex-1 items-center justify-center
+         gap-3 xl:gap-5 2xl:gap-7
+         mx-4 xl:mx-6
+         text-[#1a1a1a]
+         font-bold
+         text-[12px] xl:text-[13px] 2xl:text-[14px]
+         whitespace-nowrap">
+          <li>
+            <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
+          </li>
+          <li>
+            <a href="/portfolio" class="hover:opacity-70 transition-opacity nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="/resources" class="hover:opacity-70 transition-opacity nav-link">Resources</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:opacity-70 transition-opacity nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a href="/events"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <path
+                d="M6.92592 11.8698H12.8626M6.92592 8.9024H12.8626M0.989258 2.96755V13.6503C0.989258 14.7582 0.989258 15.3116 1.20495 15.7348C1.39466 16.107 1.69718 16.4105 2.06952 16.6001C2.49242 16.8156 3.04631 16.8156 4.15241 16.8156H15.6367C16.7427 16.8156 17.2959 16.8156 17.7188 16.6001C18.0911 16.4105 18.394 16.1074 18.5837 15.7352C18.7994 15.312 18.7994 14.758 18.7994 13.6501V6.13259C18.7994 5.02464 18.7994 4.47067 18.5837 4.04749C18.394 3.67525 18.0905 3.37283 17.7182 3.18317C17.2949 2.96755 16.7412 2.96755 15.633 2.96755H9.89424M0.989258 2.96755H9.89424M0.989258 2.96755C0.989258 1.87497 1.87524 0.989258 2.96814 0.989258H6.60386C7.08788 0.989258 7.33074 0.989258 7.55849 1.04391C7.76041 1.09238 7.95281 1.17251 8.12986 1.28098C8.3295 1.40328 8.50093 1.57466 8.84296 1.91658L9.89424 2.96755"
+                stroke="white" stroke-width="1.97859" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Events
+          </a>
+          <a href="/podcast"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#f05041] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M17.6239 0.989075C18.612 1.9106 19.4009 3.02482 19.9417 4.26302C20.4826 5.50122 20.7641 6.83713 20.7689 8.18832C20.7736 9.53952 20.5014 10.8773 19.9691 12.1193C19.4369 13.3613 18.6559 14.4809 17.6743 15.4093M14.9259 3.88259C15.5188 4.4355 15.9921 5.10403 16.3167 5.84695C16.6412 6.58987 16.8101 7.39142 16.813 8.20214C16.8157 9.01285 16.6524 9.81556 16.3332 10.5607C16.0138 11.3059 15.5452 11.9777 14.9561 12.5347M6.40917 11.5926L8.06594 13.6431C8.92962 14.7119 9.36146 15.2465 9.7398 15.3047C10.0673 15.3549 10.3983 15.238 10.6214 14.9929C10.8791 14.7098 10.8791 14.0226 10.8791 12.6484V3.7973C10.8791 2.42302 10.8791 1.73587 10.6214 1.4528C10.3983 1.20775 10.0673 1.09073 9.7398 1.14108C9.36146 1.19927 8.92962 1.73373 8.06594 2.80264L6.40917 4.85314C6.2347 5.06907 6.14745 5.17705 6.03951 5.25474C5.94388 5.32357 5.83672 5.37476 5.72308 5.40589C5.59482 5.44103 5.45602 5.44103 5.17841 5.44103H3.77077C3.0229 5.44103 2.64896 5.44103 2.34677 5.54087C1.75207 5.73735 1.28556 6.20392 1.08909 6.79869C0.989258 7.10091 0.989258 7.4749 0.989258 8.22285C0.989258 8.97081 0.989258 9.34478 1.08909 9.64701C1.28556 10.2418 1.75207 10.7084 2.34677 10.9048C2.64896 11.0047 3.0229 11.0047 3.77077 11.0047H5.17841C5.45602 11.0047 5.59482 11.0047 5.72308 11.0398C5.83672 11.071 5.94388 11.1221 6.03951 11.1909C6.14745 11.2687 6.2347 11.3767 6.40917 11.5926Z"
+                stroke="white" stroke-width="1.97808" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Podcast
+          </a>
+          <a href="/training"
+            class="btn-dark flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Training
+          </a>
+        </div>
+
+        <button class="xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button>
+
+  <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+    </div>
+  </header>
+  <main class="relative w-full max-w-400 mx-auto mt-32 md:mt-40 lg:mt-48">
+    <section class="max-w-[1400px] mx-auto px-4 md:px-10 lg:px-20 ">
+      <div class="text-center mb-12">
+        <div class="mb-2 flex justify-center">
+          <a href="/events/"
+            class="flex items-center gap-2 text-sm font-bold t-muted hover:opacity-80 transition-opacity w-fit">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.99992 12.6666L5.33325 7.99992L9.99992 3.33325" stroke="currentColor" stroke-opacity="0.6"
+                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Back to Events
+          </a>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-[700] t-hero tracking-tighter mb-4">
+          Event Registration
+        </h1>
+        <p class="t-muted font-medium text-xl max-w-2xl mx-auto">
+          Complete the form below to secure your spot. We'll send you a
+          confirmation email with all the details.
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <div class="lg:w-2/3 w-full">
+          <div class="max-w-4xl bg-white border border-gray-100 rounded-[40px] p-8 md:p-12 shadow-sm space-y-10">
+            <div>
+              <h2 class="text-2xl font-[700] mb-8">Your Information</h2>
+
+              <p class="text-xl font-[600] t-heading mb-5">
+                Personal Details
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+                <div>
+                  <label class="block text-sm font-semibold mb-2">First Name <span class="">*</span></label>
+                  <input type="text" placeholder="John"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Last Name <span class="">*</span></label>
+                  <input type="text" placeholder="Doe"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Email Address <span class="">*</span></label>
+                  <input type="email" placeholder="john.doe@company.com"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Phone Number <span class="">*</span></label>
+                  <input type="tel" placeholder="+1 (555) 123-4567"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+              </div>
+
+              <p class="text-xl font-[600] t-heading mb-5">
+                Professional Details
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Company Name <span class="">*</span></label>
+                  <input type="text" placeholder="Your Company"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Job Title <span class="">*</span></label>
+                  <input type="text" placeholder="Project Manager"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+              </div>
+
+              <p class="text-xl font-[600] t-heading mb-5">Event Details</p>
+              <div class="space-y-5">
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Number of Attendees <span class="">*</span></label>
+                  <input type="number" placeholder="1" min="1"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Dietary Restrictions</label>
+                  <input type="text" placeholder="None"
+                    class="w-full border border-gray-200 rounded-full px-5 py-3 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Special Requests or Questions</label>
+                  <textarea placeholder="Any special accommodations or questions..." rows="4"
+                    class="w-full border border-gray-200 rounded-[24px] px-5 py-4 text-sm font-medium text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#00c93a] transition-colors resize-none"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="terms" class="mt-1 w-4 h-4 accent-[#00c93a] shrink-0 cursor-pointer" />
+              <label for="terms" class="text-sm font-medium leading-relaxed cursor-pointer t-muted">
+                I agree to the terms and conditions and understand the
+                cancellation policy. I consent to receiving event-related
+                communications.
+              </label>
+            </div>
+
+            <input type="checkbox" id="dialog-toggle" class="hidden peer/dialog" />
+
+            <label for="dialog-toggle"
+              class="w-full py-4 bg-[#00c93a] text-white rounded-full font-bold text-sm shadow-xl hover:brightness-105 transition-all flex items-center justify-center cursor-pointer">
+              Complete Registration
+            </label>
+
+            <div
+              class="fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm px-2 hidden peer-checked/dialog:flex mb-0">
+              <div
+                class="card rounded-[32px] p-8 max-w-lg w-full shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
+                <div class="overflow-y-auto px-4 custom-scrollbar">
+                  <div class="flex justify-center mb-6">
+                    <div
+                      class="w-16 h-16 bg-[#00c93a] rounded-full flex items-center justify-center shadow-lg shadow-[#00c93a]/30">
+                      <svg width="32" height="32" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <h2 class="text-2xl font-[700] t-heading text-center mb-3">
+                    Registration Complete!
+                  </h2>
+                  <p class="t-muted text-sm text-center font-medium leading-relaxed mb-8">
+                    Thank you, <strong class="t-heading">John Doe</strong>.
+                    Your registration has been successfully submitted. We've
+                    sent a confirmation email to
+                    <strong class="t-heading">john@company.com</strong>.
+                  </p>
+
+                  <div class="border t-divider rounded-2xl p-5 mb-6 section-gray">
+                    <div class="flex justify-between items-center mb-3">
+                      <span class="text-xs font-bold t-muted uppercase tracking-widest">Event</span>
+                      <span
+                        class="px-3 py-1 bg-[#00c93a] text-white text-[10px] font-bold rounded-full">Workshop</span>
+                    </div>
+                    <p class="text-lg font-[700] t-heading mb-4">
+                      TAKT Planning Masterclass
+                    </p>
+                    <div class="space-y-2 text-sm mb-4">
+                      <div class="flex items-center gap-2 t-muted font-medium">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"
+                          viewBox="0 0 24 24">
+                          <rect x="3" y="4" width="18" height="18" rx="2" />
+                          <line x1="3" y1="10" x2="21" y2="10" />
+                          <line x1="16" y1="2" x2="16" y2="6" />
+                          <line x1="8" y1="2" x2="8" y2="6" />
+                        </svg>
+                        March 15, 2026 • 9:00 AM – 5:00 PM EST
+                      </div>
+                      <div class="flex items-center gap-2 t-muted font-medium">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"
+                          viewBox="0 0 24 24">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        New York, NY
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center border-t t-divider pt-4">
+                      <span class="text-xs font-bold t-muted">Confirmation</span>
+                      <span class="text-xs font-bold text-[#00c93a]">JIT-ZDYA2ILMY</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-8">
+                    <p class="text-sm font-bold t-heading mb-4">
+                      What happens next?
+                    </p>
+                    <ul class="space-y-3">
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="w-5 h-5 bg-[#00c93a] rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">1</span>
+                        <span class="text-sm t-muted font-medium">Check your email for confirmation</span>
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="w-5 h-5 bg-[#00c93a] rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">2</span>
+                        <span class="text-sm t-muted font-medium">Add the event to your calendar</span>
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="w-5 h-5 bg-[#00c93a] rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">3</span>
+                        <span class="text-sm t-muted font-medium">Receive a reminder 48h before</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="flex gap-3 mb-6">
+                    <a href="/events/"
+                      class="flex-1 py-3 bg-[#00c93a] text-white rounded-full font-bold text-sm text-center hover:brightness-105 transition-all">Browse
+                      More</a>
+                    <label for="dialog-toggle"
+                      class="flex-1 py-3 border t-divider t-heading rounded-full font-bold text-sm text-center hover:opacity-80 transition-opacity cursor-pointer">Close</label>
+                  </div>
+
+                  <div class="text-center py-2 border-t t-divider">
+                    <p class="text-xs t-muted font-medium mb-3">
+                      Share with colleagues
+                    </p>
+                    <div class="flex justify-center gap-4 ">
+                      <a href="#"
+                        class="w-9 h-9 border t-divider t-heading rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
+                            fill="transparent" />
+                          <path
+                            d="M10 11.5H12.1591L25.1136 29.5H22.9545L10 11.5ZM13.8864 11.5H16.0455L29 29.5H26.8409L13.8864 11.5ZM11.7273 11.5H16.0455V13.3H11.7273V11.5ZM22.9545 27.7H27.2727V29.5H22.9545V27.7ZM25.1136 11.5H28.1364L13.4545 29.5H10.4318L25.1136 11.5Z"
+                            fill="currentColor" />
+                        </svg>
+                      </a>
+                      <a href="#"
+                        class="w-9 h-9 border t-divider t-heading rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
+                            fill="transparent" />
+                          <g clip-path="url(#clip0_294_1473)">
+                            <path
+                              d="M27.0392 27.0433H24.0775V22.4025C24.0775 21.2958 24.055 19.8717 22.5342 19.8717C20.99 19.8717 20.7542 21.0758 20.7542 22.3208V27.0433H17.7925V17.5H20.6375V18.8008H20.6758C21.0733 18.0508 22.04 17.2592 23.4842 17.2592C26.485 17.2592 27.04 19.2342 27.04 21.805L27.0392 27.0433ZM14.4475 16.1942C13.4942 16.1942 12.7283 15.4225 12.7283 14.4733C12.7283 13.525 13.495 12.7542 14.4475 12.7542C15.3975 12.7542 16.1675 13.525 16.1675 14.4733C16.1675 15.4225 15.3967 16.1942 14.4475 16.1942ZM15.9325 27.0433H12.9625V17.5H15.9325V27.0433ZM28.5208 10H11.4758C10.66 10 10 10.645 10 11.4408V28.5592C10 29.3558 10.66 30 11.4758 30H28.5183C29.3333 30 30 29.3558 30 28.5592V11.4408C30 10.645 29.3333 10 28.5183 10H28.5208Z"
+                              fill="currentColor" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_294_1473">
+                              <rect width="20" height="20" fill="white" transform="translate(10 10)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                      <a href="#"
+                        class="w-9 h-9 border t-divider t-heading rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
+                            fill="transparent" />
+                          <path
+                            d="M29 19.5226C29 14.5421 24.968 10.5 20 10.5C15.032 10.5 11 14.5421 11 19.5226C11 23.8895 14.096 27.5256 18.2 28.3647V22.2293H16.4V19.5226H18.2V17.2669C18.2 15.5256 19.613 14.109 21.35 14.109H23.6V16.8158H21.8C21.305 16.8158 20.9 17.2218 20.9 17.718V19.5226H23.6V22.2293H20.9V28.5C25.445 28.0489 29 24.2053 29 19.5226Z"
+                            fill="currentColor" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <style>
+              /* Optional: Makes the scrollbar look cleaner inside the white box */
+              .custom-scrollbar::-webkit-scrollbar {
+                width: 4px;
+              }
+
+              .custom-scrollbar::-webkit-scrollbar-track {
+                background: transparent;
+              }
+
+              .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #e5e7eb;
+                border-radius: 10px;
+              }
+
+              .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: #00c93a;
+              }
+            </style>
+          </div>
+        </div>
+        <div class="lg:w-1/3 w-full lg:sticky top-24">
+          <div class="card rounded-[32px] p-8 shadow-xl">
+            <h3 class="text-lg font-bold t-heading mb-6">Event Summary</h3>
+
+            <span class="px-3 py-1 my-2 bg-[#00c93a] text-white text-[10px] font-bold rounded-full">Workshop</span>
+
+            <p class="text-xl font-[700] mt-3 t-heading mb-6">
+              TAKT Planning Masterclass
+            </p>
+
+            <div class="space-y-3 mb-6 text-sm">
+              <div class="flex items-center gap-3">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.6"
+                  viewBox="0 0 24 24" class="t-heading">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                </svg>
+                <div>
+                  <p class="font-semibold t-heading">March 15, 2026</p>
+                  <p class="t-muted text-xs">9:00 AM - 5:00 PM EST</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.6"
+                  viewBox="0 0 24 24" class="t-heading">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <p class="font-semibold t-heading">New York, NY</p>
+              </div>
+            </div>
+
+            <div class="border-y t-divider py-5 mb-6 space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="t-muted font-medium">Ticket Price</span>
+                <span class="font-bold t-heading">$599</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="t-muted font-medium">Number of Tickets</span>
+                <span class="font-bold t-heading">1</span>
+              </div>
+              <div class="flex justify-between pt-2 border-t t-divider">
+                <span class="font-bold t-heading">Total</span>
+                <span class="font-[700] t-heading text-lg">$599</span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <p class="text-sm font-bold t-heading mb-4">What's Included</p>
+              <ul class="space-y-3 text-sm t-muted font-medium">
+                <li class="flex items-center gap-3">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33337 8.66669L6.00004 11.3334L12.6667 4.66669" stroke="#01BD32" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Access to all sessions
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33337 8.66669L6.00004 11.3334L12.6667 4.66669" stroke="#01BD32" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Course materials
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33337 8.66669L6.00004 11.3334L12.6667 4.66669" stroke="#01BD32" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Certificate of completion
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33337 8.66669L6.00004 11.3334L12.6667 4.66669" stroke="#01BD32" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Refreshments & lunch
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33337 8.66669L6.00004 11.3334L12.6667 4.66669" stroke="#01BD32" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Networking opportunities
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-[#00c93a]/8 border border-[#00c93a]/20 rounded-2xl p-4">
+              <div class="flex items-start gap-3">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00c93a" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                <div>
+                  <p class="text-xs font-bold t-heading mb-1">
+                    Cancellation Policy
+                  </p>
+                  <p class="text-xs t-muted font-medium leading-relaxed">
+                    Full refund if canceled 7+ days before the event. 50%
+                    refund if canceled 3–7 days before.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="w-full max-w-400 mx-auto px-4 mt-3">
+    <div class="footer-box rounded-[50px] p-8 md:p-16 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Home Locator</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="about">About</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="/services/">Our Services</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Podcast</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Services</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">TAKT-Based System Implementation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Lean Construction Transformation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Digital Construction &amp; PMIS Solutions</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Performance &amp; Change Management</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Contact</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li><a href="mailto:info@arabtakt.com">info@arabtakt.com</a></li>
+            <li><a href="tel:+966538292878">+966 53 82 92 878</a></li>
+            <li class="leading-relaxed">
+              Alsadhan Building, Khurais<br />Branch, Al Manar Dist.<br />Riyadh
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Subscribe</h4>
+          <div class="mb-6">
+            <input type="email" placeholder="Email"
+              class="footer-input w-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+          </div>
+          <div class="flex gap-3">
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">f</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">x</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">in</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="shrink-0 hover:scale-110 transition-transform cursor-pointer">
+          <img src="/images/Layer_2.svg" alt="ATM Logo" class="site-logo h-14 w-auto" />
+        </div>
+        <div class="text-center md:text-right">
+          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">
+            Building More Profitable Companies
+          </h2>
+        </div>
+      </div>
+      <div class="mt-12 t-body font-medium text-xs md:text-sm">
+        <p>© 2026 Construction Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../../js/animations.js"></script>
+  <script src="../../js/theme.js"></script>
+</body>
+
+</html>

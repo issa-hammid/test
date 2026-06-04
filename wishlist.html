@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>My Wishlist</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./dist/output.css">
+
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    *{
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      padding: 0;
+      background: rgba(251, 249, 244, 1);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wishlist-shadow{
+      box-shadow:
+        0px 20px 45px rgba(0, 0, 0, 0.08),
+        0px 5px 12px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- HEADER -->
+    <div class="flex items-start gap-4 mb-10">
+
+      <!-- Back -->
+      <button style="cursor: pointer;" onclick="window.location.href='accountdashboard.html'" class="w-11 h-11 rounded-full border border-[#DDD7D1] bg-white flex items-center justify-center shrink-0 hover:bg-gray-50 transition">
+
+        <i class="fa-solid fa-arrow-left text-sm text-black"></i>
+
+      </button>
+
+      <!-- Content -->
+      <div>
+
+        <h1 class="text-2xl sm:text-3xl font-bold  leading-none">
+          My Wishlist
+        </h1>
+
+        <p class="text-sm text-gray-500 mt-2">
+          4 saved items
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- ========================= -->
+      <!-- CARD -->
+      <!-- ========================= -->
+      <div class="bg-white rounded-[30px] p-5 wishlist-shadow relative overflow-hidden">
+
+        <!-- Remove -->
+        <button class="absolute top-5 right-5 w-10 h-10 rounded-full border border-[#E7E2DD] bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 transition">
+
+          <i class="fa-solid fa-xmark text-sm"></i>
+
+        </button>
+
+        <!-- Top Icon -->
+        <div class="w-12 h-12 rounded-2xl bg-[#FFD600] flex items-center justify-center mb-4">
+
+          <img
+            src="/images/book.svg"
+            alt=""
+            class="w-6 h-6"
+          />
+
+        </div>
+
+        <!-- Badge -->
+        <div class="inline-flex h-7 px-3 rounded-full bg-[#F2F0ED] items-center text-xs font-semibold text-[#555] mb-4">
+          Course
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-xl font-bold text-black leading-tight mb-3">
+
+          Digital Transformation in Construction
+
+        </h2>
+
+        <!-- Desc -->
+        <p class="text-[15px] leading-7 text-gray-500 mb-5">
+
+          Learn how to modernize your construction operations with digital tools
+
+        </p>
+
+        <!-- Duration -->
+        <div class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+
+          <img
+            src="/images/calendar.svg"
+            alt=""
+            class="w-4 h-4"
+          />
+
+          8 weeks
+
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-[#ECE7E2] mb-5"></div>
+
+        <!-- Bottom -->
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+
+          <!-- Price -->
+          <div class="text-[24px] leading-none font-bold text-black">
+            $799
+          </div>
+
+          <!-- Button -->
+          <button class="h-14 px-7 rounded-full bg-[#EB433C] text-white font-bold text-sm flex items-center gap-3 hover:opacity-90 transition">
+
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+
+            Enroll Now
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ========================= -->
+      <!-- CARD -->
+      <!-- ========================= -->
+      <div class="bg-white rounded-[30px] p-5 wishlist-shadow relative overflow-hidden">
+
+        <!-- Remove -->
+        <button class="absolute top-5 right-5 w-10 h-10 rounded-full border border-[#E7E2DD] bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 transition">
+
+          <i class="fa-solid fa-xmark text-sm"></i>
+
+        </button>
+
+        <!-- Top Icon -->
+        <div class="w-12 h-12 rounded-2xl bg-[#EB433C] flex items-center justify-center mb-4">
+
+          <img
+            src="/images/event.svg"
+            alt=""
+            class="w-6 h-6"
+          />
+
+        </div>
+
+        <!-- Badge -->
+        <div class="inline-flex h-7 px-3 rounded-full bg-[#F2F0ED] items-center text-xs font-semibold text-[#555] mb-4">
+          Event
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-xl font-bold text-black leading-tight mb-3">
+
+          Construction Innovation Conference 2026
+
+        </h2>
+
+        <!-- Desc -->
+        <p class="text-[15px] leading-7 text-gray-500 mb-5">
+
+          Join industry leaders for two days of innovation and networking
+
+        </p>
+
+        <!-- Duration -->
+        <div class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+
+          <img
+            src="/images/calendar.svg"
+            alt=""
+            class="w-4 h-4"
+          />
+
+          August 15–16, 2026
+
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-[#ECE7E2] mb-5"></div>
+
+        <!-- Bottom -->
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+
+          <!-- Price -->
+          <div class="text-[24px] leading-none font-bold text-black">
+            $599
+          </div>
+
+          <!-- Button -->
+          <button class="h-14 px-7 rounded-full bg-[#EB433C] text-white font-bold text-sm flex items-center gap-3 hover:opacity-90 transition">
+
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+
+            Enroll Now
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ========================= -->
+      <!-- CARD -->
+      <!-- ========================= -->
+      <div class="bg-white rounded-[30px] p-5 wishlist-shadow relative overflow-hidden">
+
+        <!-- Remove -->
+        <button class="absolute top-5 right-5 w-10 h-10 rounded-full border border-[#E7E2DD] bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 transition">
+
+          <i class="fa-solid fa-xmark text-sm"></i>
+
+        </button>
+
+        <!-- Top Icon -->
+        <div class="w-12 h-12 rounded-2xl bg-[#09C63A] flex items-center justify-center mb-4">
+
+          <img
+            src="/images/file.svg"
+            alt=""
+            class="w-6 h-6"
+          />
+
+        </div>
+
+        <!-- Badge -->
+        <div class="inline-flex h-7 px-3 rounded-full bg-[#F2F0ED] items-center text-xs font-semibold text-[#555] mb-4">
+          Resource
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-xl font-bold text-black leading-tight mb-3">
+
+          Complete TAKT Planning Toolkit
+
+        </h2>
+
+        <!-- Desc -->
+        <p class="text-[15px] leading-7 text-gray-500 mb-5">
+
+          Comprehensive templates and guides for TAKT planning implementation
+
+        </p>
+
+        <!-- Duration -->
+        <div class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+
+          <img
+            src="/images/resourses.svg"
+            alt=""
+            class="w-4 h-4"
+          />
+
+          25+ Templates
+
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-[#ECE7E2] mb-5"></div>
+
+        <!-- Bottom -->
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+
+          <!-- Price -->
+          <div class="text-[24px] leading-none font-bold text-black">
+            $149
+          </div>
+
+          <!-- Button -->
+          <button class="h-14 px-7 rounded-full bg-[#EB433C] text-white font-bold text-sm flex items-center gap-3 hover:opacity-90 transition">
+
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+
+            Enroll Now
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ========================= -->
+      <!-- CARD -->
+      <!-- ========================= -->
+      <div class="bg-white rounded-[30px] p-5 wishlist-shadow relative overflow-hidden">
+
+        <!-- Remove -->
+        <button class="absolute top-5 right-5 w-10 h-10 rounded-full border border-[#E7E2DD] bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 transition">
+
+          <i class="fa-solid fa-xmark text-sm"></i>
+
+        </button>
+
+        <!-- Top Icon -->
+        <div class="w-12 h-12 rounded-2xl bg-[#FFD600] flex items-center justify-center mb-4">
+
+          <img
+            src="/images/book.svg"
+            alt=""
+            class="w-6 h-6"
+          />
+
+        </div>
+
+        <!-- Badge -->
+        <div class="inline-flex h-7 px-3 rounded-full bg-[#F2F0ED] items-center text-xs font-semibold text-[#555] mb-4">
+          Course
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-xl font-bold text-black leading-tight mb-3">
+
+          Lean Construction Mastery
+
+        </h2>
+
+        <!-- Desc -->
+        <p class="text-[15px] leading-7 text-gray-500 mb-5">
+
+          Master lean principles and practices for construction projects
+
+        </p>
+
+        <!-- Duration -->
+        <div class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+
+          <img
+            src="/images/calendar.svg"
+            alt=""
+            class="w-4 h-4"
+          />
+
+          6 weeks
+
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-[#ECE7E2] mb-5"></div>
+
+        <!-- Bottom -->
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+
+          <!-- Price -->
+          <div class="text-[24px] leading-none font-bold text-black">
+            $699
+          </div>
+
+          <!-- Button -->
+          <button class="h-14 px-7 rounded-full bg-[#EB433C] text-white font-bold text-sm flex items-center gap-3 hover:opacity-90 transition">
+
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+
+            Enroll Now
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,797 @@
+{
+  "Auth": {
+    "app_name": "جست إن تاكت",
+    "welcome_back": "مرحبًا بعودتك",
+    "sign_in": "تسجيل الدخول",
+    "or": "أو",
+    "create_account": "إنشاء حساب",
+    "continue_as_guest": "المتابعة كضيف",
+    "terms_privacy": "بالمتابعة، فإنك توافق على الشروط وسياسة الخصوصية الخاصة بنا"
+  },
+  "Login": {
+    "app_name": "جست إن تاكت",
+    "title": "أنشئ حسابك",
+    "welcome_back": "مرحبًا بعودتك",
+    "description": "سجّل الدخول للوصول إلى لوحة تحكم المشرف",
+
+    "email_address": "عنوان البريد الإلكتروني",
+    "email_placeholder": "admin@justintakt.com",
+
+    "password": "كلمة المرور",
+    "password_placeholder": "أدخل كلمة المرور الخاصة بك",
+
+    "remember_me": "تذكرني",
+    "forgot_password": "هل نسيت كلمة المرور؟",
+
+    "sign_in": "تسجيل الدخول",
+    "or": "أو",
+
+    "sign_in_google": "تسجيل الدخول باستخدام Google",
+    "sign_in_linkedin": "تسجيل الدخول باستخدام LinkedIn",
+
+    "security_note": "مؤمن بتشفير SSL ‏256 بت",
+    "back_home": "العودة إلى الصفحة الرئيسية"
+  },
+   "ForgotPassword": {
+    "app_name": "جست إن تاكت",
+    "title": "إعادة تعيين كلمة المرور",
+
+    "heading": "هل نسيت كلمة المرور؟",
+    "description": "لا تقلق! أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
+
+    "email_address": "عنوان البريد الإلكتروني",
+    "email_placeholder": "admin@justintakt.com",
+
+    "send_reset_link": "إرسال رابط إعادة التعيين",
+    "back_to_login": "العودة إلى تسجيل الدخول",
+
+    "need_help": "هل تحتاج مساعدة للوصول إلى حسابك؟",
+    "contact_support": "التواصل مع الدعم",
+
+    "back_home": "العودة إلى الصفحة الرئيسية"
+  },
+  "CreateNewPassword": {
+    "app_name": "جست إن تاكت",
+    "title": "إنشاء كلمة مرور جديدة",
+
+    "heading": "إنشاء كلمة مرور جديدة",
+    "description": "يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمات المرور المستخدمة سابقًا",
+
+    "new_password": "كلمة المرور الجديدة",
+    "new_password_placeholder": "أنشئ كلمة مرور قوية",
+
+    "confirm_password": "تأكيد كلمة المرور الجديدة",
+    "confirm_password_placeholder": "أعد إدخال كلمة المرور",
+
+    "password_requirements": "متطلبات كلمة المرور",
+
+    "requirement_length": "8 أحرف على الأقل",
+    "requirement_upper_lower": "أحرف كبيرة وصغيرة",
+    "requirement_number": "رقم واحد على الأقل",
+    "requirement_special": "رمز خاص واحد على الأقل",
+
+    "reset_password": "إعادة تعيين كلمة المرور",
+    "back_to_login": "العودة إلى تسجيل الدخول"
+  },
+   "Signup": {
+    "app_name": "جست إن تاكت",
+    "title": "أنشئ حسابك",
+
+    "step_personal": "البيانات الشخصية",
+    "step_company": "الشركة",
+    "step_security": "الأمان",
+
+    "section_title": "المعلومات الشخصية",
+    "section_description": "لنبدأ ببياناتك الأساسية",
+
+    "full_name": "الاسم الكامل *",
+    "full_name_placeholder": "محمد أحمد",
+
+    "email_address": "عنوان البريد الإلكتروني *",
+    "email_placeholder": "john@company.com",
+
+    "phone_number": "رقم الهاتف *",
+    "phone_placeholder": "+1 (555) 000-0000",
+
+    "continue": "متابعة",
+
+    "already_have_account": "لديك حساب بالفعل؟",
+    "sign_in": "تسجيل الدخول",
+
+    "back_home": "العودة إلى الصفحة الرئيسية",
+
+    "company_section_title": "معلومات الشركة",
+    "company_section_description": "أخبرنا المزيد عن عملك",
+
+    "company_name": "اسم الشركة *",
+    "company_name_placeholder": "شركتك",
+
+    "job_title": "المسمى الوظيفي *",
+    "job_title_placeholder": "مصمم منتجات",
+
+    "country": "الدولة *",
+    "country_placeholder": "الولايات المتحدة",
+
+    "security_section_title": "إعدادات الأمان",
+    "security_section_description": "أنشئ كلمة مرور آمنة",
+
+    "password": "كلمة المرور *",
+    "password_placeholder": "أدخل كلمة المرور",
+
+    "confirm_password": "تأكيد كلمة المرور *",
+    "confirm_password_placeholder": "أكد كلمة المرور",
+
+    "agree_terms": "أوافق على شروط الخدمة وسياسة الخصوصية",
+
+    "create_account": "إنشاء حساب"
+  },
+  "EmailVerification": {
+    "app_name": "جست إن تاكت",
+    "title": "تأكيد بريدك الإلكتروني",
+
+    "heading": "تحقق من بريدك الإلكتروني",
+    "description": "لقد أرسلنا رمز تحقق مكونًا من 6 أرقام إلى",
+
+    "verification_code": "أدخل رمز التحقق",
+
+    "resend_code": "لم تستلم الرمز؟ إعادة الإرسال خلال {seconds} ثانية",
+
+    "verify_email": "تأكيد البريد الإلكتروني",
+
+    "tip": "نصيحة: تحقق من مجلد الرسائل غير المرغوب فيها إذا لم تجد البريد الإلكتروني",
+
+    "demo_code": "لأغراض العرض التجريبي، استخدم الرمز: {code}",
+
+    "back_to_signup": "العودة إلى إنشاء الحساب",
+
+    "need_help": "هل تحتاج مساعدة؟",
+    "contact_support": "التواصل مع الدعم",
+
+    "back_home": "العودة إلى الصفحة الرئيسية"
+  },
+   "Onboarding": {
+    "title": "مرحبًا بك في جست إن تاكت!",
+    "description": "لنخصص تجربتك. اختر مجالات اهتمامك للحصول على توصيات مخصصة.",
+
+    "interests_title": "ما الذي يهمك؟",
+    "interests_description": "حدد جميع ما ينطبق عليك",
+
+    "training_courses": "الدورات التدريبية",
+    "training_courses_description": "تعلّم منهجية TAKT وأفضل الممارسات",
+
+    "consulting_services": "الخدمات الاستشارية",
+    "consulting_services_description": "إرشاد احترافي لمشاريعك",
+
+    "events_workshops": "الفعاليات وورش العمل",
+    "events_workshops_description": "انضم إلى التجمعات المجتمعية والندوات",
+
+    "digital_resources": "الموارد الرقمية",
+    "digital_resources_description": "الوصول إلى القوالب والوثائق",
+
+    "construction_management": "إدارة الإنشاءات",
+    "construction_management_description": "أدوات تخطيط وتنفيذ المشاريع",
+
+    "digital_transformation": "التحول الرقمي",
+    "digital_transformation_description": "تحديث عملياتك وتطويرها",
+
+    "industry_title": "ما هو قطاع عملك؟",
+    "industry_description": "يساعدنا هذا على اقتراح محتوى مناسب لك",
+
+    "residential_construction": "الإنشاءات السكنية",
+    "commercial_construction": "الإنشاءات التجارية",
+    "infrastructure_civil": "البنية التحتية والأعمال المدنية",
+    "industrial_construction": "الإنشاءات الصناعية",
+    "renovation_remodeling": "التجديد وإعادة التصميم",
+    "consulting_engineering": "الاستشارات والهندسة",
+    "other": "أخرى",
+
+    "language_title": "اللغة المفضلة",
+    "language_description": "اختر لغتك المفضلة للمحتوى والتواصل",
+
+    "english": "الإنجليزية",
+    "german": "الألمانية",
+    "french": "الفرنسية",
+    "spanish": "الإسبانية",
+    "portuguese": "البرتغالية",
+
+    "skip": "تخطي الآن",
+    "get_started": "ابدأ الآن",
+
+    "selected_interests": "{count} اهتمامات محددة"
+  },
+  "Home": {
+    "hero_title": "نحو مستقبل أفضل لقطاع الإنشاءات",
+
+    "hero_heading_line1": "بناء شركات",
+    "hero_heading_line2": "أكثر ربحية",
+
+    "hero_description": "تقوم TAKT بتحويل كفاءة قطاع الإنشاءات",
+
+    "free_consultation": "احجز استشارة مجانية",
+
+    "years_experience": "سنوات الخبرة",
+    "projects_completed": "المشاريع المكتملة",
+    "happy_clients": "العملاء السعداء",
+
+    "construction_problem_description": "اليوم، تعاني مشاريع الإنشاءات من التأخير وضعف التواصل والفوضى التشغيلية اليومية. نحن فريق من الخبراء المتخصصين في تحويل شركات الإنشاءات من الفوضى إلى مؤسسات عالية الأداء والكفاءة باستخدام منهجية TAKT وممارسات إدارة التحول المثبتة التي ترتقي بالمهندسين من الصفر إلى الاحتراف.",
+
+    "mission_vision_title": "مهمتنا ورؤيتنا",
+    "mission_vision_description": "ملتزمون بالتميز في البناء والابتكار في التصميم وخلق قيمة مستدامة لعملائنا ومجتمعاتنا.",
+
+    "mission": "المهمة",
+    "mission_description": "نساعد المؤسسات على تحقيق نتائج متوقعة وعالية الأداء من خلال Lean وTakt والتحسين المستمر، مع إزالة العوائق وخلق تدفق مستدام.",
+
+    "vision": "الرؤية",
+    "vision_description": "أن نصبح المحرك الرائد للتميز التشغيلي في المنطقة، وتحويل طريقة تخطيط وتنفيذ ونمو المؤسسات من خلال تدفق متوقع وعمليات متزامنة وأفراد متمكنين.",
+
+    "consultant_title_line1": "تعرف على",
+    "consultant_title_line2": "مستشارينا",
+    "consultant_title_line3": "المحترفين",
+
+    "consultant_description": "خبراؤنا موجودون لإرشادك في كل خطوة من مشروعك وضمان الجودة والتسليم في الوقت المناسب.",
+
+    "learn_more": "اعرف المزيد",
+
+    "consultant_subtitle": "هنا لإرشادك في كل خطوة",
+    "consultant_text": "سيساعدك مستشارونا في كل خطوة على الطريق",
+
+    "how_takt_works": "شاهد كيف يعمل TAKT",
+
+    "solutions_description": "حلول إنشائية متكاملة مصممة لتحقيق رؤيتك بدقة واحترافية.",
+
+    "takt_system": "تطبيق نظام TAKT",
+    "takt_system_description": "التخطيط الاستراتيجي ودراسات الجدوى لضمان نجاح المشروع من اليوم الأول.",
+
+    "lean_transformation": "تحول البناء الرشيق",
+    "lean_transformation_description": "إدارة متكاملة للمشاريع مع التركيز على الجودة والمواعيد النهائية.",
+
+    "digital_construction": "حلول البناء الرقمي وPMIS",
+    "digital_construction_description": "إرشادات متخصصة لتحسين التكاليف والجداول الزمنية واستراتيجيات البناء.",
+
+    "performance_management": "إدارة الأداء والتغيير",
+    "performance_management_description": "منهجية متكاملة تجمع بين التصميم والتنفيذ لتسليم سلس.",
+
+    "projects_title": "أهم المشاريع",
+    "projects_description": "استكشف مجموعة مشاريعنا المتميزة التي تعكس خبرتنا وابتكارنا والتزامنا بتقديم مشاريع عالمية المستوى.",
+
+    "view_all": "عرض الكل",
+
+    "trusted_clients": "عملاؤنا الموثوقون",
+
+    "clients_title": "ماذا يقول عملاؤنا",
+
+    "testimonial_1": "قدم الفريق خدمة استثنائية وأنجز مشروعنا قبل الموعد المحدد بجودة رائعة.",
+    "testimonial_2": "احترافيون ويمكن الاعتماد عليهم ويلتزمون دائمًا بوعودهم.",
+    "testimonial_3": "كان العمل معهم تجربة رائعة، اهتمامهم بالتفاصيل والتزامهم بالتميز لا مثيل له."
+  },
+  "About": {
+    "page_title": "حول",
+
+    "company_name": "أراب تاكتينج مانجمنت",
+
+    "description": "نحن مجموعة من الخبراء المتخصصين في تحويل شركات الإنشاءات من الفوضى إلى مؤسسات عالية الأداء والكفاءة باستخدام منهجية TAKT وممارسات إدارة التحول المثبتة.",
+
+    "mission_title": "مهمتنا",
+    "mission_description": "الارتقاء بمتخصصي قطاع الإنشاءات من الصفر إلى الاحتراف من خلال تطبيق منهجية TAKT وممارسات التحول الإداري التي تقضي على الفوضى وتقلل التأخير وتخلق أنظمة تسليم مشاريع عالية الأداء ويمكن التنبؤ بها.",
+
+    "vision_title": "رؤيتنا",
+    "vision_description": "قطاع إنشاءات يتم فيه تسليم كل مشروع في الوقت المحدد وضمن الميزانية وبجودة استثنائية من خلال التخطيط المنهجي والتحسين المستمر والتميز التشغيلي.",
+
+    "story_title": "قصتنا",
+    "story_subtitle": "خلفية قصتنا",
+
+    "story_paragraph_1": "اليوم، تعاني مشاريع الإنشاءات من التأخير وضعف التواصل والفوضى التشغيلية اليومية. لقد واجهنا هذه التحديات بشكل مباشر وأدركنا أنه لا بد من وجود طريقة أفضل.",
+
+    "story_paragraph_2": "بعد سنوات من البحث والتطبيق عبر مئات المشاريع، اكتشفنا أن منهجية تخطيط TAKT مع التحول الإداري المنهجي يمكن أن تحدث ثورة في طريقة عمل شركات الإنشاءات.",
+
+    "story_paragraph_3": "تم تأسيس Just In Takt لمشاركة هذا النهج المثبت مع شركات الإنشاءات المستعدة لتحويل عملياتها وتحقيق نتائج ثابتة ويمكن التنبؤ بها.",
+
+    "values_title": "قيمنا",
+
+    "excellence_title": "التميز",
+    "excellence_description": "نسعى لتحقيق أعلى المعايير في كل ما نقوم به، مع التحسين المستمر لمنهجياتنا وتقديم نتائج استثنائية.",
+
+    "integrity_title": "النزاهة",
+    "integrity_description": "نعمل بصدق وشفافية، ونبني الثقة من خلال الأفعال المستمرة والالتزام بوعودنا.",
+
+    "collaboration_title": "التعاون",
+    "collaboration_description": "نعمل بشكل وثيق مع عملائنا كشركاء، ونشارك المعرفة ونمكّن الفرق لتحقيق تحول مستدام.",
+
+    "leadership_title": "فريق القيادة",
+
+    "leader_name": "تامر رضا",
+    "leader_position": "الرئيس التنفيذي",
+    "leader_quote": "أحدثت TaktBuild Solutions ثورة في جداول مشاريعنا الزمنية. لقد قدم نهج إدارة TAKT مستوى غير مسبوق من القدرة على التنبؤ.",
+
+    "cta_title": "هل أنت مستعد لتحويل عملياتك؟",
+    "cta_description": "دعنا نناقش كيف يمكننا مساعدة شركتك في تحقيق التميز التشغيلي.",
+
+    "contact_button": "تواصل معنا"
+  },
+   "Services": {
+    "title": "خدماتنا",
+    "description": "نساعد شركات الإنشاءات على تحقيق التميز التشغيلي من خلال منهجية TAKT وممارسات التحول الإداري. تم تصميم خدماتنا الشاملة لتحويل طريقة تخطيط وتنفيذ وتسليم مشاريع الإنشاءات.",
+
+    "time_schedules_title": "الجداول الزمنية",
+    "time_schedules_subtitle": "جداول زمنية تعتمد على TAKT",
+    "time_schedules_description": "تقوم ATM بتطوير جداول زمنية تعتمد على TAKT لتحويل الجدولة التقليدية إلى خطط تنفيذ عالية الكفاءة قائمة على الموقع والتدفق.",
+
+    "building_core_team_title": "بناء الفريق الأساسي",
+    "building_core_team_subtitle": "تشكيل فريق المشروع الأساسي",
+    "building_core_team_description": "تدعم ATM تشكيل ومواءمة فريق مشروع قادر على تنفيذ والحفاظ على تنفيذ TAKT.",
+
+    "lean_transformation_title": "التحول الرشيق",
+    "lean_transformation_subtitle": "رحلة تحول Lean منظمة",
+    "lean_transformation_description": "تقود ATM رحلة تحول Lean منظمة تنقل فرق المشاريع من الفوضى والتفاعل إلى التنفيذ المنهجي والتعاون.",
+
+    "simulation_games_title": "ألعاب المحاكاة",
+    "simulation_games_subtitle": "تبسيط مفاهيم TAKT",
+    "simulation_games_description": "تحول ATM مفاهيم TAKT المعقدة إلى تجارب بسيطة ومرئية وتفاعلية يمكن للجميع فهمها.",
+
+    "on_site_implementation_title": "التنفيذ في الموقع",
+    "on_site_implementation_subtitle": "تطبيق ميداني منظم",
+    "on_site_implementation_description": "من خلال روتين عمل منظم في الموقع، يحقق TAKT الانضباط والوضوح والتدفق ويضمن معرفة ماذا ومتى وكيف يتم العمل.",
+
+    "elevation_training_title": "برامج التدريب",
+    "elevation_training_subtitle": "تأهيل فرق العمل",
+    "elevation_training_description": "بدون التدريب، يبقى TAKT نظريًا. ومعه يصبح نظام إنتاج قابل للتكرار بقيادة فرق متمكنة.",
+
+    "digitalization_title": "الرقمنة",
+    "digitalization_subtitle": "تحول رقمي في البناء",
+    "digitalization_description": "تطبق ATM أنظمة رقمية تعزز الانضباط والتدفق والوضوح في عمليات الموقع.",
+
+    "why_choose_us_title": "لماذا نحن؟",
+
+    "proven_methodology_title": "منهجية مثبتة",
+    "proven_methodology_description": "منهجية TAKT لدينا حققت نتائج قابلة للقياس عبر مئات المشاريع.",
+
+    "expert_team_title": "فريق خبراء",
+    "expert_team_description": "خبراؤنا يمتلكون عقودًا من الخبرة في قطاع الإنشاءات والتحول التشغيلي.",
+
+    "fast_implementation_title": "تنفيذ سريع",
+    "fast_implementation_description": "نركز على النتائج السريعة مع بناء تحول طويل الأمد.",
+
+    "trusted_clients_title": "عملاؤنا الموثوقون",
+
+    "technology_partners_title": "الشركاء التقنيون",
+    "technology_partners_description": "مدعومون بأحدث تقنيات البناء والبرمجيات الحديثة.",
+
+    "cta_title": "هل أنت مستعد لتحويل عملياتك؟",
+    "cta_description": "احجز جلسة استراتيجية مع خبرائنا لاكتشاف كيف يمكن لمنهجية TAKT أن تغير مشاريعك.",
+    "cta_button": "احجز جلسة استراتيجية"
+  },
+   "Portfolio": {
+    "title": "أعمالنا",
+    "description": "استكشف تطبيقات TAKT الناجحة لدينا عبر مشاريع إنشائية متنوعة. كل مشروع يمثل قصة تحول نحو كفاءة أعلى وقدرة أفضل على التنبؤ.",
+
+    "filter_all": "الكل",
+    "filter_commercial": "تجاري",
+    "filter_residential": "سكني",
+    "filter_infrastructure": "بنية تحتية",
+    "filter_industrial": "صناعي",
+
+    "view_project": "عرض المشروع",
+
+    "projects": [
+      {
+        "title": "مركز الأعمال في وسط المدينة",
+        "category": "تجاري",
+        "year": "2025",
+        "location": "نيويورك، نيويورك"
+      },
+      {
+        "title": "شقق ريفرسايد الفاخرة",
+        "category": "سكني",
+        "year": "2024",
+        "location": "أوستن، تكساس"
+      },
+      {
+        "title": "مركز النقل المترو",
+        "category": "بنية تحتية",
+        "year": "2025",
+        "location": "شيكاغو، إلينوي"
+      },
+      {
+        "title": "منشأة التصنيع التقني",
+        "category": "صناعي",
+        "year": "2024",
+        "location": "سان خوسيه، كاليفورنيا"
+      },
+      {
+        "title": "حرم المكاتب جرينفيلد",
+        "category": "تجاري",
+        "year": "2025",
+        "location": "سياتل، واشنطن"
+      },
+      {
+        "title": "برج سكاي لاين السكني",
+        "category": "سكني",
+        "year": "2026",
+        "location": "ميامي، فلوريدا"
+      }
+    ],
+
+    "testimonials_title": "ماذا يقول عملاؤنا",
+
+    "testimonial_1_name": "سارة",
+    "testimonial_1_text": "قدم الفريق خدمة استثنائية وأنجز مشروعنا قبل الموعد المحدد بجودة رائعة.",
+    "testimonial_1_company": "BuildTech",
+
+    "testimonial_2_name": "مايكل",
+    "testimonial_2_text": "محترفون ويمكن الاعتماد عليهم ويلتزمون دائمًا بوعودهم. أوصي بهم لأي مشروع إنشائي.",
+    "testimonial_2_company": "UrbanDev",
+
+    "testimonial_3_name": "إميلي",
+    "testimonial_3_text": "كان العمل معهم تجربة رائعة. اهتمامهم بالتفاصيل والتزامهم بالتميز لا مثيل له.",
+    "testimonial_3_company": "SkyHigh"
+  },
+   "PortfolioDetails": {
+    "location": "الموقع",
+    "budget": "الميزانية",
+    "duration": "المدة",
+    "services_title": "الخدمات المقدمة",
+    "features_title": "المميزات الرئيسية",
+    "results_title": "نتائج المشروع",
+    "related_title": "مشاريع ذات صلة",
+    "cta_title": "هل أنت مستعد لتحويل مشروعك؟",
+    "cta_button": "تواصل معنا"
+  },
+  "Resources": {
+    "title": "الموارد والرؤى",
+    "description": "رؤى خبراء، أفضل الممارسات، وإرشادات عملية حول منهجية TAKT وإدارة الإنشاءات والتحول التشغيلي.",
+
+    "featured_label": "مميز",
+    "featured_category": "تخطيط TAKT",
+
+    "featured_title": "الدليل الشامل لتخطيط TAKT في البناء",
+    "featured_description": "تعلم كيف يمكن لمنهجية TAKT تحويل مشاريع الإنشاءات من الفوضى إلى التنبؤ والوضوح، مع استراتيجيات مثبتة وأمثلة واقعية.",
+
+    "latest_title": "أحدث المقالات",
+
+    "read_article": "قراءة المقال",
+    "read_more": "قراءة المزيد",
+
+    "min_read": "دقائق قراءة"
+  },
+  "Contact": {
+    "title": "تواصل معنا",
+    "description": "هل أنت مستعد لتحويل عمليات الإنشاءات لديك؟ نحن هنا لمساعدتك. تواصل معنا لمناقشة مشروعك واكتشاف كيف يمكن لمنهجية TAKT أن تعمل لصالحك.",
+
+    "email_title": "راسلنا عبر البريد الإلكتروني",
+    "email": "info@justintakt.com",
+    "email_note": "سنقوم بالرد خلال 24 ساعة",
+
+    "phone_title": "اتصل بنا",
+    "phone": "+1 (555) 123-4567",
+    "phone_note": "من الإثنين إلى الجمعة، 9 صباحًا - 6 مساءً بتوقيت EST",
+
+    "location_title": "زورنا",
+    "address_line1": "123 Construction Plaza",
+    "address_line2": "نيويورك، NY 10001",
+
+    "form_title": "أرسل لنا رسالة",
+
+    "first_name": "الاسم الأول *",
+    "first_name_placeholder": "محمد",
+
+    "last_name": "اسم العائلة *",
+    "last_name_placeholder": "أحمد",
+
+    "email_address": "البريد الإلكتروني *",
+    "email_placeholder": "john.doe@company.com",
+
+    "phone_number": "رقم الهاتف *",
+    "phone_placeholder": "+966 123 456 789",
+
+    "company": "الشركة",
+    "company_placeholder": "اسم شركتك",
+
+    "subject": "الموضوع *",
+    "subject_placeholder": "كيف يمكننا مساعدتك؟",
+
+    "message": "الرسالة *",
+    "message_placeholder": "أخبرنا عن مشروعك...",
+
+    "send_message": "إرسال الرسالة"
+  },
+   "Events": {
+    "title": "الفعاليات القادمة",
+    "subtitle": "احجز مكانك في فرصة التعلم القادمة",
+
+    "description": "انضم إلى ورش العمل والندوات والمؤتمرات لتعميق فهمك لمنهجية TAKT والتواصل مع قادة صناعة الإنشاءات حول العالم.",
+
+    "impact_title": "أثرنا بالأرقام",
+    "impact_description": "بناء مجتمع عالمي من التميز في قطاع الإنشاءات",
+
+    "attendees": "إجمالي الحضور",
+    "attendees_desc": "محترفون تم تدريبهم على منهجية TAKT",
+
+    "events_hosted": "عدد الفعاليات",
+    "events_hosted_desc": "ورش عمل وندوات ومؤتمرات حول العالم",
+
+    "satisfaction_rate": "معدل الرضا",
+    "satisfaction_rate_desc": "متوسط تقييم المشاركين",
+
+    "countries_reached": "الدول المستهدفة",
+    "countries_reached_desc": "انتشار عالمي في أسواق الإنشاءات",
+
+    "certified_professionals": "المحترفون المعتمدون",
+    "certified_professionals_desc": "ممارسو TAKT المعتمدون",
+
+    "avg_response_time": "متوسط وقت الاستجابة",
+    "avg_response_time_desc": "دعم سريع لجميع الاستفسارات",
+
+    "past_events_title": "تغطية الفعاليات السابقة",
+    "past_events_description": "أبرز فعالياتنا الناجحة الأخيرة",
+
+    "newsletter_title": "لا تفوت فعاليتنا القادمة",
+    "newsletter_description": "اشترك في النشرة البريدية للحصول على تحديثات حول الفعاليات القادمة والعروض الحصرية وأحدث الرؤى في التميز الإنشائي.",
+
+    "email_placeholder": "أدخل بريدك الإلكتروني",
+    "subscribe": "اشترك الآن"
+  },
+  "EventDetails": {
+    "about_title": "حول هذه الفعالية",
+
+    "what_you_will_learn_title": "ما الذي ستتعلمه",
+    "who_should_attend_title": "من يجب أن يحضر",
+
+    "you_might_also_like_title": "قد يعجبك أيضًا"
+  },
+
+  "EventRegister": {
+    "back_to_events": "العودة إلى الفعاليات",
+    "title": "تسجيل الفعالية",
+    "description": "أكمل النموذج أدناه لحجز مقعدك. سنرسل لك رسالة تأكيد تحتوي على جميع التفاصيل.",
+
+    "your_information_title": "معلوماتك",
+    "personal_details_title": "البيانات الشخصية",
+
+    "first_name": "الاسم الأول *",
+    "last_name": "اسم العائلة *",
+    "email_address": "البريد الإلكتروني *",
+    "phone_number": "رقم الهاتف *",
+
+    "professional_details_title": "البيانات المهنية",
+    "company_name": "اسم الشركة *",
+    "job_title": "المسمى الوظيفي *",
+
+    "event_details_title": "تفاصيل الفعالية",
+    "number_of_attendees": "عدد الحضور *",
+    "dietary_restrictions": "القيود الغذائية",
+    "special_requests": "طلبات أو ملاحظات خاصة",
+
+    "terms_text": "أوافق على الشروط والأحكام وأفهم سياسة الإلغاء. أوافق أيضًا على استقبال رسائل متعلقة بالفعالية.",
+
+    "complete_registration": "إكمال التسجيل",
+
+    "event_summary_title": "ملخص الفعالية",
+    "cancellation_policy_title": "سياسة الإلغاء",
+    "cancellation_policy_text": "استرداد كامل عند الإلغاء قبل 7 أيام أو أكثر من الفعالية. استرداد 50% عند الإلغاء قبل 3 إلى 7 أيام."
+  },
+  "EventSuccess": {
+    "title": "تم إكمال التسجيل!",
+    "message": "شكرًا لك يا John Doe. تم إرسال طلب تسجيلك بنجاح. لقد أرسلنا رسالة تأكيد إلى",
+
+    "what_happens_next_title": "ماذا يحدث بعد ذلك؟",
+
+    "step_1": "تحقق من بريدك الإلكتروني للتأكيد",
+    "step_2": "أضف الفعالية إلى التقويم الخاص بك",
+    "step_3": "ستصلك تذكير قبل 48 ساعة من الفعالية",
+
+    "browse_more": "تصفح المزيد",
+    "close": "إغلاق",
+    "share": "مشاركة مع الزملاء"
+  },
+  "PodcastSubscribe": {
+    "title": "بودكاست Just In Takt",
+    "subtitle": "اشترك ولا تفوّت أي حلقة",
+    "description": "احصل على أحدث الرؤى حول تخطيط TAKT وابتكارات البناء وأفضل الممارسات في الصناعة تُرسل إلى تطبيق البودكاست المفضل لديك كل أسبوع.",
+
+    "feature_weekly": "حلقات أسبوعية",
+    "feature_weekly_desc": "حلقات جديدة كل يوم الثلاثاء",
+
+    "feature_guests": "ضيوف خبراء",
+    "feature_guests_desc": "قادة ومبتكرون في الصناعة",
+
+    "feature_adfree": "بدون إعلانات",
+    "feature_adfree_desc": "محتوى خالص بدون انقطاع",
+
+    "feature_notes": "ملاحظات الحلقة",
+    "feature_notes_desc": "ملخصات ومصادر مفصلة",
+
+    "platform_title": "اختر منصتك",
+    "platform_subtitle": "استمع عبر التطبيق المفضل لديك",
+
+    "apple_desc": "استمع عبر iPhone و iPad و Mac و Apple Watch",
+    "spotify_desc": "استمع عبر الهاتف والكمبيوتر والمتصفح",
+    "youtube_desc": "شاهد الحلقات على يوتيوب",
+
+    "subscribe_button": "اشترك",
+
+    "email_title": "استقبل تحديثات الحلقات عبر البريد",
+    "email_description": "هل تفضل البريد؟ اشترك في النشرة البريدية واحصل على ملخصات الحلقات والملاحظات والمحتوى الحصري أسبوعيًا.",
+
+    "email_placeholder": "أدخل بريدك الإلكتروني",
+    "email_subscribe": "اشترك",
+    "privacy_note": "لا رسائل مزعجة. يمكنك إلغاء الاشتراك في أي وقت. نحترم خصوصيتك.",
+
+    "about_title": "عن البودكاست",
+    "about_description": "يقدم بودكاست Just In Takt محادثات أسبوعية مع قادة ومبتكرين وممارسين في قطاع البناء الذين يغيرون طريقة البناء. من أساسيات TAKT إلى الأدوات الرقمية الحديثة.",
+
+    "about_point_1": "حلقات مدتها 45–60 دقيقة",
+    "about_point_2": "مقابلات ودراسات حالة",
+    "about_point_3": "رؤى عملية قابلة للتطبيق",
+    "about_point_4": "متاح على جميع المنصات",
+
+    "contact_title": "تواصل معنا",
+    "contact_description": "هل لديك أسئلة أو اقتراحات؟ نرحب بسماعك! انضم إلى مجتمعنا وكن جزءًا من الحوار.",
+
+    "email_label": "راسلنا",
+    "email": "podcast@justintakt.com",
+
+    "contact_form": "نموذج التواصل",
+    "contact_button": "إرسال رسالة",
+
+    "browse_episodes": "تصفح الحلقات"
+  },
+   "Training": {
+    "title": "التدريب والشهادات",
+    "description": "طوّر مهاراتك من خلال دورات شاملة مصممة من قبل خبراء في المجال. من أساسيات TAKT إلى استراتيجيات التنفيذ المتقدمة.",
+
+    "search_placeholder": "ابحث عن الدورات...",
+
+    "filter_all": "الكل",
+    "filter_beginner": "مبتدئ",
+    "filter_intermediate": "متوسط",
+    "filter_advanced": "متقدم",
+
+    "coming_soon_title": "دورات قادمة قريبًا",
+    "coming_soon_description": "استكشف الدورات القادمة التي ستكون متاحة قريبًا. ترقب محتوى جديد وفرص تدريب متقدمة.",
+
+    "corporate_title": "برامج تدريب الشركات",
+    "corporate_description": "حلول تدريب مخصصة للفرق. احصل على مناهج مصممة حسب احتياجك، ودعم مخصص، وبرامج شهادات جماعية.",
+
+    "request_corporate_training": "طلب تدريب للشركات"
+  },
+  "Dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحبًا بعودتك، جون!",
+
+    "back_home": "العودة إلى الصفحة الرئيسية",
+
+    "member_since": "عضو منذ يناير 2024",
+
+    "edit_profile": "تعديل الملف الشخصي",
+
+    "stats_courses": "الدورات المسجلة",
+    "stats_completed": "المكتملة",
+    "stats_events": "الفعاليات المسجلة",
+    "stats_resources": "الموارد المحفوظة",
+
+    "my_orders": "طلباتي",
+    "my_orders_desc": "عرض المشتريات والفواتير",
+
+    "wishlist": "المفضلة",
+    "wishlist_desc": "العناصر المحفوظة",
+
+    "notifications": "الإشعارات",
+    "new_updates": "تحديثات جديدة",
+
+    "active_courses_title": "الدورات النشطة",
+    "view_all": "عرض الكل",
+    "progress": "التقدم",
+    "continue": "متابعة",
+
+    "upcoming_events_title": "الفعاليات القادمة",
+
+    "recent_activity_title": "النشاط الأخير",
+
+    "security_settings": "إعدادات الأمان"
+  },
+  "ProfileSettings": {
+    "title": "إعدادات الملف الشخصي",
+    "description": "إدارة معلوماتك الشخصية وتفضيلاتك",
+
+    "profile_photo": "الصورة الشخصية",
+    "upload_photo": "رفع صورة جديدة",
+    "upload_hint": "JPG أو PNG أو GIF. الحد الأقصى 2MB",
+
+    "personal_info_title": "المعلومات الشخصية",
+    "edit": "تعديل",
+
+    "full_name": "الاسم الكامل",
+    "email_address": "البريد الإلكتروني",
+    "phone_number": "رقم الهاتف",
+    "company": "الشركة",
+    "job_title": "المسمى الوظيفي",
+    "country": "الدولة",
+    "bio": "نبذة تعريفية",
+
+    "bio_placeholder": "أخبرنا عن نفسك...",
+
+    "communication_title": "تفضيلات التواصل",
+
+    "email_notifications": "إشعارات البريد الإلكتروني",
+    "email_notifications_desc": "استلام تحديثات حول الدورات والفعاليات",
+
+    "marketing_communications": "التواصل التسويقي",
+    "marketing_communications_desc": "استلام أخبار الموارد والعروض الجديدة",
+
+    "weekly_digest": "الملخص الأسبوعي",
+    "weekly_digest_desc": "ملخص أسبوعي لنشاطك"
+  },
+   "SecuritySettings": {
+    "title": "إعدادات الأمان",
+    "description": "إدارة أمان حسابك وتفضيلات تسجيل الدخول",
+
+    "change_password_title": "تغيير كلمة المرور",
+    "last_changed": "آخر تغيير منذ 30 يومًا",
+    "update_password": "تحديث كلمة المرور",
+
+    "password_tip": "نصيحة: استخدم كلمة مرور قوية لا تقل عن 8 أحرف وتحتوي على أحرف كبيرة وصغيرة وأرقام ورموز خاصة.",
+
+    "two_factor_title": "المصادقة الثنائية",
+    "two_factor_disabled": "معطلة",
+    "two_factor_description": "أضف طبقة أمان إضافية إلى حسابك باستخدام 2FA",
+    "enable_2fa": "تفعيل المصادقة الثنائية",
+
+    "security_recommendation": "توصية أمنية: قم بتفعيل المصادقة الثنائية لحماية حسابك من الوصول غير المصرح به.",
+
+    "active_sessions_title": "الجلسات النشطة",
+    "active_sessions_count": "جلسات نشطة",
+    "sign_out_all": "تسجيل الخروج من جميع الأجهزة",
+
+    "revoke": "إلغاء",
+    "current": "الحالي",
+    "active_now": "نشط الآن",
+
+    "login_history_title": "سجل تسجيل الدخول",
+    "login_history_description": "آخر نشاط تسجيل دخول على حسابك",
+
+    "success": "نجاح",
+    "failed": "فشل"
+  },
+  "Orders": {
+    "title": "طلباتي",
+    "description": "عرض المشتريات والفواتير وسجل الطلبات",
+
+    "order": "طلب",
+    "completed": "مكتمل",
+    "pending": "قيد الانتظار",
+
+    "order_placed_on": "تم إنشاء الطلب بتاريخ",
+
+    "invoice": "الفاتورة",
+    "view_details": "عرض التفاصيل",
+
+    "payment_method": "طريقة الدفع",
+    "total": "الإجمالي"
+  },
+  "Wishlist": {
+    "title": "المفضلة",
+    "saved_items": "عناصر محفوظة",
+
+    "course": "دورة",
+    "event": "فعالية",
+    "resource": "مورد",
+
+    "weeks": "أسابيع",
+
+    "enroll_now": "سجل الآن"
+  },
+   "Notifications": {
+    "title": "الإشعارات",
+    "unread": "إشعارات غير مقروءة",
+
+    "settings": "الإعدادات",
+    "mark_all_read": "تحديد الكل كمقروء",
+    "clear_all": "مسح الكل",
+
+    "new_module": "محتوى جديد متاح",
+    "event_reminder": "تذكير بالفعالية",
+    "purchase_confirmation": "تأكيد عملية الشراء",
+    "welcome": "مرحبًا بك في Just In Takt!",
+    "course_update": "تحديث الدورة"
+  }
+}

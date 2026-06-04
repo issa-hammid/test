@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../dist/output.css">
+<link rel="stylesheet" href="../../global.css">
+<!-- <link rel="stylesheet" href="../../test.css"> -->
+  
+
+
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
+
+ <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+    <div class="max-w-400 mx-auto">
+      <nav id="main-nav"
+        class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
+        aria-label="Main navigation">
+
+        <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
+          <a href="../" aria-label="Arab Talk Home">
+            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+          </a>
+        </div>
+
+        <ul
+          class="hidden lg:flex flex-1 items-center justify-center
+         gap-3 xl:gap-5 2xl:gap-7
+         mx-4 xl:mx-6
+         text-[#1a1a1a]
+         font-bold
+         text-[12px] xl:text-[13px] 2xl:text-[14px]
+         whitespace-nowrap">
+          <li>
+            <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
+          </li>
+          <li>
+            <a href="/portfolio" class="hover:opacity-70 transition-opacity nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="/resources" class="hover:opacity-70 transition-opacity nav-link">Resources</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:opacity-70 transition-opacity nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a href="/events"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <path
+                d="M6.92592 11.8698H12.8626M6.92592 8.9024H12.8626M0.989258 2.96755V13.6503C0.989258 14.7582 0.989258 15.3116 1.20495 15.7348C1.39466 16.107 1.69718 16.4105 2.06952 16.6001C2.49242 16.8156 3.04631 16.8156 4.15241 16.8156H15.6367C16.7427 16.8156 17.2959 16.8156 17.7188 16.6001C18.0911 16.4105 18.394 16.1074 18.5837 15.7352C18.7994 15.312 18.7994 14.758 18.7994 13.6501V6.13259C18.7994 5.02464 18.7994 4.47067 18.5837 4.04749C18.394 3.67525 18.0905 3.37283 17.7182 3.18317C17.2949 2.96755 16.7412 2.96755 15.633 2.96755H9.89424M0.989258 2.96755H9.89424M0.989258 2.96755C0.989258 1.87497 1.87524 0.989258 2.96814 0.989258H6.60386C7.08788 0.989258 7.33074 0.989258 7.55849 1.04391C7.76041 1.09238 7.95281 1.17251 8.12986 1.28098C8.3295 1.40328 8.50093 1.57466 8.84296 1.91658L9.89424 2.96755"
+                stroke="white" stroke-width="1.97859" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Events
+          </a>
+          <a href="/podcast"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#f05041] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M17.6239 0.989075C18.612 1.9106 19.4009 3.02482 19.9417 4.26302C20.4826 5.50122 20.7641 6.83713 20.7689 8.18832C20.7736 9.53952 20.5014 10.8773 19.9691 12.1193C19.4369 13.3613 18.6559 14.4809 17.6743 15.4093M14.9259 3.88259C15.5188 4.4355 15.9921 5.10403 16.3167 5.84695C16.6412 6.58987 16.8101 7.39142 16.813 8.20214C16.8157 9.01285 16.6524 9.81556 16.3332 10.5607C16.0138 11.3059 15.5452 11.9777 14.9561 12.5347M6.40917 11.5926L8.06594 13.6431C8.92962 14.7119 9.36146 15.2465 9.7398 15.3047C10.0673 15.3549 10.3983 15.238 10.6214 14.9929C10.8791 14.7098 10.8791 14.0226 10.8791 12.6484V3.7973C10.8791 2.42302 10.8791 1.73587 10.6214 1.4528C10.3983 1.20775 10.0673 1.09073 9.7398 1.14108C9.36146 1.19927 8.92962 1.73373 8.06594 2.80264L6.40917 4.85314C6.2347 5.06907 6.14745 5.17705 6.03951 5.25474C5.94388 5.32357 5.83672 5.37476 5.72308 5.40589C5.59482 5.44103 5.45602 5.44103 5.17841 5.44103H3.77077C3.0229 5.44103 2.64896 5.44103 2.34677 5.54087C1.75207 5.73735 1.28556 6.20392 1.08909 6.79869C0.989258 7.10091 0.989258 7.4749 0.989258 8.22285C0.989258 8.97081 0.989258 9.34478 1.08909 9.64701C1.28556 10.2418 1.75207 10.7084 2.34677 10.9048C2.64896 11.0047 3.0229 11.0047 3.77077 11.0047H5.17841C5.45602 11.0047 5.59482 11.0047 5.72308 11.0398C5.83672 11.071 5.94388 11.1221 6.03951 11.1909C6.14745 11.2687 6.2347 11.3767 6.40917 11.5926Z"
+                stroke="white" stroke-width="1.97808" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Podcast
+          </a>
+          <a href="/training"
+            class="btn-dark flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Training
+          </a>
+        </div>
+
+        <button class="xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button>
+
+  <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+    </div>
+  </header>
+  <main class="relative w-full max-w-400 mx-auto mt-32 md:mt-40 lg:mt-48">
+    <section
+      class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 py-12 bg-[var(--bg-page)] transition-colors duration-400">
+
+      <a href="/podcast"
+        class="inline-flex items-center gap-2 text-[#f05041] font-[600] text-xs mb-10 hover:gap-3 transition-all opacity-0 animate-fade-in delay-100">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Back to Podcast
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+        <div class="lg:col-span-8">
+          <div class="opacity-0 animate-fade-up delay-200">
+            <div class="flex items-center gap-4 mb-6">
+              <span
+                class="px-3 py-1.5 bg-[#f05041] text-white text-[12px] font-[600] rounded-2xl shadow-lg shadow-[#f05041]/20">
+                Episode 42
+              </span>
+              <span class="t-muted text-xs font-[600]">
+                February 20, 2026
+              </span>
+            </div>
+
+            <h1 class="text-5xl md:text-6xl font-[700] t-heading mb-8 leading-[1.05]">
+              The Future of Construction Technology
+            </h1>
+
+            <p class="t-muted text-lg leading-relaxed mb-10 font-medium max-w-3xl">
+              Join us as we explore the revolutionary TAKT planning methodology
+              with industry expert Dr. Jennifer Martinez, MIT Construction
+              Research. Discover how this approach is transforming construction
+              projects worldwide and learn practical strategies you can
+              implement immediately.
+            </p>
+
+            <div class="flex items-center gap-5 mb-12 p-2">
+              <div
+                class="w-14 h-14 bg-[#f05041] rounded-full flex items-center justify-center text-white shadow-xl shadow-[#f05041]/20">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 7C16 8.06087 15.5786 9.07828 14.8284 9.82843C14.0783 10.5786 13.0609 11 12 11C10.9391 11 9.92172 10.5786 9.17157 9.82843C8.42143 9.07828 8 8.06087 8 7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7ZM12 14C10.1435 14 8.36301 14.7375 7.05025 16.0503C5.7375 17.363 5 19.1435 5 21H19C19 19.1435 18.2625 17.363 16.9497 16.0503C15.637 14.7375 13.8565 14 12 14Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p class="t-heading font-[600] text-[16px]">
+                  Guest: Dr. Jennifer Martinez, MIT Construction Research
+                </p>
+                <p class="t-muted text-[14px]">
+                  Lead TAKT Consultant, Just In Takt
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-8 opacity-0 animate-fade-up delay-300">
+            <div class="relative w-full aspect-video rounded-[50px] overflow-hidden shadow-2xl bg-black">
+              <img src="/images/podcast-hero.jpg" alt="Episode Cover" class="w-full h-full object-cover opacity-70" />
+            </div>
+
+            <div class="w-full px-2 mb-0">
+              <div class="relative w-full h-2 bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden">
+                <div class="absolute top-0 left-0 h-full w-[25%] bg-[#f05041] transition-all"></div>
+              </div>
+              <div class="flex justify-between mt-4 text-[12px] font-[600] t-muted tracking-[0.2em]">
+                <span>18:42</span>
+                <span>57:36</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center gap-10">
+              <button
+                class="w-14 h-14 bg-[var(--bg-section)] border border-[var(--border-card)] rounded-full flex items-center justify-center t-heading hover:brightness-95 transition-all">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11 18V6l-8.5 6L11 18zM21.5 12l-8.5-6v12l8.5-6z" />
+                </svg>
+              </button>
+
+              <button
+                class="w-16 h-16 bg-[#f05041] rounded-full flex items-center justify-center text-white shadow-2xl shadow-[#f05041]/40 hover:scale-110 active:scale-95 transition-all">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+
+              <button
+                class="w-14 h-14 bg-[var(--bg-section)] border border-[var(--border-card)] rounded-full flex items-center justify-center t-heading hover:brightness-95 transition-all">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-6 pt-5 border-t border-[var(--border-card)]">
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="px-6 py-3 bg-[var(--text-heading)] text-[var(--bg-page)] text-[12px] font-[600] rounded-full">Available
+                  Offline</span>
+
+                <button
+                  class="px-6 py-3 bg-[var(--bg-section)] border border-[var(--border-card)] t-heading text-[12px] font-[600] rounded-full flex items-center gap-2 hover:brightness-95 transition-all">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download
+                </button>
+
+                <button
+                  class="px-6 py-3 bg-[var(--bg-section)] border border-[var(--border-card)] t-heading text-[12px] font-[600] rounded-full flex items-center gap-2 hover:brightness-95 transition-all">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="18" cy="5" r="3" />
+                    <circle cx="6" cy="12" r="3" />
+                    <circle cx="18" cy="19" r="3" />
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                  </svg>
+                  Share
+                </button>
+              </div>
+
+              <button
+                class="px-10 py-3 bg-[#f05041] text-white text-[12px] font-[600] rounded-full shadow-lg shadow-[#f05041]/20 hover:brightness-110 transition-all active:scale-95">
+                Subscribe
+              </button>
+            </div>
+
+            <div
+              class="w-full bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-4 md:p-8 shadow-sm mt-12 opacity-0 animate-fade-up delay-400">
+              <h2 class="text-2xl font-bold t-heading mb-10">
+                Key Takeaways
+              </h2>
+
+              <ul class="space-y-6">
+                <li class="flex items-start gap-4 t-body text-lg font-medium">
+                  <div class="mt-1 flex-shrink-0 w-6 h-6 bg-[#f05041] rounded-full flex items-center justify-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>TAKT planning can reduce construction timelines by
+                    20-30%</span>
+                </li>
+
+                <li class="flex items-start gap-4 t-body text-lg font-medium">
+                  <div class="mt-1 flex-shrink-0 w-6 h-6 bg-[#f05041] rounded-full flex items-center justify-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Successful implementation requires buy-in from all
+                    stakeholders</span>
+                </li>
+
+                <li class="flex items-start gap-4 t-body text-lg font-medium">
+                  <div class="mt-1 flex-shrink-0 w-6 h-6 bg-[#f05041] rounded-full flex items-center justify-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Digital tools are essential for modern TAKT
+                    workflows</span>
+                </li>
+
+                <li class="flex items-start gap-4 t-body text-lg font-medium">
+                  <div class="mt-1 flex-shrink-0 w-6 h-6 bg-[#f05041] rounded-full flex items-center justify-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Start with pilot projects before full-scale
+                    adoption</span>
+                </li>
+
+                <li class="flex items-start gap-4 t-body text-lg font-medium">
+                  <div class="mt-1 flex-shrink-0 w-6 h-6 bg-[#f05041] rounded-full flex items-center justify-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Continuous training and improvement are critical</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="w-full bg-[var(--bg-card)] border border-[var(--border-card)] rounded-[45px] p-4 md:p-8 shadow-sm opacity-0 animate-fade-up delay-500">
+              <h2 class="text-3xl font-bold t-heading mb-3">Show Notes</h2>
+
+              <div class="space-y-0">
+                <div class="flex items-start gap-6 py-4 border-b border-[var(--border-card)] last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    00:00
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      Introduction
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Overview of today's episode and guest introduction
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 py-4 border-b border-[var(--border-card)] last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    05:30
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      What is TAKT Planning?
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Deep dive into the fundamentals of TAKT methodology
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 py-4 border-b border-[var(--border-card)] last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    15:45
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      Real-World Applications
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Case studies from successful TAKT implementations
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 py-4 border-b border-[var(--border-card)] last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    28:20
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      Common Challenges
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Obstacles teams face when adopting TAKT planning
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 py-4 border-b border-[var(--border-card)] last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    38:15
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      Digital Tools Integration
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Software and technology that supports TAKT workflows
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 py-4 border-b border-[var(--border-card)] last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    48:00
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      Future Trends
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Where TAKT planning is headed in the next decade
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 py-6 last:border-0">
+                  <span class="px-4 py-1.5 bg-[#f05041]/10 text-[#f05041] text-sm font-bold rounded-full flex-shrink-0">
+                    55:00
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-bold t-heading mb-1">
+                      Q&A and Final Thoughts
+                    </h3>
+                    <p class="t-muted text-sm font-medium">
+                      Listener questions and key takeaways
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 space-y-8 opacity-0 animate-fade-up delay-400 lg:sticky top-24">
+
+          <div
+            class="bg-[var(--bg-section)] border border-[var(--border-card)] rounded-[50px] p-10 text-center premium-hover-lift">
+            <div
+              class="w-16 h-16 bg-[var(--bg-card)] rounded-full flex items-center justify-center mx-auto mb-8 text-[#f05041] shadow-sm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-[700] mb-4 t-heading leading-tight">
+              Never Miss an Episode
+            </h3>
+            <p class="t-muted text-sm font-medium mb-10 px-4">
+              Subscribe to get new episodes delivered directly to your
+              favorite podcast app.
+            </p>
+            <a href="/podcast/subscribe"
+              class="w-full cursor-pointer py-5 bg-[#f05041] text-white rounded-full text-[16px] font-[600] shadow-xl shadow-[#f05041]/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center no-underline">
+              Subscribe Now
+            </a>
+          </div>
+
+          <div class="border border-[var(--border-card)] bg-[var(--bg-card)] rounded-[50px] p-10 premium-hover-lift">
+            <h3 class="text-xl font-[600] t-heading mb-3">Episode Stats</h3>
+            <div class="space-y-3 text-[14px]">
+              <div class="flex justify-between items-center">
+                <span class="t-muted font-[400]">Duration</span>
+                <span class="t-heading font-[600]">57:36</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="t-muted font-[400]">Release Date</span>
+                <span class="t-heading font-[600]">February 20, 2026</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="t-muted font-[400]">Downloads</span>
+                <span class="t-heading font-[600]">12.4K</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="t-muted font-[400]">Rating</span>
+                <div class="flex items-center gap-0.5 text-[#EB433C]">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.23928 2.3416C7.47928 1.6048 8.52168 1.6048 8.76088 2.3416L9.61688 4.9752C9.66917 5.13559 9.77084 5.27534 9.90733 5.37448C10.0438 5.47362 10.2082 5.52708 10.3769 5.5272H13.1465C13.9217 5.5272 14.2433 6.5192 13.6169 6.9752L11.3769 8.6024C11.2401 8.70162 11.1383 8.84161 11.0859 9.00228C11.0336 9.16296 11.0335 9.33607 11.0857 9.4968L11.9417 12.1304C12.1817 12.8672 11.3377 13.4808 10.7097 13.0248L8.46968 11.3976C8.33304 11.2984 8.16852 11.245 7.99968 11.245C7.83083 11.245 7.66631 11.2984 7.52968 11.3976L5.28968 13.0248C4.66248 13.4808 3.81928 12.8672 4.05848 12.1304L4.91448 9.4968C4.96662 9.33607 4.96652 9.16296 4.91421 9.00228C4.8619 8.84161 4.76005 8.70162 4.62328 8.6024L2.38408 6.976C1.75768 6.52 2.08008 5.528 2.85448 5.528H5.62328C5.79211 5.52804 5.95664 5.47467 6.0933 5.37552C6.22995 5.27637 6.33174 5.13652 6.38408 4.976L7.24008 2.3424L7.23928 2.3416Z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.23928 2.3416C7.47928 1.6048 8.52168 1.6048 8.76088 2.3416L9.61688 4.9752C9.66917 5.13559 9.77084 5.27534 9.90733 5.37448C10.0438 5.47362 10.2082 5.52708 10.3769 5.5272H13.1465C13.9217 5.5272 14.2433 6.5192 13.6169 6.9752L11.3769 8.6024C11.2401 8.70162 11.1383 8.84161 11.0859 9.00228C11.0336 9.16296 11.0335 9.33607 11.0857 9.4968L11.9417 12.1304C12.1817 12.8672 11.3377 13.4808 10.7097 13.0248L8.46968 11.3976C8.33304 11.2984 8.16852 11.245 7.99968 11.245C7.83083 11.245 7.66631 11.2984 7.52968 11.3976L5.28968 13.0248C4.66248 13.4808 3.81928 12.8672 4.05848 12.1304L4.91448 9.4968C4.96662 9.33607 4.96652 9.16296 4.91421 9.00228C4.8619 8.84161 4.76005 8.70162 4.62328 8.6024L2.38408 6.976C1.75768 6.52 2.08008 5.528 2.85448 5.528H5.62328C5.79211 5.52804 5.95664 5.47467 6.0933 5.37552C6.22995 5.27637 6.33174 5.13652 6.38408 4.976L7.24008 2.3424L7.23928 2.3416Z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.23928 2.3416C7.47928 1.6048 8.52168 1.6048 8.76088 2.3416L9.61688 4.9752C9.66917 5.13559 9.77084 5.27534 9.90733 5.37448C10.0438 5.47362 10.2082 5.52708 10.3769 5.5272H13.1465C13.9217 5.5272 14.2433 6.5192 13.6169 6.9752L11.3769 8.6024C11.2401 8.70162 11.1383 8.84161 11.0859 9.00228C11.0336 9.16296 11.0335 9.33607 11.0857 9.4968L11.9417 12.1304C12.1817 12.8672 11.3377 13.4808 10.7097 13.0248L8.46968 11.3976C8.33304 11.2984 8.16852 11.245 7.99968 11.245C7.83083 11.245 7.66631 11.2984 7.52968 11.3976L5.28968 13.0248C4.66248 13.4808 3.81928 12.8672 4.05848 12.1304L4.91448 9.4968C4.96662 9.33607 4.96652 9.16296 4.91421 9.00228C4.8619 8.84161 4.76005 8.70162 4.62328 8.6024L2.38408 6.976C1.75768 6.52 2.08008 5.528 2.85448 5.528H5.62328C5.79211 5.52804 5.95664 5.47467 6.0933 5.37552C6.22995 5.27637 6.33174 5.13652 6.38408 4.976L7.24008 2.3424L7.23928 2.3416Z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.23928 2.3416C7.47928 1.6048 8.52168 1.6048 8.76088 2.3416L9.61688 4.9752C9.66917 5.13559 9.77084 5.27534 9.90733 5.37448C10.0438 5.47362 10.2082 5.52708 10.3769 5.5272H13.1465C13.9217 5.5272 14.2433 6.5192 13.6169 6.9752L11.3769 8.6024C11.2401 8.70162 11.1383 8.84161 11.0859 9.00228C11.0336 9.16296 11.0335 9.33607 11.0857 9.4968L11.9417 12.1304C12.1817 12.8672 11.3377 13.4808 10.7097 13.0248L8.46968 11.3976C8.33304 11.2984 8.16852 11.245 7.99968 11.245C7.83083 11.245 7.66631 11.2984 7.52968 11.3976L5.28968 13.0248C4.66248 13.4808 3.81928 12.8672 4.05848 12.1304L4.91448 9.4968C4.96662 9.33607 4.96652 9.16296 4.91421 9.00228C4.8619 8.84161 4.76005 8.70162 4.62328 8.6024L2.38408 6.976C1.75768 6.52 2.08008 5.528 2.85448 5.528H5.62328C5.79211 5.52804 5.95664 5.47467 6.0933 5.37552C6.22995 5.27637 6.33174 5.13652 6.38408 4.976L7.24008 2.3424L7.23928 2.3416Z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.23928 2.3416C7.47928 1.6048 8.52168 1.6048 8.76088 2.3416L9.61688 4.9752C9.66917 5.13559 9.77084 5.27534 9.90733 5.37448C10.0438 5.47362 10.2082 5.52708 10.3769 5.5272H13.1465C13.9217 5.5272 14.2433 6.5192 13.6169 6.9752L11.3769 8.6024C11.2401 8.70162 11.1383 8.84161 11.0859 9.00228C11.0336 9.16296 11.0335 9.33607 11.0857 9.4968L11.9417 12.1304C12.1817 12.8672 11.3377 13.4808 10.7097 13.0248L8.46968 11.3976C8.33304 11.2984 8.16852 11.245 7.99968 11.245C7.83083 11.245 7.66631 11.2984 7.52968 11.3976L5.28968 13.0248C4.66248 13.4808 3.81928 12.8672 4.05848 12.1304L4.91448 9.4968C4.96662 9.33607 4.96652 9.16296 4.91421 9.00228C4.8619 8.84161 4.76005 8.70162 4.62328 8.6024L2.38408 6.976C1.75768 6.52 2.08008 5.528 2.85448 5.528H5.62328C5.79211 5.52804 5.95664 5.47467 6.0933 5.37552C6.22995 5.27637 6.33174 5.13652 6.38408 4.976L7.24008 2.3424L7.23928 2.3416Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-[var(--border-card)] bg-[var(--bg-card)] rounded-[50px] p-10 premium-hover-lift">
+            <h3 class="text-xl font-[600] mb-10 t-heading border-b border-[var(--border-card)] pb-4">
+              Related Episodes
+            </h3>
+            <div class="space-y-5">
+              <div class="flex items-center gap-5 group cursor-pointer">
+                <div class="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                  <img src="/images/pod-lean.png"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                </div>
+                <div>
+                  <h4
+                    class="text-[14px] font-[600] leading-tight t-heading group-hover:text-[#f05041] transition-colors">
+                    Lean Construction Principles
+                  </h4>
+                  <p class="text-[10px] font-bold t-muted mt-2">
+                    Ep 41 • 45:22
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-5 group cursor-pointer">
+                <div class="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                  <img src="/images/pod-digital.png"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                </div>
+                <div>
+                  <h4
+                    class="text-[14px] font-[600] leading-tight t-heading group-hover:text-[#f05041] transition-colors">
+                    Digital Transformation in Construction
+                  </h4>
+                  <p class="text-[10px] font-bold t-muted mt-2">
+                    Ep 40 • 52:15
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-5 group cursor-pointer">
+                <div class="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                  <img src="/images/pod-teams.png"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                </div>
+                <div>
+                  <h4
+                    class="text-[14px] font-[600] leading-tight t-heading group-hover:text-[#f05041] transition-colors">
+                    Managing Construction Teams Effectively
+                  </h4>
+                  <p class="text-[10px] font-bold t-muted mt-2">
+                    Ep 39 • 48:30
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full max-w-400 mx-auto px-4 pt-8 pb-4">
+    <div class="footer-box rounded-[50px] p-8 md:p-16 mb-6 opacity-0 animate-fade-in delay-200">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Home Locator</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform"><a href="/">Home</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="/">About</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="/services/">Our Services</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="/podcast/">Podcast</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="#">Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Services</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform"><a href="#">TAKT-Based System Implementation</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="#">Lean Construction Transformation</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="#">Digital Construction &amp; PMIS
+                Solutions</a></li>
+            <li class="hover:-translate-x-1 transition-transform"><a href="#">Performance &amp; Change Management</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Contact</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li><a href="mailto:info@arabtakt.com">info@arabtakt.com</a></li>
+            <li><a href="tel:+966538292878">+966 53 82 92 878</a></li>
+            <li class="leading-relaxed">Alsadhan Building, Khurais<br />Branch, Al Manar Dist.<br />Riyadh</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Subscribe</h4>
+          <div class="mb-6"><input type="email" placeholder="Email"
+              class="footer-input w-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500" /></div>
+          <div class="flex gap-3">
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">f</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">x</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">in</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="shrink-0 hover:scale-110 transition-transform cursor-pointer">
+          <img src="/images/Layer_2.svg" alt="ATM Logo" class="site-logo h-14 w-auto" />
+        </div>
+        <div class="text-center md:text-right">
+          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">Building More
+            Profitable Companies</h2>
+        </div>
+      </div>
+      <div class="mt-12 t-body font-medium text-xs md:text-sm">
+        <p>© 2026 Construction Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../../js/animations.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+
+</html>

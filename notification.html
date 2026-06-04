@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Notifications</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- TAILWIND -->
+  <link rel="stylesheet" href="./global.css">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+   <link rel="stylesheet" href="./dist/output.css">
+
+
+  <!-- LUCIDE -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[#FBF9F4] min-h-screen font-[Inter] px-4 py-6 md:px-8 lg:px-14">
+
+  <!-- PAGE -->
+  <div class="max-w-[1150px] mx-auto">
+
+    <!-- HEADER -->
+    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5 mt-4">
+
+      <!-- LEFT -->
+      <div class="flex items-start gap-4">
+
+        <!-- BACK -->
+        <button
+        style="cursor: pointer;"
+          onclick="window.history.back()"
+          class="w-11 h-11 rounded-full border border-black/10 bg-white/60 flex items-center justify-center shadow-sm hover:bg-white transition shrink-0"
+        >
+
+          <i
+            data-lucide="arrow-left"
+            class="w-5 h-5 text-black"
+          ></i>
+
+        </button>
+
+        <!-- TITLE -->
+        <div>
+
+          <h1 class="text-[30px] md:text-[36px] leading-none font-bold text-black">
+            Notifications
+          </h1>
+
+          <p class="mt-2 text-[#777] text-[16px] md:text-lg">
+            2 unread notifications
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SETTINGS -->
+      <button
+        class="h-[50px] px-7 rounded-full border border-black/10 bg-white/60 shadow-sm flex items-center justify-center gap-3 font-semibold text-black hover:bg-white transition self-start"
+      >
+
+        <i
+          data-lucide="settings-2"
+          class="w-5 h-5"
+        ></i>
+
+        Settings
+
+      </button>
+
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="flex flex-wrap gap-4 mt-10">
+
+      <!-- MARK -->
+      <button
+        class="h-[52px] px-7 rounded-full border border-black/10 bg-white/60 shadow-sm flex items-center justify-center gap-3 font-semibold text-black hover:bg-white transition"
+      >
+
+        <i
+          data-lucide="check-circle-2"
+          class="w-5 h-5"
+        ></i>
+
+        Mark All as Read
+
+      </button>
+
+      <!-- CLEAR -->
+      <button
+        class="h-[52px] px-7 rounded-full border border-black/10 bg-white/60 shadow-sm flex items-center justify-center gap-3 font-semibold text-black hover:bg-white transition"
+      >
+
+        <i
+          data-lucide="trash-2"
+          class="w-5 h-5"
+        ></i>
+
+        Clear All
+
+      </button>
+
+    </div>
+
+    <!-- CARD -->
+    <div
+      class="mt-8 overflow-hidden rounded-[34px] border border-black/10 bg-white/70 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.10)]"
+    >
+
+      <!-- ITEM -->
+     <div
+  class="relative flex flex-col sm:flex-row sm:items-center gap-5 px-5 md:px-7 py-6 border-b border-black/10"
+  style="background: rgba(255, 215, 0, 0.05);"
+>
+
+        <!-- RED DOT -->
+        <div class="absolute top-5 right-5 w-2 h-2 rounded-full bg-[#EB433C]"></div>
+
+        <!-- LEFT -->
+        <div class="flex items-start gap-4 flex-1">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl bg-[#FFD600] flex items-center justify-center shrink-0">
+
+            <i
+              data-lucide="book-open"
+              class="w-7 h-7 text-black"
+            ></i>
+
+          </div>
+
+          <!-- CONTENT -->
+          <div class="pr-8">
+
+            <h3 class="text-[16px] font-bold text-black">
+              New Module Available
+            </h3>
+
+            <p class="mt-2 text-[#555] text-[17px] leading-relaxed">
+              Module 4 of TAKT Fundamentals is now available
+            </p>
+
+            <span class="block mt-3 text-sm text-[#777]">
+              2 hours ago
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- DELETE -->
+        <button class="sm:self-center self-end text-[#777] hover:text-black transition">
+
+          <i
+            data-lucide="trash-2"
+            class="w-5 h-5"
+          ></i>
+
+        </button>
+
+      </div>
+
+      <!-- ITEM -->
+     <div
+  class="relative flex flex-col sm:flex-row sm:items-center gap-5 px-5 md:px-7 py-6 border-b border-black/10"
+  style="background: rgba(255, 215, 0, 0.05);"
+>
+
+        <!-- RED DOT -->
+        <div class="absolute top-5 right-5 w-2 h-2 rounded-full bg-[#EB433C]"></div>
+
+        <!-- LEFT -->
+        <div class="flex items-start gap-4 flex-1">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl bg-[#EB433C] flex items-center justify-center shrink-0">
+
+            <i
+              data-lucide="calendar-days"
+              class="w-7 h-7 text-white"
+            ></i>
+
+          </div>
+
+          <!-- CONTENT -->
+          <div class="pr-8">
+
+            <h3 class="text-[16px] font-bold text-black">
+              Event Reminder
+            </h3>
+
+            <p class="mt-2 text-[#555] text-[17px] leading-relaxed">
+              TAKT Summit 2026 is happening in 3 days
+            </p>
+
+            <span class="block mt-3 text-sm text-[#777]">
+              1 day ago
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- DELETE -->
+        <button class="sm:self-center self-end text-[#777] hover:text-black transition">
+
+          <i
+            data-lucide="trash-2"
+            class="w-5 h-5"
+          ></i>
+
+        </button>
+
+      </div>
+
+      <!-- ITEM -->
+      <div
+        class="flex flex-col sm:flex-row sm:items-center gap-5 px-5 md:px-7 py-6 border-b border-black/10"
+      >
+
+        <!-- LEFT -->
+        <div class="flex items-start gap-4 flex-1">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl bg-[#10C339] flex items-center justify-center shrink-0">
+
+            <i
+              data-lucide="check-circle-2"
+              class="w-7 h-7 text-white"
+            ></i>
+
+          </div>
+
+          <!-- CONTENT -->
+          <div>
+
+            <h3 class="text-[16px] font-bold text-black">
+              Purchase Confirmation
+            </h3>
+
+            <p class="mt-2 text-[#555] text-[17px] leading-relaxed">
+              You've successfully enrolled in Advanced Planning Techniques
+            </p>
+
+            <span class="block mt-3 text-sm text-[#777]">
+              3 days ago
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- DELETE -->
+        <button class="sm:self-center self-end text-[#777] hover:text-black transition">
+
+          <i
+            data-lucide="trash-2"
+            class="w-5 h-5"
+          ></i>
+
+        </button>
+
+      </div>
+
+      <!-- ITEM -->
+      <div
+        class="flex flex-col sm:flex-row sm:items-center gap-5 px-5 md:px-7 py-6 border-b border-black/10"
+      >
+
+        <!-- LEFT -->
+        <div class="flex items-start gap-4 flex-1">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center shrink-0">
+
+            <i
+              data-lucide="bell"
+              class="w-7 h-7 text-white"
+            ></i>
+
+          </div>
+
+          <!-- CONTENT -->
+          <div>
+
+            <h3 class="text-[16px] font-bold text-black">
+              Welcome to Just In Takt!
+            </h3>
+
+            <p class="mt-2 text-[#555] text-[17px] leading-relaxed">
+              Complete your profile to get personalized recommendations
+            </p>
+
+            <span class="block mt-3 text-sm text-[#777]">
+              5 days ago
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- DELETE -->
+        <button class="sm:self-center self-end text-[#777] hover:text-black transition">
+
+          <i
+            data-lucide="trash-2"
+            class="w-5 h-5"
+          ></i>
+
+        </button>
+
+      </div>
+
+      <!-- ITEM -->
+      <div
+        class="flex flex-col sm:flex-row sm:items-center gap-5 px-5 md:px-7 py-6"
+      >
+
+        <!-- LEFT -->
+        <div class="flex items-start gap-4 flex-1">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl bg-[#FFD600] flex items-center justify-center shrink-0">
+
+            <i
+              data-lucide="book-open"
+              class="w-7 h-7 text-black"
+            ></i>
+
+          </div>
+
+          <!-- CONTENT -->
+          <div>
+
+            <h3 class="text-[16px] font-bold text-black">
+              Course Update
+            </h3>
+
+            <p class="mt-2 text-[#555] text-[17px] leading-relaxed">
+              TAKT Fundamentals has been updated with new content
+            </p>
+
+            <span class="block mt-3 text-sm text-[#777]">
+              1 week ago
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- DELETE -->
+        <button class="sm:self-center self-end text-[#777] hover:text-black transition">
+
+          <i
+            data-lucide="trash-2"
+            class="w-5 h-5"
+          ></i>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>

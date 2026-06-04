@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Auth</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind -->
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./styles.css">
+   <link rel="stylesheet" href="./dist/output.css">
+  <!-- <link rel="stylesheet" href="./test.css"> -->
+
+  <style>
+    *{
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body{
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      background:#FBF9F4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .auth-card{
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      border:1px solid rgba(0,0,0,0.08);
+
+      box-shadow:
+        0px 25px 50px rgba(0,0,0,0.10),
+        0px 10px 20px rgba(0,0,0,0.06),
+        0px 2px 6px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE CENTER -->
+  <div class="min-h-screen flex items-center justify-center px-4">
+
+    <!-- CONTENT -->
+    <div class="w-full max-w-[470px] text-center">
+
+      <!-- TITLE -->
+      <h1 class="text-3xl md:text-4xl font-bold text-black">
+        Just In Takt
+      </h1>
+
+      <!-- SUB -->
+      <p class="mt-5 text-[17px] text-[#666666] font-medium">
+        Welcome back
+      </p>
+
+      <!-- CARD -->
+      <div class="auth-card rounded-[38px] px-8 py-9 mt-12">
+
+        <!-- SIGN IN -->
+        <button
+          onclick="window.location.href='login.html'"
+          class="w-full h-[64px] rounded-full bg-[#EB433C] text-white  font-bold flex items-center justify-center gap-3 hover:opacity-90 transition"
+        >
+
+          <img
+            src="./images/signin.svg"
+            alt=""
+            class="w-5 h-5"
+          />
+
+          Sign In
+
+        </button>
+
+        <!-- DIVIDER -->
+        <div class="flex items-center gap-4 my-6">
+
+          <div class="flex-1 h-px bg-black/10"></div>
+
+          <span class="text-[#777] text-[15px]">
+            or
+          </span>
+
+          <div class="flex-1 h-px bg-black/10"></div>
+
+        </div>
+
+        <!-- CREATE -->
+        <button
+          onclick="window.location.href='signup.html'"
+          class="w-full h-[64px] rounded-full border border-black/10 bg-white/30 text-black font-bold flex items-center justify-center gap-3 hover:bg-white/50 transition"
+        >
+
+          <img
+            src="./images/createaccount.svg"
+            alt=""
+            class="w-5 h-5"
+          />
+
+          Create Account
+
+        </button>
+
+        <!-- GUEST -->
+       <button
+  onclick="window.location.href='index.html'"
+  class="mt-7 font-semibold text-[#555] hover:opacity-70 transition"
+>
+  Continue as Guest
+</button>
+
+      </div>
+
+      <!-- FOOTER -->
+      <p class="mt-10 text-[15px] text-[#777] leading-relaxed px-4">
+
+        By continuing, you agree to our
+
+        <span class="font-bold text-[#EB433C]">
+          Terms
+        </span>
+
+        and
+
+        <span class="font-bold text-[#EB433C]">
+          Privacy Policy
+        </span>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Welcome Setup</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind -->
+   
+  <link rel="stylesheet" href="./global.css">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body
+  class="min-h-screen bg-[#FBF9F4] font-[Inter] px-4 py-10 flex items-center justify-center"
+>
+
+  <div class="w-full max-w-[980px]">
+
+    <!-- TOP ICON -->
+    <div class="flex justify-center">
+      <div class="w-16 h-16 rounded-full bg-[#FFD600] flex items-center justify-center shadow-sm">
+        <i data-lucide="rocket" class="w-8 h-8 text-black"></i>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="text-center mt-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-black">
+        Welcome to Just In Takt!
+      </h1>
+
+      <p class="mt-4 text-[#777777] text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
+        Let's personalize your experience. Select your areas of interest to get
+        tailored recommendations.
+      </p>
+    </div>
+
+    <!-- MAIN CARD -->
+    <div
+      class="mt-10 bg-white/70 border border-black/10 rounded-[34px] p-5 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.10)] backdrop-blur-xl"
+    >
+
+      <!-- SECTION -->
+      <div>
+
+        <h2 class="text-2xl font-bold text-black">
+          What are you interested in?
+        </h2>
+
+        <p class="text-[#888] text-sm mt-2">
+          Select all that apply
+        </p>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+
+          <!-- ITEM -->
+          <div
+            class="rounded-[24px] border border-black/10 bg-white p-5 transition hover:shadow-md cursor-pointer"
+          >
+            <div class="flex items-start justify-between">
+
+              <div class="w-11 h-11 rounded-xl bg-[#FFD600] flex items-center justify-center">
+                <i data-lucide="book-open" class="w-5 h-5 text-black"></i>
+              </div>
+
+            </div>
+
+            <h3 class="mt-5 text-lg font-bold text-black">
+              Training Courses
+            </h3>
+
+            <p class="mt-2 text-sm leading-relaxed text-[#666]">
+              Learn TAKT methodology and best practices
+            </p>
+          </div>
+
+          <!-- ACTIVE -->
+          <div
+            class="rounded-[24px] border border-[#EB433C] bg-white p-5 transition shadow-sm cursor-pointer relative"
+          >
+
+            <div class="absolute top-4 right-4 w-5 h-5 rounded-full border border-[#EB433C] flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#EB433C]"></div>
+            </div>
+
+            <div class="w-11 h-11 rounded-xl bg-[#EB433C] flex items-center justify-center">
+              <i data-lucide="users" class="w-5 h-5 text-white"></i>
+            </div>
+
+            <h3 class="mt-5 text-lg font-bold text-black">
+              Consulting Services
+            </h3>
+
+            <p class="mt-2 text-sm leading-relaxed text-[#666]">
+              Expert guidance for your projects
+            </p>
+          </div>
+
+          <!-- ITEM -->
+          <div
+            class="rounded-[24px] border border-black/10 bg-white p-5 transition hover:shadow-md cursor-pointer"
+          >
+
+            <div class="w-11 h-11 rounded-xl bg-[#FFD600] flex items-center justify-center">
+              <i data-lucide="calendar-days" class="w-5 h-5 text-black"></i>
+            </div>
+
+            <h3 class="mt-5 text-lg font-bold text-black">
+              Events & Workshops
+            </h3>
+
+            <p class="mt-2 text-sm leading-relaxed text-[#666]">
+              Join community gatherings and webinars
+            </p>
+          </div>
+
+          <!-- ITEM -->
+          <div
+            class="rounded-[24px] border border-black/10 bg-white p-5 transition hover:shadow-md cursor-pointer"
+          >
+
+            <div class="w-11 h-11 rounded-xl bg-[#FFD600] flex items-center justify-center">
+              <i data-lucide="file-text" class="w-5 h-5 text-black"></i>
+            </div>
+
+            <h3 class="mt-5 text-lg font-bold text-black">
+              Digital Resources
+            </h3>
+
+            <p class="mt-2 text-sm leading-relaxed text-[#666]">
+              Access templates and documentation
+            </p>
+          </div>
+
+          <!-- ACTIVE -->
+          <div
+            class="rounded-[24px] border border-[#EB433C] bg-white p-5 transition shadow-sm cursor-pointer relative"
+          >
+
+            <div class="absolute top-4 right-4 w-5 h-5 rounded-full border border-[#EB433C] flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#EB433C]"></div>
+            </div>
+
+            <div class="w-11 h-11 rounded-xl bg-[#EB433C] flex items-center justify-center">
+              <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+            </div>
+
+            <h3 class="mt-5 text-lg font-bold text-black">
+              Construction Management
+            </h3>
+
+            <p class="mt-2 text-sm leading-relaxed text-[#666]">
+              Project planning and execution tools
+            </p>
+          </div>
+
+          <!-- ITEM -->
+          <div
+            class="rounded-[24px] border border-black/10 bg-white p-5 transition hover:shadow-md cursor-pointer"
+          >
+
+            <div class="w-11 h-11 rounded-xl bg-[#FFD600] flex items-center justify-center">
+              <img src="/images/setting.svg" alt="">
+            </div>
+
+            <h3 class="mt-5 text-lg font-bold text-black">
+              Digital Transformation
+            </h3>
+
+            <p class="mt-2 text-sm leading-relaxed text-[#666]">
+              Modernize your operations
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="h-px bg-black/10 my-10"></div>
+
+      <!-- INDUSTRY -->
+      <div>
+
+        <h2 class="text-2xl font-bold text-black">
+          What's your industry sector?
+        </h2>
+
+        <p class="text-[#888] text-sm mt-2">
+          This helps us recommend relevant content
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+
+          <button class="h-[58px] rounded-2xl border border-black/10 bg-white text-sm font-semibold text-left px-5 hover:border-[#EB433C] transition">
+            Residential Construction
+          </button>
+
+          <button class="h-[58px] rounded-2xl border border-black/10 bg-white text-sm font-semibold text-left px-5 hover:border-[#EB433C] transition">
+            Commercial Construction
+          </button>
+
+          <!-- ACTIVE -->
+          <button class="h-[58px] rounded-2xl border border-[#EB433C] bg-white text-sm font-semibold text-left px-5 flex items-center justify-between transition">
+            Infrastructure & Civil
+
+            <img
+  src="/images/true-red.svg"
+  alt="status"
+  class="w-4 h-4 shrink-0"
+/>
+          </button>
+
+          <button class="h-[58px] rounded-2xl border border-black/10 bg-white text-sm font-semibold text-left px-5 hover:border-[#EB433C] transition">
+            Industrial Construction
+          </button>
+
+          <button class="h-[58px] rounded-2xl border border-black/10 bg-white text-sm font-semibold text-left px-5 hover:border-[#EB433C] transition">
+            Renovation & Remodeling
+          </button>
+
+          <button class="h-[58px] rounded-2xl border border-black/10 bg-white text-sm font-semibold text-left px-5 hover:border-[#EB433C] transition">
+            Consulting & Engineering
+          </button>
+
+          <button class="h-[58px] rounded-2xl border border-black/10 bg-white text-sm font-semibold text-left px-5 hover:border-[#EB433C] transition">
+            Other
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="h-px bg-black/10 my-10"></div>
+
+      <!-- LANGUAGE -->
+      <div>
+
+        <h2 class="text-2xl font-bold text-black">
+          Preferred Language
+        </h2>
+
+        <p class="text-[#888] text-sm mt-2">
+          Choose your preferred language for content and communication
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
+
+          <!-- ACTIVE -->
+          <button
+            class="h-[82px] rounded-2xl border border-[#EB433C] bg-white flex flex-col items-center justify-center gap-2 transition"
+          >
+            <img src="/images/earth-red.svg" alt="">
+
+            <span class="text-sm font-semibold text-black">
+              English
+            </span>
+          </button>
+
+          <button
+            class="h-[82px] rounded-2xl border border-black/10 bg-white flex flex-col items-center justify-center gap-2 transition hover:border-[#EB433C]"
+          >
+            <img src="/images/earth.svg" alt="">
+
+            <span class="text-sm font-semibold text-black">
+              German
+            </span>
+          </button>
+
+          <button
+            class="h-[82px] rounded-2xl border border-black/10 bg-white flex flex-col items-center justify-center gap-2 transition hover:border-[#EB433C]"
+          >
+            <img src="/images/earth.svg" alt="">
+
+            <span class="text-sm font-semibold text-black">
+              French
+            </span>
+          </button>
+
+          <button
+            class="h-[82px] rounded-2xl border border-black/10 bg-white flex flex-col items-center justify-center gap-2 transition hover:border-[#EB433C]"
+          >
+            <img src="/images/earth.svg" alt="">
+
+            <span class="text-sm font-semibold text-black">
+              Spanish
+            </span>
+          </button>
+
+          <button
+            class="h-[82px] rounded-2xl border border-black/10 bg-white flex flex-col items-center justify-center gap-2 transition hover:border-[#EB433C]"
+          >
+            <img src="/images/earth.svg" alt="">
+
+            <span class="text-sm font-semibold text-black">
+              Portuguese
+            </span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+
+     <button
+     style="cursor: pointer;"
+  onclick="window.location.href='index.html'"
+  class="h-[56px] px-8 rounded-full border border-black/10 bg-white text-black font-semibold hover:bg-gray-50 transition"
+>
+  Skip for Now
+</button>
+
+<button
+style="cursor: pointer;"
+ onclick="window.location.href='index.html'"
+  class="h-[56px] px-10 rounded-full bg-[#EB433C] text-white font-semibold flex items-center gap-3 hover:opacity-90 transition"
+>
+  <i data-lucide="rocket" class="w-5 h-5"></i>
+
+  Get Started
+</button>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="text-center mt-6">
+      <p class="text-sm text-[#01BD32] font-medium">
+        2 interests selected
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

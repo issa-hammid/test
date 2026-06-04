@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - ATM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css" />
+<link rel="stylesheet" href="../global.css">
+<!-- <link rel="stylesheet" href="../test.css"> -->
+</head>
+
+<body class="section-white overflow-x-hidden">
+  <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
+
+ <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+    <div class="max-w-400 mx-auto">
+      <nav id="main-nav"
+        class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
+        aria-label="Main navigation">
+
+        <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
+          <a href="../" aria-label="Arab Talk Home">
+            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+          </a>
+        </div>
+
+        <ul
+          class="hidden lg:flex flex-1 items-center justify-center
+         gap-3 xl:gap-5 2xl:gap-7
+         mx-4 xl:mx-6
+         text-[#1a1a1a]
+         font-bold
+         text-[12px] xl:text-[13px] 2xl:text-[14px]
+         whitespace-nowrap">
+          <li>
+            <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
+          </li>
+          <li>
+            <a href="/portfolio" class="hover:opacity-70 transition-opacity nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="/resources" class="hover:opacity-70 transition-opacity nav-link">Resources</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:opacity-70 transition-opacity nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a href="/events"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <path
+                d="M6.92592 11.8698H12.8626M6.92592 8.9024H12.8626M0.989258 2.96755V13.6503C0.989258 14.7582 0.989258 15.3116 1.20495 15.7348C1.39466 16.107 1.69718 16.4105 2.06952 16.6001C2.49242 16.8156 3.04631 16.8156 4.15241 16.8156H15.6367C16.7427 16.8156 17.2959 16.8156 17.7188 16.6001C18.0911 16.4105 18.394 16.1074 18.5837 15.7352C18.7994 15.312 18.7994 14.758 18.7994 13.6501V6.13259C18.7994 5.02464 18.7994 4.47067 18.5837 4.04749C18.394 3.67525 18.0905 3.37283 17.7182 3.18317C17.2949 2.96755 16.7412 2.96755 15.633 2.96755H9.89424M0.989258 2.96755H9.89424M0.989258 2.96755C0.989258 1.87497 1.87524 0.989258 2.96814 0.989258H6.60386C7.08788 0.989258 7.33074 0.989258 7.55849 1.04391C7.76041 1.09238 7.95281 1.17251 8.12986 1.28098C8.3295 1.40328 8.50093 1.57466 8.84296 1.91658L9.89424 2.96755"
+                stroke="white" stroke-width="1.97859" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Events
+          </a>
+          <a href="/podcast"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#f05041] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M17.6239 0.989075C18.612 1.9106 19.4009 3.02482 19.9417 4.26302C20.4826 5.50122 20.7641 6.83713 20.7689 8.18832C20.7736 9.53952 20.5014 10.8773 19.9691 12.1193C19.4369 13.3613 18.6559 14.4809 17.6743 15.4093M14.9259 3.88259C15.5188 4.4355 15.9921 5.10403 16.3167 5.84695C16.6412 6.58987 16.8101 7.39142 16.813 8.20214C16.8157 9.01285 16.6524 9.81556 16.3332 10.5607C16.0138 11.3059 15.5452 11.9777 14.9561 12.5347M6.40917 11.5926L8.06594 13.6431C8.92962 14.7119 9.36146 15.2465 9.7398 15.3047C10.0673 15.3549 10.3983 15.238 10.6214 14.9929C10.8791 14.7098 10.8791 14.0226 10.8791 12.6484V3.7973C10.8791 2.42302 10.8791 1.73587 10.6214 1.4528C10.3983 1.20775 10.0673 1.09073 9.7398 1.14108C9.36146 1.19927 8.92962 1.73373 8.06594 2.80264L6.40917 4.85314C6.2347 5.06907 6.14745 5.17705 6.03951 5.25474C5.94388 5.32357 5.83672 5.37476 5.72308 5.40589C5.59482 5.44103 5.45602 5.44103 5.17841 5.44103H3.77077C3.0229 5.44103 2.64896 5.44103 2.34677 5.54087C1.75207 5.73735 1.28556 6.20392 1.08909 6.79869C0.989258 7.10091 0.989258 7.4749 0.989258 8.22285C0.989258 8.97081 0.989258 9.34478 1.08909 9.64701C1.28556 10.2418 1.75207 10.7084 2.34677 10.9048C2.64896 11.0047 3.0229 11.0047 3.77077 11.0047H5.17841C5.45602 11.0047 5.59482 11.0047 5.72308 11.0398C5.83672 11.071 5.94388 11.1221 6.03951 11.1909C6.14745 11.2687 6.2347 11.3767 6.40917 11.5926Z"
+                stroke="white" stroke-width="1.97808" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Podcast
+          </a>
+          <a href="/training"
+            class="btn-dark flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Training
+          </a>
+        </div>
+
+        <button class="xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button>
+
+  <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+    </div>
+  </header>
+
+  <main class="relative w-full max-w-400 mx-auto mt-32 md:mt-40 lg:mt-48">
+    <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pt-10 pb-16 text-center">
+      <h1
+        class="t-hero text-[60px] md:text-[80px] lg:text-[100px] font-[700] uppercase leading-[0.85] tracking-tighter mb-10 opacity-0 animate-fade-up">
+        Get In Touch
+      </h1>
+      <p
+        class="t-muted max-w-2xl mx-auto text-[16px] md:text-[19px] leading-relaxed font-medium mb-20 opacity-0 animate-fade-up delay-100">
+        Ready to transform your construction operations? We're here to help.
+        Reach out to discuss your project and discover how TAKT can work for
+        you.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="value-card rounded-[45px] p-12 flex flex-col items-center transition-all duration-150 ease-out hover:shadow-xl hover:-translate-y-1 opacity-0 animate-fade-up delay-200">
+          <div
+            class="w-16 h-16 bg-[#FFB82E] rounded-full flex items-center justify-center mb-6 shadow-md hover:rotate-12 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-[700] t-heading mb-3">Email Us</h3>
+          <a href="mailto:info@justintakt.com"
+            class="t-muted font-bold text-sm mb-4 hover:t-heading transition-colors">info@justintakt.com</a>
+          <p class="t-muted text-xs font-bold opacity-60">
+            We'll respond within 24 hours
+          </p>
+        </div>
+
+        <div
+          class="value-card rounded-[45px] p-12 flex flex-col items-center transition-all duration-150 ease-out hover:shadow-xl hover:-translate-y-1 opacity-0 animate-fade-up delay-300">
+          <div
+            class="w-16 h-16 bg-[#FFB82E] rounded-full flex items-center justify-center mb-6 shadow-md hover:rotate-12 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-[700] t-heading mb-3">Call Us</h3>
+          <a href="tel:+15551234567" class="t-muted font-bold text-sm mb-4 hover:t-heading transition-colors">+1 (555)
+            123-4567</a>
+          <p class="t-muted text-xs font-bold opacity-60">
+            Mon-Fri, 9am-6pm EST
+          </p>
+        </div>
+
+        <div
+          class="value-card rounded-[45px] p-12 flex flex-col items-center transition-all duration-150 ease-out hover:shadow-xl hover:-translate-y-1 opacity-0 animate-fade-up delay-400">
+          <div
+            class="w-16 h-16 bg-[#FFB82E] rounded-full flex items-center justify-center mb-6 shadow-md hover:rotate-12 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-[700] t-heading mb-3">Visit Us</h3>
+          <p class="t-body font-bold text-sm mb-1">123 Construction Plaza</p>
+          <p class="t-muted text-xs font-bold opacity-60">
+            New York, NY 10001
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pb-24">
+      <div class="max-w-4xl mx-auto bg-white border border-gray-100 rounded-[60px] p-8 md:p-16 shadow-sm">
+        <h2 class="text-4xl md:text-6xl font-[700] uppercase tracking-tighter text-black text-center mb-12">
+          Send Us A Message
+        </h2>
+
+        <form action="#" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm font-[600] text-black ml-4">First Name *</label>
+              <input type="text" placeholder="John"
+                class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors"
+                required />
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-[600] text-black ml-4">Last Name *</label>
+              <input type="text" placeholder="Doe"
+                class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors"
+                required />
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-[600] text-black ml-4">Email Address *</label>
+            <input type="email" placeholder="john.doe@company.com"
+              class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors"
+              required />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-[600] text-black ml-4">Phone Number *</label>
+            <input type="tel" placeholder="+966 123 456 789"
+              class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors"
+              required />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-[600] text-black ml-4">Company</label>
+            <input type="text" placeholder="Your Company Name"
+              class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors" />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-[600] text-black ml-4">Subject *</label>
+            <input type="text" placeholder="How can we help?"
+              class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors"
+              required />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-[600] text-black ml-4">Message *</label>
+            <textarea rows="5" placeholder="Tell us about your project..."
+              class="w-full bg-white border border-gray-200 rounded-[30px] px-6 py-5 text-gray-800 placeholder-gray-300 focus:outline-none focus:border-[#FFB82E] transition-colors resize-none"
+              required></textarea>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit"
+              class="w-full bg-[#FFB82E] hover:bg-[#F59E0B] text-black font-[600] py-5 rounded-full text-lg shadow-xl transition-all hover:scale-[1.01] active:scale-95">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pb-24 section-white">
+      <div class="mb-12">
+        <h2 class="text-4xl md:text-6xl font-[700] uppercase tracking-tighter text-black mb-4"></h2>
+        <p class="text-gray-600 font-medium"></p>
+      </div>
+
+      <div
+        class="w-full h-[400px] md:h-[600px] rounded-[60px] overflow-hidden bg-gray-100 shadow-inner border border-gray-100 relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14498.115849841893!2d46.78745034638361!3d24.70870950345107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03c4bc60ee31%3A0xa227c37f10ae17d9!2z2KfZhNmF2YbYp9ix2Iwg2KfZhNix2YrYp9i2IDE0MjIz!5e0!3m2!1sen!2ssa!4v1715694321000!5m2!1sen!2ssa"
+          class="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+          style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full max-w-400 mx-auto px-4 pt-8 pb-4">
+    <div class="footer-box rounded-[50px] p-12 md:p-16 mb-6 opacity-0 animate-fade-in delay-200">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Home Locator</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="../">Home</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="/about/">About</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="/podcast/">Podcast</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Services</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">TAKT-Based System Implementation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Lean Construction Transformation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Digital Construction & PMIS Solutions</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform duration-150 ease-out">
+              <a href="#">Performance & Change Management</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Contact</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li>
+              <a href="mailto:info@arabtakt.com" class="hover:text-[#FFB82E] transition-colors">info@arabtakt.com</a>
+            </li>
+            <li>
+              <a href="tel:+966538292878" class="hover:text-[#FFB82E] transition-colors">+966 53 82 92 878</a>
+            </li>
+            <li class="leading-relaxed">
+              Alsadhan Building, Khurais<br />Branch, Al Manar Dist.<br />Riyadh
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <h4 class="t-heading font-bold mb-6 text-lg">Subscribe</h4>
+          <div class="mb-6">
+            <input type="email" placeholder="Email"
+              class="footer-input w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#FFB82E]" />
+          </div>
+          <div class="flex gap-3">
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 transition-all duration-150 ease-out hover:shadow-lg">f</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 transition-all duration-150 ease-out hover:shadow-lg">x</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 transition-all duration-150 ease-out hover:shadow-lg">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="shrink-0">
+          <img src="../images/Layer_2.svg" alt="ATM Logo" class="h-14 w-auto site-logo" />
+        </div>
+        <div class="text-center md:text-right">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-[600] tracking-tighter t-heading">
+            Building More Profitable Companies
+          </h2>
+        </div>
+      </div>
+      <div class="mt-12 t-body font-medium text-xs md:text-sm">
+        <p>© 2026 Construction Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/animations.js"></script>
+  <script src="../js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atm</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="./dist/output.css">
+  <link rel="stylesheet" href="./global.css">
+  <!-- <link rel="stylesheet" href="./test.css"> -->
+</head>
+
+<body>
+  <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
+
+  <!-- ══ HEADER ══ -->
+  <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+    <div class="max-w-400 mx-auto">
+      <nav id="main-nav"
+        class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
+        aria-label="Main navigation">
+
+        <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
+          <a href="../" aria-label="Arab Talk Home">
+           <img
+  class="site-logo"
+  src="./images/lightmodelogo.png"
+  data-light="./images/lightmodelogo.png"
+  data-dark="./images/Darkmode.png"
+  alt="Logo">
+          </a>
+        </div>
+
+        <ul
+          class="hidden lg:flex flex-1 items-center justify-center
+         gap-3 xl:gap-5 2xl:gap-7
+         mx-4 xl:mx-6
+         text-[#1a1a1a]
+         font-bold
+         text-[12px] xl:text-[13px] 2xl:text-[14px]
+         whitespace-nowrap">
+          <li>
+            <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
+          </li>
+          <li>
+            <a href="/portfolio" class="hover:opacity-70 transition-opacity nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="/resources" class="hover:opacity-70 transition-opacity nav-link">Resources</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:opacity-70 transition-opacity nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a href="/events"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <path
+                d="M6.92592 11.8698H12.8626M6.92592 8.9024H12.8626M0.989258 2.96755V13.6503C0.989258 14.7582 0.989258 15.3116 1.20495 15.7348C1.39466 16.107 1.69718 16.4105 2.06952 16.6001C2.49242 16.8156 3.04631 16.8156 4.15241 16.8156H15.6367C16.7427 16.8156 17.2959 16.8156 17.7188 16.6001C18.0911 16.4105 18.394 16.1074 18.5837 15.7352C18.7994 15.312 18.7994 14.758 18.7994 13.6501V6.13259C18.7994 5.02464 18.7994 4.47067 18.5837 4.04749C18.394 3.67525 18.0905 3.37283 17.7182 3.18317C17.2949 2.96755 16.7412 2.96755 15.633 2.96755H9.89424M0.989258 2.96755H9.89424M0.989258 2.96755C0.989258 1.87497 1.87524 0.989258 2.96814 0.989258H6.60386C7.08788 0.989258 7.33074 0.989258 7.55849 1.04391C7.76041 1.09238 7.95281 1.17251 8.12986 1.28098C8.3295 1.40328 8.50093 1.57466 8.84296 1.91658L9.89424 2.96755"
+                stroke="white" stroke-width="1.97859" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Events
+          </a>
+          <a href="/podcast"
+            class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#f05041] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M17.6239 0.989075C18.612 1.9106 19.4009 3.02482 19.9417 4.26302C20.4826 5.50122 20.7641 6.83713 20.7689 8.18832C20.7736 9.53952 20.5014 10.8773 19.9691 12.1193C19.4369 13.3613 18.6559 14.4809 17.6743 15.4093M14.9259 3.88259C15.5188 4.4355 15.9921 5.10403 16.3167 5.84695C16.6412 6.58987 16.8101 7.39142 16.813 8.20214C16.8157 9.01285 16.6524 9.81556 16.3332 10.5607C16.0138 11.3059 15.5452 11.9777 14.9561 12.5347M6.40917 11.5926L8.06594 13.6431C8.92962 14.7119 9.36146 15.2465 9.7398 15.3047C10.0673 15.3549 10.3983 15.238 10.6214 14.9929C10.8791 14.7098 10.8791 14.0226 10.8791 12.6484V3.7973C10.8791 2.42302 10.8791 1.73587 10.6214 1.4528C10.3983 1.20775 10.0673 1.09073 9.7398 1.14108C9.36146 1.19927 8.92962 1.73373 8.06594 2.80264L6.40917 4.85314C6.2347 5.06907 6.14745 5.17705 6.03951 5.25474C5.94388 5.32357 5.83672 5.37476 5.72308 5.40589C5.59482 5.44103 5.45602 5.44103 5.17841 5.44103H3.77077C3.0229 5.44103 2.64896 5.44103 2.34677 5.54087C1.75207 5.73735 1.28556 6.20392 1.08909 6.79869C0.989258 7.10091 0.989258 7.4749 0.989258 8.22285C0.989258 8.97081 0.989258 9.34478 1.08909 9.64701C1.28556 10.2418 1.75207 10.7084 2.34677 10.9048C2.64896 11.0047 3.0229 11.0047 3.77077 11.0047H5.17841C5.45602 11.0047 5.59482 11.0047 5.72308 11.0398C5.83672 11.071 5.94388 11.1221 6.03951 11.1909C6.14745 11.2687 6.2347 11.3767 6.40917 11.5926Z"
+                stroke="white" stroke-width="1.97808" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Podcast
+          </a>
+          <a href="/training"
+            class="btn-dark flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Training
+          </a>
+        </div>
+
+       <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu (Tablet + Mobile only) -->
+<div id="mobile-menu"
+     class="lg:hidden hidden mt-4">
+
+  <div
+    class="rounded-3xl
+           bg-white dark:bg-[#111827]
+           border border-gray-200 dark:border-white/10
+           shadow-2xl
+           overflow-hidden">
+
+    <!-- Links -->
+    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+
+      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
+      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
+      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
+      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
+      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
+      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+
+    </ul>
+
+    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
+    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+
+      <a href="/events"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
+        Events
+      </a>
+
+      <a href="/podcast"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#f05041] text-white rounded-full font-bold shadow-xl">
+        Podcast
+      </a>
+
+      <a href="/training"
+         class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
+        Training
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button>
+
+  <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+    </div>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="relative w-full max-w-400 mx-auto mt-8 pt-8 pb-48 md:pt-16 lg:pt-20 overflow-hidden">
+    <p
+      class="t-muted text-center text-[22px] font-medium md:text-[48px] tracking-tight opacity-0 animate-fade-up delay-300 mt-10">
+      Transforming the Future of Construction
+    </p>
+
+    <div class="relative z-20 mt-4 px-6 md:px-12 lg:px-24 mb-10 opacity-0 animate-fade-up delay-300">
+      <h1
+        class="t-hero max-w-6xl text-[60px] font-bold uppercase leading-[0.85] tracking-tighter md:text-[100px] lg:text-[135px]">
+        Building More<br />Profitable<br />Companies
+      </h1>
+      <div class="mt-8 max-w-sm">
+        <p class="t-body mb-6 text-[15px] font-medium">
+          TAKT transforms construction efficiency
+        </p>
+        <button type="button"
+          class="rounded-full bg-[#f8bf2c] px-8 py-4 text-[15px] font-bold text-[#111218] shadow-lg hover:-translate-y-1 hover:shadow-xl hover:bg-[#eab308] active:scale-95 transition-all duration-300">
+          Schedule a Free Consultation
+        </button>
+      </div>
+    </div>
+
+    <img src="./images/modern-brick.svg" alt=""
+      class="pointer-events-none absolute bottom-0 left-[18%] w-[45%] max-w-[900px] z-10 opacity-0 animate-fade-up delay-300" />
+    <img src="./images/modern-brick1.svg" alt=""
+      class="pointer-events-none absolute bottom-0 right-[0%] w-[58%] max-w-[980px] z-20 opacity-0 animate-fade-up delay-400" />
+
+    <div
+      class="stats-counter absolute bottom-10 left-1/2 z-30 w-[94%] -translate-x-1/2 rounded-full border border-white/40 bg-gradient-to-r from-black/20 to-black/20 backdrop-blur-2xl px-10 py-7 shadow-2xl">
+      <div class="flex items-center justify-between gap-4">
+        <div class="grid flex-1 grid-cols-3 gap-3 t-heading">
+
+          <div class="text-left">
+            <p class="text-[14px] font-bold tracking-widest">
+              Years Of Experience
+            </p>
+            <p class="stat-number text-4xl text-white font-bold">12+</p>
+          </div>
+
+          <div class="border-l border-white/10 pl-6">
+            <p class="text-[14px] font-bold tracking-widest">
+              Project Completed
+            </p>
+            <p class="stat-number text-4xl text-white font-bold">130+</p>
+          </div>
+
+          <div class="border-l border-white/10 pl-6">
+            <p class="text-[14px] font-bold tracking-widest">
+              Happy Clients
+            </p>
+            <p class="stat-number text-4xl text-white font-bold">870+</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="w-full max-w-400 mx-auto">
+    <!-- ══ ABOUT ══ -->
+    <section class=" w-full px-4 md:px-12 lg:px-24 overflow-hidden ">
+      <div class="mx-auto px-12 md:px-14 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="max-w-lg t-body text-[15px] leading-relaxed animate-slide-left"> Today, construction projects
+          struggle with delays, poor
+          communication, and daily operational chaos. We are a group of
+          experts dedicated to transforming construction companies from
+          disorder into high-performing, efficient organizations using TAKT
+          methodology and proven management transformation practices that
+          elevate engineers from zero to hero.
+        </div>
+        <div class="flex-shrink-0 animate-slide-right delay-300"> <img src="./images/helmet.svg"
+            alt="Construction Helmet" class="w-76 md:w-[400px] object-contain drop-shadow-xl" />
+        </div>
+      </div>
+
+      <div
+        class="w-full px-6 md:px-12 lg:px-24 py-12 flex flex-col md:flex-row items-center justify-between gap-8 opacity-0 animate-fade-up delay-300">
+        <h2 class="t-heading text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tighter whitespace-nowrap">
+          Our Mission & Vision
+        </h2>
+
+        <p class="t-muted text-[14px] md:text-left">
+          Committed to excellence in construction, innovation in design, and
+          creating lasting value for our clients and communities.
+        </p>
+      </div>
+
+      <div class="mx-auto px-6 md:px-12 pb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- MISSION CARD (تم تعديله ليدعم الدارك مود ويصبح أسود) -->
+        <div class="white-card  card rounded-[24px] p-8 opacity-0" style="border: 0.99px solid rgba(229, 231, 235, 1);">
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="mv-icon w-10 h-10 bg-[#FFB730] rounded-full flex items-center justify-center shrink-0 hover:rotate-12 transition-transform duration-300 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3 class="t-heading text-[16px] font-bold">Mission</h3>
+          </div>
+          <p class="t-body text-[14px] leading-relaxed">
+            We help organizations achieve predictable, high-performance results through Lean, Takt, and continuous
+            improvement eliminating bottlenecks and creating sustainable flow.
+          </p>
+        </div>
+
+        <!-- VISION CARD -->
+        <div class="white-card card rounded-[24px] p-8 opacity-0" style="border: 0.99px solid rgba(229, 231, 235, 1); box-shadow: 0px 25.72px 47.49px 0px rgba(0, 0, 0, 0.19);">
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="mv-icon w-10 h-10 rounded-full  bg-[#FFB730]  flex items-center justify-center shrink-0 hover:rotate-12 transition-transform duration-300 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3 class="t-heading text-[16px] font-bold">Vision</h3>
+          </div>
+          <p class="t-body text-[14px] leading-relaxed">
+            To become the region's leading catalyst for operational excellence transforming how organizations plan,
+            execute, and grow through predictable flow, synchronized operations, and empowered people.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ══ CONSULTANT ══ -->
+    <section  style="margin-bottom: -65px;" class=" w-full py-16 overflow-hidden px-4 md:px-12 lg:px-24 ">
+      <div class="mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="max-w-sm shrink-0 animate-slide-left">
+          <h2 class="t-heading text-4xl md:text-5xl font-bold uppercase leading-tight mb-5">
+            Meet Our<br />Professional<br />Consultant
+          </h2>
+          <p class="t-body text-[14px] leading-relaxed mb-8">
+            Our expert consultants are here to guide you through every step of
+            your construction project, ensuring quality and timely delivery.
+          </p>
+          <button type="button"
+            class="btn-dark px-7 py-3 text-[13px] font-semibold rounded-full hover:scale-105 active:scale-95 transition-all shadow-md">
+            Learn More
+          </button>
+        </div>
+        <div
+          class="relative w-full max-w-2xl animate-slide-right delay-300 flex items-end justify-center min-h-[480px]">
+          <div
+            class="absolute left-0 top-0 w-[47%] h-[72%] rounded-2xl overflow-hidden z-0 hover:scale-[1.02] transition-transform shadow-lg">
+            <img src="./images/building.svg" alt="Building" class="w-full h-full object-cover" />
+          </div>
+          <div
+            class="absolute left-[38%] bottom-0 w-[58%] h-[100%] z-10 hover:scale-[1.02] transition-transform drop-shadow-2xl">
+            <img src="./images/consultant.svg" alt="Consultant" class="w-full h-full object-contain object-bottom" />
+          </div>
+          <div
+            class="badge-amber animate-float delay-300 absolute top-2 right-[10%] z-20 text-[14px] font-semibold rounded-2xl px-8 py-6 max-w-[240px] shadow-lg leading-snug animate-float">
+            Here to guide you every step of the way
+          </div>
+          <div
+            class="badge-glass absolute bottom-8 left-[0%] z-20 text-[15px] font-bold rounded-[24px] px-8 py-6 max-w-[340px] shadow-xl leading-snug animate-float"
+            style="animation-delay: 2s">
+            Our consultants will help you every step of the way
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SERVICES ══ -->
+    <section class="py-20 px-4 md:px-12 lg:px-24 section-gray">
+      <div class="mb-12">
+        <h2 class="t-heading text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-4">
+          See How TAKT Works
+        </h2>
+        <p class="t-muted text-lg max-w-3xl font-medium">
+          Comprehensive construction solutions tailored to bring your vision
+          to life with precision and excellence.
+        </p>
+      </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+  
+  <!-- الكرت الأول -->
+  <div class="svc-card animate-fade-up p-5 md:p-6 lg:p-8 flex flex-col gap-5 lg:gap-6 cursor-default border border-gray-100 rounded-2xl min-h-[280px] md:min-h-[320px] lg:min-h-[350px] bg-white transition-all hover:shadow-xl">
+    
+    <div class="w-12 h-12 bg-[#f8bf2c] rounded-full flex items-center justify-center shrink-0 shadow-sm hover:rotate-12 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h3 class="t-heading text-lg md:text-xl font-bold leading-tight text-gray-900">
+        TAKT-Based System<br>
+        Implementation
+      </h3>
+
+      <p class="t-body text-sm leading-relaxed font-medium text-gray-500">
+        Strategic planning and feasibility studies to ensure project success from day one.
+      </p>
+    </div>
+  </div>
+
+  <!-- الكرت الثاني -->
+  <div class="svc-card animate-fade-up p-5 md:p-6 lg:p-8 flex flex-col gap-5 lg:gap-6 cursor-default border border-gray-100 rounded-2xl min-h-[280px] md:min-h-[320px] lg:min-h-[350px] bg-white transition-all hover:shadow-xl">
+    
+    <div class="w-12 h-12 bg-[#f8bf2c] rounded-full flex items-center justify-center shrink-0 shadow-sm hover:rotate-12 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h3 class="t-heading text-lg md:text-xl font-bold leading-tight text-gray-900">
+        Lean Construction<br>
+        Transformation
+      </h3>
+
+      <p class="t-body text-sm leading-relaxed font-medium text-gray-500">
+        End-to-end construction management with attention to quality and deadlines.
+      </p>
+    </div>
+  </div>
+
+  <!-- الكرت الثالث -->
+  <div class="svc-card animate-fade-up p-5 md:p-6 lg:p-8 flex flex-col gap-5 lg:gap-6 cursor-default border border-gray-100 rounded-2xl min-h-[280px] md:min-h-[320px] lg:min-h-[350px] bg-white transition-all hover:shadow-xl">
+    
+    <div class="w-12 h-12 bg-[#f8bf2c] rounded-full flex items-center justify-center shrink-0 shadow-sm hover:rotate-12 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h3 class="t-heading text-lg md:text-xl font-bold leading-tight text-gray-900">
+        Digital Construction<br>
+        &amp; PMIS Solutions
+      </h3>
+
+      <p class="t-body text-sm leading-relaxed font-medium text-gray-500">
+        Expert guidance to optimize costs, timelines, and construction strategies.
+      </p>
+    </div>
+  </div>
+
+  <!-- الكرت الرابع -->
+  <div class="svc-card p-5 md:p-6 lg:p-8 flex flex-col gap-5 lg:gap-6 cursor-default border border-gray-100 rounded-2xl min-h-[280px] md:min-h-[320px] lg:min-h-[350px] bg-white transition-all hover:shadow-2xl shadow-lg">
+
+    <div class="w-12 h-12 bg-[#f8bf2c] rounded-full flex items-center justify-center shrink-0 shadow-sm hover:rotate-12 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h3 class="t-heading text-lg md:text-xl font-bold leading-tight text-gray-900">
+        Performance &amp; Change<br>
+        Management
+      </h3>
+
+      <p class="t-body text-sm leading-relaxed font-medium text-gray-500">
+        Integrated approach combining design and construction for seamless delivery.
+      </p>
+    </div>
+  </div>
+
+</div>
+    </section>
+
+    <!-- ══ PROJECTS ══ -->
+   <section class="max-w-[1800px] mx-auto px-4 md:px-10 lg:px-16 py-20 section-gray">
+
+  <!-- HEADER -->
+  <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-14">
+
+    <div class="max-w-2xl">
+      <h2
+        class="text-[42px] md:text-[64px] leading-[0.95] tracking-[-3px] font-extrabold  uppercase"
+      >
+        Top Projects
+      </h2>
+
+      <p class="mt-5 text-[#5F5F5F] text-[15px] md:text-[17px] leading-[1.9] max-w-[720px]">
+        Discover our portfolio of exceptional construction projects that showcase
+        our expertise, innovation, and commitment to delivering world-class developments.
+      </p>
+
+      <button
+        class="mt-8 h-12 px-8 rounded-full bg-black text-white text-sm font-bold transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
+      >
+        View All
+      </button>
+    </div>
+
+    <!-- NAV -->
+    <div class="flex items-center gap-3">
+
+      <button
+        class="w-12 h-12 rounded-full border border-black/10 bg-white flex items-center justify-center shadow-md hover:scale-105 transition"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+      </button>
+
+      <button
+        class="w-12 h-12 rounded-full bg-[#FFD600] text-black flex items-center justify-center shadow-lg hover:scale-105 transition"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- CARDS -->
+  <div
+    class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-6"
+  >
+
+    <!-- CARD 1 -->
+    <div
+      class="flex-none w-[88%] sm:w-[72%] md:w-[48%] xl:w-[32%] h-[500px] snap-center"
+    >
+
+      <div
+        class="relative w-full h-full rounded-[38px] overflow-hidden group "
+      >
+
+        <!-- IMAGE -->
+        <img
+          src="./images/hotel.svg"
+          alt="Hotel Project"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/70"
+        ></div>
+
+        <!-- TAG -->
+        <div class="absolute top-6 left-6 z-20">
+
+          <span
+            class="h-8 px-4 rounded-full bg-[#FFD600] text-black text-[10px] font-bold flex items-center justify-center shadow-lg"
+          >
+            Hotel Project
+          </span>
+
+        </div>
+
+        <!-- GLASS CARD -->
+        <div
+          class="absolute bottom-5 left-1/2 -translate-x-1/2 w-[92%]
+          rounded-[30px]
+          border border-white/20
+          backdrop-blur-[22px]
+          bg-[rgba(255,255,255,0.06)]
+          px-5 pt-5 pb-4
+          text-white
+          shadow-[0_18px_40px_rgba(0,0,0,0.28)]
+          transition-all duration-500
+          group-hover:-translate-y-2
+          group-hover:bg-[rgba(255,255,255,0.10)]"
+        >
+
+          <!-- TITLE -->
+          <h3
+            class="text-[18px] leading-[1.25] font-bold"
+          >
+            Four Seasons Hotel, Jeddah
+          </h3>
+
+          <!-- TAGS -->
+          <div class="flex flex-wrap gap-2 mt-3">
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Luxury
+            </span>
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Mixed-Use
+            </span>
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              High-Rise
+            </span>
+
+          </div>
+
+          <!-- DESC -->
+          <p
+            class="mt-4 text-[12px] leading-[1.85] text-white/90 line-clamp-3"
+          >
+            Situated on a plot area of 18,812 m² within an upscale district
+            comprising residential buildings and premium commercial developments.
+          </p>
+
+          <!-- LINE -->
+          <div class="w-full h-px bg-white/20 my-4"></div>
+
+          <!-- INFO -->
+          <div class="space-y-1.5 text-[12px] leading-relaxed">
+
+            <p>
+              <span class="font-bold text-white">
+                Owner:
+              </span>
+              <span class="text-white/85">
+                Midad Real Estate Investment
+              </span>
+            </p>
+
+            <p>
+              <span class="font-bold text-white">
+                Consultant:
+              </span>
+              <span class="text-white/85">
+                Jubruz Engineering
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div
+      class="flex-none w-[88%] sm:w-[72%] md:w-[48%] xl:w-[32%] h-[500px] snap-center"
+    >
+
+      <div
+        class="relative w-full h-full rounded-[38px] overflow-hidden group "
+      >
+
+        <img
+          src="./images/hospital.svg"
+          alt="Hospital Project"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/70"
+        ></div>
+
+        <div class="absolute top-6 left-6 z-20">
+
+          <span
+            class="h-8 px-4 rounded-full bg-[#FFD600] text-black text-[10px] font-bold flex items-center justify-center shadow-lg"
+          >
+            Hospital Projects
+          </span>
+
+        </div>
+
+        <!-- GLASS -->
+        <div
+          class="absolute bottom-5 left-1/2 -translate-x-1/2 w-[92%]
+          rounded-[30px]
+          border border-white/20
+          backdrop-blur-[22px]
+          bg-[rgba(255,255,255,0.06)]
+          px-5 pt-5 pb-4
+          text-white
+          shadow-[0_18px_40px_rgba(0,0,0,0.28)]
+          transition-all duration-500
+          group-hover:-translate-y-2
+          group-hover:bg-[rgba(255,255,255,0.10)]"
+        >
+
+          <h3
+            class="text-[18px] leading-[1.25] font-bold"
+          >
+            Veterinary Hospital, Abu Dhabi
+          </h3>
+
+          <div class="flex flex-wrap gap-2 mt-3">
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Healthcare
+            </span>
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Specialized
+            </span>
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Abu Dhabi
+            </span>
+
+          </div>
+
+          <p
+            class="mt-4 text-[12px] leading-[1.85] text-white/90 line-clamp-3"
+          >
+            Located approximately 20 km south of Abu Dhabi International Airport
+            near Al Wathba Camel Racetrack.
+          </p>
+
+          <div class="w-full h-px bg-white/20 my-4"></div>
+
+          <div class="space-y-1.5 text-[12px] leading-relaxed">
+
+            <p>
+              <span class="font-bold text-white">
+                Owner:
+              </span>
+              <span class="text-white/85">
+                ADAAE
+              </span>
+            </p>
+
+            <p>
+              <span class="font-bold text-white">
+                Contractor:
+              </span>
+              <span class="text-white/85">
+                Al Mann General Contracting
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div
+      class="flex-none w-[88%] sm:w-[72%] md:w-[48%] xl:w-[32%] h-[500px] snap-center"
+    >
+
+      <div
+        class="relative w-full h-full rounded-[38px] overflow-hidden group "
+      >
+
+        <img
+          src="./images/monorail.svg"
+          alt="KAFD Project"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/70"
+        ></div>
+
+        <div class="absolute top-6 left-6 z-20">
+
+          <span
+            class="h-8 px-4 rounded-full bg-[#FFD600] text-black text-[10px] font-bold flex items-center justify-center shadow-lg"
+          >
+            Infrastructure
+          </span>
+
+        </div>
+
+        <!-- GLASS -->
+        <div
+          class="absolute bottom-5 left-1/2 -translate-x-1/2 w-[92%]
+          rounded-[30px]
+          border border-white/20
+          backdrop-blur-[22px]
+          bg-[rgba(255,255,255,0.06)]
+          px-5 pt-5 pb-4
+          text-white
+          shadow-[0_18px_40px_rgba(0,0,0,0.28)]
+          transition-all duration-500
+          group-hover:-translate-y-2
+          group-hover:bg-[rgba(255,255,255,0.10)]"
+        >
+
+          <h3
+            class="text-[18px] leading-[1.25] font-bold"
+          >
+            King Abdullah Financial District
+          </h3>
+
+          <div class="flex flex-wrap gap-2 mt-3">
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Infrastructure
+            </span>
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Urban Dev.
+            </span>
+
+            <span
+              class="h-7 px-3 rounded-full bg-white/90 text-black text-[11px] font-medium flex items-center justify-center"
+            >
+              Riyadh
+            </span>
+
+          </div>
+
+          <p
+            class="mt-4 text-[12px] leading-[1.85] text-white/90 line-clamp-3"
+          >
+            A landmark mixed-use development that blends business,
+            living, and innovation spanning 1.6 million square meters.
+          </p>
+
+          <div class="w-full h-px bg-white/20 my-4"></div>
+
+          <div class="space-y-1.5 text-[12px] leading-relaxed">
+
+            <p>
+              <span class="font-bold text-white">
+                Employer:
+              </span>
+              <span class="text-white/85">
+                KAFD
+              </span>
+            </p>
+
+            <p>
+              <span class="font-bold text-white">
+                Contractor:
+              </span>
+              <span class="text-white/85">
+                Nesma Alum Construction
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- ══ CLIENTS ══ -->
+  <section class="py-16 md:py-20 px-4 md:px-10 lg:px-20">
+  <div class="max-w-[1400px] mx-auto">
+
+    <div class="mb-12 md:mb-14">
+      <h2 class="text-4xl md:text-5xl font-[800] tracking-[-2px] t-heading">
+        Our Trusted Clients
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-7">
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="BuildTech" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">BuildTech</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="Urban + Craft" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">Urban + Craft</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="SkyHigh" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">SkyHigh</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="ModernSpace" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">ModernSpace</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="GreenBuild" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">GreenBuild</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="CityScape" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">CityScape</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="Foundation Pro" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">Foundation Pro</span>
+      </div>
+
+      <div class="card group rounded-[44px] md:rounded-[100px] h-[120px] md:h-[132px] flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
+        <img src="./images/building-icon.svg" alt="Elite Builders" class="w-10 h-10 md:w-11 md:h-11 opacity-70 group-hover:opacity-100 transition" />
+        <span class="text-[15px] md:text-[17px] font-medium t-body">Elite Builders</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ══ TESTIMONIALS ══ -->
+    <section class=" py-16 md:py-20 px-4 md:px-12 lg:px-24">
+      <div class="max-w-400 mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+          <h2 class="t-heading text-4xl md:text-5xl font-bold uppercase tracking-tighter">
+            What Our Clients Say
+          </h2>
+          <div class="flex gap-3">
+            <button class="scroll-btn w-12 h-12 rounded-full flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              class="w-12 h-12 rounded-full bg-[#f8bf2c] text-black flex items-center justify-center shadow-md hover:brightness-105 hover:-translate-y-1 hover:shadow-lg transition-all">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- reusable star path -->
+        <svg style="display: none">
+          <symbol id="star" viewBox="0 0 15 14">
+            <path
+              d="M6.94305 0.854058C6.97196 0.795657 7.01661 0.746498 7.07197 0.712128C7.12733 0.677759 7.1912 0.659546 7.25636 0.659546C7.32152 0.659546 7.38539 0.677759 7.44075 0.712128C7.49611 0.746498 7.54077 0.795657 7.56967 0.854058L9.09335 3.94032C9.19372 4.14346 9.34189 4.3192 9.52514 4.45247C9.70838 4.58574 9.92123 4.67255 10.1454 4.70546L13.5529 5.20412C13.6175 5.21347 13.6781 5.24071 13.728 5.28274C13.7779 5.32477 13.815 5.37993 13.8352 5.44197C13.8554 5.50401 13.8578 5.57046 13.8422 5.6338C13.8266 5.69714 13.7935 5.75485 13.7468 5.80039L11.2826 8.20002C11.12 8.35839 10.9984 8.55388 10.9282 8.76967C10.858 8.98545 10.8413 9.21507 10.8795 9.43875L11.4613 12.8291C11.4727 12.8936 11.4657 12.9601 11.4412 13.0208C11.4166 13.0816 11.3755 13.1342 11.3225 13.1727C11.2695 13.2112 11.2067 13.2341 11.1413 13.2386C11.0759 13.2432 11.0106 13.2293 10.9528 13.1985L7.90673 11.597C7.70602 11.4916 7.48272 11.4365 7.25603 11.4365C7.02934 11.4365 6.80604 11.4916 6.60534 11.597L3.55997 13.1985C3.50214 13.2291 3.43688 13.2428 3.37162 13.2382C3.30635 13.2336 3.2437 13.2107 3.19079 13.1722C3.13787 13.1337 3.09682 13.0812 3.0723 13.0205C3.04777 12.9599 3.04077 12.8935 3.05207 12.8291L3.63318 9.43941C3.67157 9.21562 3.65494 8.98586 3.58473 8.76994C3.51451 8.55402 3.39283 8.35842 3.23017 8.20002L0.765903 5.80105C0.718803 5.75556 0.685427 5.69776 0.669576 5.63422C0.653726 5.57069 0.656038 5.50398 0.676249 5.4417C0.69646 5.37941 0.733758 5.32406 0.783894 5.28194C0.83403 5.23982 0.894989 5.21262 0.959825 5.20346L4.36666 4.70546C4.59109 4.67281 4.80423 4.58611 4.98772 4.45282C5.17122 4.31954 5.31958 4.14366 5.42004 3.94032L6.94305 0.854058Z" />
+          </symbol>
+        </svg>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="card h-full rounded-[35px] p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+            <div class="p-3">
+              <div>
+                <div class="flex gap-1 mb-6">
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                </div>
+                <h4 class="t-heading text-xl font-bold mb-3">Sarah</h4>
+                <p class="t-body text-[15px] leading-relaxed mb-8">
+                  The team provided exceptional service and completed our
+                  project ahead of schedule with outstanding quality.
+                </p>
+              </div>
+              <div class="flex items-center gap-4 border-t t-divider pt-4">
+                <div
+                  class="reviewer-avatar w-12 h-12 rounded-full flex items-center justify-center font-bold text-base">
+                  SJ
+                </div>
+                <div>
+                  <p class="t-heading font-semibold text-sm">Sarah Johnson</p>
+                  <p class="t-body text-[13px]">BuildTech</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card h-full rounded-[35px] p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+            <div class="p-3">
+              <div>
+                <div class="flex gap-1 mb-6">
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                </div>
+                <h4 class="t-heading text-xl font-bold mb-3">Michael</h4>
+                <p class="t-body text-[15px] leading-relaxed mb-8">
+                  Professional, reliable, and always delivering on their
+                  promises. Highly recommend for any construction project.
+                </p>
+              </div>
+              <div class="flex items-center gap-4 border-t t-divider pt-4">
+                <div
+                  class="reviewer-avatar w-12 h-12 rounded-full flex items-center justify-center font-bold text-base">
+                  MC
+                </div>
+                <div>
+                  <p class="t-heading font-semibold text-sm">Michael Chen</p>
+                  <p class="t-body text-[13px]">UrbanDev</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card h-full rounded-[35px] p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+            <div class="p-3">
+              <div>
+                <div class="flex gap-1 mb-6">
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                </div>
+                <h4 class="t-heading text-xl font-bold mb-3">Emily</h4>
+                <p class="t-body text-[15px] leading-relaxed mb-8">
+                  Working with this team was a pleasure. Their attention to
+                  detail and commitment to excellence is unmatched.
+                </p>
+              </div>
+              <div class="flex items-center gap-4 border-t t-divider pt-4">
+                <div
+                  class="reviewer-avatar w-12 h-12 rounded-full flex items-center justify-center font-bold text-base">
+                  ER
+                </div>
+                <div>
+                  <p class="t-heading font-semibold text-sm">
+                    Emily Rodriguez
+                  </p>
+                  <p class="t-body text-[13px]">SkyHigh</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="w-full max-w-400 mx-auto px-4 ">
+    <div class="footer-box rounded-[50px] p-8 md:p-16 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Home Locator</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="about">About</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="/services/">Our Services</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Podcast</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Services</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">TAKT-Based System Implementation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Lean Construction Transformation</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Digital Construction &amp; PMIS Solutions</a>
+            </li>
+            <li class="hover:-translate-x-1 transition-transform">
+              <a href="#">Performance &amp; Change Management</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Contact</h4>
+          <ul class="space-y-4 t-body font-medium text-sm">
+            <li><a href="mailto:info@arabtakt.com">info@arabtakt.com</a></li>
+            <li><a href="tel:+966538292878">+966 53 82 92 878</a></li>
+            <li class="leading-relaxed">
+              Alsadhan Building, Khurais<br />Branch, Al Manar Dist.<br />Riyadh
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="t-heading font-bold mb-6 text-lg">Subscribe</h4>
+          <div class="mb-6">
+            <input type="email" placeholder="Email"
+              class="footer-input w-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+          </div>
+          <div class="flex gap-3">
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">f</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">x</a>
+            <a href="#"
+              class="footer-social w-10 h-10 flex items-center justify-center font-bold text-sm hover:-translate-y-1 hover:shadow-lg transition-all">in</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="shrink-0 hover:scale-110 transition-transform cursor-pointer">
+             <img
+  class="site-logo"
+  src="./images/lightmodelogo.png"
+  data-light="./images/lightmodelogo.png"
+  data-dark="./images/Darkmode.png"
+  alt="Logo">
+        </div>
+        <div class="text-center md:text-right">
+          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">
+            Building More Profitable Companies
+          </h2>
+        </div>
+      </div>
+      <div class="mt-12 t-body font-medium text-xs md:text-sm">
+        <p>© 2026 Construction Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/animations.js"></script>
+  <script src="./js/language.js"></script>
+  <script src="./js/theme.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+});
+</script>
+</body>
+
+</html>

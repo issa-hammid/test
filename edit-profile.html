@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Settings</title>
+
+  <!-- Tailwind -->
+  <link rel="stylesheet" href="./global.css">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+   <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- <link rel="stylesheet" href="./test.css"> -->
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    body{
+      background:#f6f3ef;
+      font-family: Inter, sans-serif;
+    }
+
+    .main-shadow{
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.08),
+        0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .input-style{
+      @apply w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2]
+      px-4 text-sm text-gray-700 outline-none transition;
+    }
+
+    .input-style:focus{
+      border-color:#f97316;
+      background:white;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- HEADER -->
+    <div class="flex items-start gap-4 mb-8">
+
+      <button style="cursor: pointer;" onclick="window.location.href='accountdashboard.html'" class="w-10 h-10 rounded-full border border-[#DDD7D1] bg-white flex items-center justify-center text-gray-700 hover:bg-gray-50 transition">
+        <i class="fa-solid fa-arrow-left text-sm"></i>
+      </button>
+
+      <div>
+        <h1 class="text-3xl font-bold text-black leading-tight">
+          Profile Settings
+        </h1>
+
+        <p class="text-sm text-gray-500 mt-1">
+          Manage your personal information and preferences
+        </p>
+      </div>
+
+    </div>
+
+    <!-- PROFILE PHOTO CARD -->
+    <div class="bg-white rounded-[28px] p-6 sm:p-8 main-shadow mb-6">
+
+      <h2 class="text-xl font-bold text-black mb-6">
+        Profile Photo
+      </h2>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+
+        <!-- Avatar -->
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-3xl font-bold shrink-0">
+          JD
+        </div>
+
+        <!-- Upload -->
+        <div>
+            <button 
+            class="h-12 px-6 rounded-full text-white text-sm font-semibold flex items-center gap-3 transition hover:scale-[1.02]"
+            style="background: rgba(235, 67, 60, 1); box-shadow: 0 10px 25px rgba(235, 67, 60, 0.25);"
+            >
+            <i class="fa-solid fa-camera"></i>
+
+            Upload New Photo
+          </button>
+
+          <p class="text-xs text-gray-400 mt-3">
+            JPG, PNG or GIF. Max size 2MB
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PERSONAL INFO -->
+    <div class="bg-white rounded-[28px] p-6 sm:p-8 main-shadow mb-6">
+
+      <!-- TOP -->
+      <div class="flex items-center justify-between mb-8">
+
+        <h2 class="text-2xl font-bold text-black">
+          Personal Information
+        </h2>
+
+        <button class="px-5 h-10 rounded-full border border-[#E7E2DD] text-sm font-semibold hover:bg-gray-50 transition">
+          Edit
+        </button>
+
+      </div>
+
+     <!-- FORM -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+  <!-- Full Name -->
+  <div>
+    <label class="block text-sm font-semibold text-black mb-2">
+      Full Name
+    </label>
+
+    <div class="relative">
+      <img
+        src="/images/person.svg"
+        alt=""
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <input
+        type="text"
+        placeholder="John Doe"
+        class="w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2] pl-11 pr-4 text-sm outline-none focus:border-orange-400 focus:bg-white transition"
+      />
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label class="block text-sm font-semibold text-black mb-2">
+      Email Address
+    </label>
+
+    <div class="relative">
+      <img
+        src="/images/mail.svg"
+        alt=""
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <input
+        type="email"
+        placeholder="john@company.com"
+        class="w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2] pl-11 pr-4 text-sm outline-none focus:border-orange-400 focus:bg-white transition"
+      />
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div>
+    <label class="block text-sm font-semibold text-black mb-2">
+      Phone Number
+    </label>
+
+    <div class="relative">
+      <img
+        src="/images/phone.svg"
+        alt=""
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <input
+        type="text"
+        placeholder="+1 (555) 123-4567"
+        class="w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2] pl-11 pr-4 text-sm outline-none focus:border-orange-400 focus:bg-white transition"
+      />
+    </div>
+  </div>
+
+  <!-- Company -->
+  <div>
+    <label class="block text-sm font-semibold text-black mb-2">
+      Company
+    </label>
+
+    <div class="relative">
+      <img
+        src="/images/build.svg"
+        alt=""
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <input
+        type="text"
+        placeholder="ABC Construction Ltd."
+        class="w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2] pl-11 pr-4 text-sm outline-none focus:border-orange-400 focus:bg-white transition"
+      />
+    </div>
+  </div>
+
+  <!-- Job Title -->
+  <div>
+    <label class="block text-sm font-semibold text-black mb-2">
+      Job Title
+    </label>
+
+    <div class="relative">
+      <img
+        src="/images/job.svg"
+        alt=""
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <input
+        type="text"
+        placeholder="Project Manager"
+        class="w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2] pl-11 pr-4 text-sm outline-none focus:border-orange-400 focus:bg-white transition"
+      />
+    </div>
+  </div>
+
+  <!-- Country -->
+  <div>
+    <label class="block text-sm font-semibold text-black mb-2">
+      Country
+    </label>
+
+    <div class="relative">
+      <img
+        src="/images/countrey.svg"
+        alt=""
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <input
+        type="text"
+        placeholder=""
+        class="w-full h-12 rounded-2xl border border-[#E8E4DF] bg-[#F7F5F2] pl-11 pr-4 text-sm outline-none focus:border-orange-400 focus:bg-white transition"
+      />
+    </div>
+  </div>
+
+</div>
+
+      <!-- BIO -->
+      <div class="mt-5">
+        <label class="block text-sm font-semibold text-black mb-2">
+          Bio
+        </label>
+
+        <textarea
+          placeholder="Tell us about yourself..."
+          class="w-full h-40 rounded-3xl border border-[#E8E4DF] bg-[#F7F5F2] px-4 py-4 text-sm outline-none resize-none focus:border-orange-400 focus:bg-white transition"
+        ></textarea>
+      </div>
+
+    </div>
+
+    <!-- COMMUNICATION -->
+    <div class="bg-white rounded-[28px] p-6 sm:p-8 main-shadow">
+
+      <h2 class="text-2xl font-bold text-black mb-8">
+        Communication Preferences
+      </h2>
+
+      <div class="space-y-4">
+
+        <!-- Item -->
+        <div class="rounded-3xl bg-[#FCFBFA] p-5 flex items-start justify-between gap-4">
+
+          <div>
+            <h3 class="font-semibold text-black text-base">
+              Email Notifications
+            </h3>
+
+            <p class="text-sm text-gray-500 mt-1">
+              Receive updates about courses and events
+            </p>
+          </div>
+
+          <!-- <label class="relative inline-flex cursor-pointer items-center">
+            <input type="checkbox" class="peer sr-only" checked>
+
+            <div class="peer h-7 w-12 rounded-full bg-gray-300 after:absolute after:left-[2px] after:top-[2px] after:h-6 after:w-6 after:rounded-full after:bg-white after:transition-all peer-checked:bg-orange-500 peer-checked:after:translate-x-5"></div>
+          </label> -->
+
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-3xl  bg-[#FCFBFA] p-5 flex items-start justify-between gap-4">
+
+          <div>
+            <h3 class="font-semibold text-black text-base">
+              Marketing Communications
+            </h3>
+
+            <p class="text-sm text-gray-500 mt-1">
+              Receive news about new resources and offers
+            </p>
+          </div>
+
+          <!-- <label class="relative inline-flex cursor-pointer items-center">
+            <input type="checkbox" class="peer sr-only">
+
+            <div class="peer h-7 w-12 rounded-full bg-gray-300 after:absolute after:left-[2px] after:top-[2px] after:h-6 after:w-6 after:rounded-full after:bg-white after:transition-all peer-checked:bg-orange-500 peer-checked:after:translate-x-5"></div>
+          </label> -->
+
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-3xl bg-[#FCFBFA] p-5 flex items-start justify-between gap-4">
+
+          <div>
+            <h3 class="font-semibold text-black text-base">
+              Weekly Digest
+            </h3>
+
+            <p class="text-sm text-gray-500 mt-1">
+              Get a weekly summary of your activity
+            </p>
+          </div>
+
+          <!-- <label class="relative inline-flex cursor-pointer items-center">
+            <input type="checkbox" class="peer sr-only" checked>
+
+            <div class="peer h-7 w-12 rounded-full bg-gray-300 after:absolute after:left-[2px] after:top-[2px] after:h-6 after:w-6 after:rounded-full after:bg-white after:transition-all peer-checked:bg-orange-500 peer-checked:after:translate-x-5"></div>
+          </label> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+

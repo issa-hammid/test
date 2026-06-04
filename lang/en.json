@@ -1,0 +1,797 @@
+{
+  "Auth": {
+    "app_name": "Just In Takt",
+    "welcome_back": "Welcome back",
+    "sign_in": "Sign In",
+    "or": "or",
+    "create_account": "Create Account",
+    "continue_as_guest": "Continue as Guest",
+    "terms_privacy": "By continuing, you agree to our Terms and Privacy Policy"
+  },
+  "Login": {
+    "app_name": "Just In Takt",
+    "title": "Create Your Account",
+    "welcome_back": "Welcome Back",
+    "description": "Sign in to access your admin dashboard",
+
+    "email_address": "Email Address",
+    "email_placeholder": "admin@justintakt.com",
+
+    "password": "Password",
+    "password_placeholder": "Enter your password",
+
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot Password?",
+
+    "sign_in": "Sign In",
+    "or": "or",
+
+    "sign_in_google": "Sign in with Google",
+    "sign_in_linkedin": "Sign in with LinkedIn",
+
+    "security_note": "Secured with 256-bit SSL encryption",
+    "back_home": "Back to Homepage"
+  },
+  "ForgotPassword": {
+    "app_name": "Just In Takt",
+    "title": "Reset Your Password",
+
+    "heading": "Forgot Password?",
+    "description": "No worries! Enter your email address and we'll send you instructions to reset your password.",
+
+    "email_address": "Email Address",
+    "email_placeholder": "admin@justintakt.com",
+
+    "send_reset_link": "Send Reset Link",
+    "back_to_login": "Back to Login",
+
+    "need_help": "Need help accessing your account?",
+    "contact_support": "Contact Support",
+
+    "back_home": "Back to Homepage"
+  },
+  "CreateNewPassword": {
+    "app_name": "Just In Takt",
+    "title": "Create New Password",
+
+    "heading": "Create New Password",
+    "description": "Your new password must be different from previously used passwords",
+
+    "new_password": "New Password",
+    "new_password_placeholder": "Create a strong password",
+
+    "confirm_password": "Confirm New Password",
+    "confirm_password_placeholder": "Re-enter your password",
+
+    "password_requirements": "Password Requirements",
+
+    "requirement_length": "At least 8 characters",
+    "requirement_upper_lower": "Uppercase and lowercase letters",
+    "requirement_number": "At least one number",
+    "requirement_special": "At least one special character",
+
+    "reset_password": "Reset Password",
+    "back_to_login": "Back to Login"
+  },
+  "Signup": {
+    "app_name": "Just In Takt",
+    "title": "Create Your Account",
+
+    "step_personal": "Personal",
+    "step_company": "Company",
+    "step_security": "Security",
+
+    "section_title": "Personal Information",
+    "section_description": "Let's start with your basic details",
+
+    "full_name": "Full Name *",
+    "full_name_placeholder": "John Doe",
+
+    "email_address": "Email Address *",
+    "email_placeholder": "john@company.com",
+
+    "phone_number": "Phone Number *",
+    "phone_placeholder": "+1 (555) 000-0000",
+
+    "continue": "Continue",
+
+    "already_have_account": "Already have an account?",
+    "sign_in": "Sign In",
+
+    "back_home": "Back to Homepage",
+
+    "company_section_title": "Company Information",
+    "company_section_description": "Tell us more about your work",
+
+    "company_name": "Company Name *",
+    "company_name_placeholder": "Your Company",
+
+    "job_title": "Job Title *",
+    "job_title_placeholder": "Product Designer",
+
+    "country": "Country *",
+    "country_placeholder": "United States",
+
+    "security_section_title": "Security Setup",
+    "security_section_description": "Create a secure password",
+
+    "password": "Password *",
+    "password_placeholder": "Enter password",
+
+    "confirm_password": "Confirm Password *",
+    "confirm_password_placeholder": "Confirm password",
+
+    "agree_terms": "I agree to the Terms of Service and Privacy Policy",
+
+    "create_account": "Create Account"
+  },
+  "EmailVerification": {
+    "app_name": "Just In Takt",
+    "title": "Verify Your Email",
+
+    "heading": "Check Your Email",
+    "description": "We've sent a 6-digit verification code to",
+
+    "verification_code": "Enter Verification Code",
+
+    "resend_code": "Didn't receive the code? Resend in {seconds}s",
+
+    "verify_email": "Verify Email",
+
+    "tip": "Tip: Check your spam folder if you don't see the email",
+
+    "demo_code": "For demo purposes, use code: {code}",
+
+    "back_to_signup": "Back to Sign Up",
+
+    "need_help": "Need help?",
+    "contact_support": "Contact Support",
+
+    "back_home": "Back to Homepage"
+  },
+  "Onboarding": {
+    "title": "Welcome to Just In Takt!",
+    "description": "Let's personalize your experience. Select your areas of interest to get tailored recommendations.",
+
+    "interests_title": "What are you interested in?",
+    "interests_description": "Select all that apply",
+
+    "training_courses": "Training Courses",
+    "training_courses_description": "Learn TAKT methodology and best practices",
+
+    "consulting_services": "Consulting Services",
+    "consulting_services_description": "Expert guidance for your projects",
+
+    "events_workshops": "Events & Workshops",
+    "events_workshops_description": "Join community gatherings and webinars",
+
+    "digital_resources": "Digital Resources",
+    "digital_resources_description": "Access templates and documentation",
+
+    "construction_management": "Construction Management",
+    "construction_management_description": "Project planning and execution tools",
+
+    "digital_transformation": "Digital Transformation",
+    "digital_transformation_description": "Modernize your operations",
+
+    "industry_title": "What's your industry sector?",
+    "industry_description": "This helps us recommend relevant content",
+
+    "residential_construction": "Residential Construction",
+    "commercial_construction": "Commercial Construction",
+    "infrastructure_civil": "Infrastructure & Civil",
+    "industrial_construction": "Industrial Construction",
+    "renovation_remodeling": "Renovation & Remodeling",
+    "consulting_engineering": "Consulting & Engineering",
+    "other": "Other",
+
+    "language_title": "Preferred Language",
+    "language_description": "Choose your preferred language for content and communication",
+
+    "english": "English",
+    "german": "German",
+    "french": "French",
+    "spanish": "Spanish",
+    "portuguese": "Portuguese",
+
+    "skip": "Skip for Now",
+    "get_started": "Get Started",
+
+    "selected_interests": "{count} interests selected"
+  },
+  "Home": {
+    "hero_title": "Transforming the Future of Construction",
+
+    "hero_heading_line1": "Building More",
+    "hero_heading_line2": "Profitable Companies",
+
+    "hero_description": "TAKT transforms construction efficiency",
+
+    "free_consultation": "Schedule a Free Consultation",
+
+    "years_experience": "Years Of Experience",
+    "projects_completed": "Project Completed",
+    "happy_clients": "Happy Clients",
+
+    "construction_problem_description": "Today, construction projects struggle with delays, poor communication, and daily operational chaos. We are a group of experts dedicated to transforming construction companies from disorder into high-performing, efficient organizations using TAKT methodology and proven management transformation practices that elevate engineers from zero to hero.",
+
+    "mission_vision_title": "Our Mission & Vision",
+    "mission_vision_description": "Committed to excellence in construction, innovation in design, and creating lasting value for our clients and communities.",
+
+    "mission": "Mission",
+    "mission_description": "We help organizations achieve predictable, high-performance results through Lean, Takt, and continuous improvement eliminating bottlenecks and creating sustainable flow.",
+
+    "vision": "Vision",
+    "vision_description": "To become the region's leading catalyst for operational excellence transforming how organizations plan, execute, and grow through predictable flow, synchronized operations, and empowered people.",
+
+    "consultant_title_line1": "Meet Our",
+    "consultant_title_line2": "Professional",
+    "consultant_title_line3": "Consultant",
+
+    "consultant_description": "Our expert consultants are here to guide you through every step of your construction project, ensuring quality and timely delivery.",
+
+    "learn_more": "Learn More",
+
+    "consultant_subtitle": "Here to guide you every step of the way",
+    "consultant_text": "Our consultants will help you every step of the way",
+
+    "how_takt_works": "See How TAKT Works",
+
+    "solutions_description": "Comprehensive construction solutions tailored to bring your vision to life with precision and excellence.",
+
+    "takt_system": "TAKT-Based System Implementation",
+    "takt_system_description": "Strategic planning and feasibility studies to ensure project success from day one.",
+
+    "lean_transformation": "Lean Construction Transformation",
+    "lean_transformation_description": "End-to-end construction management with attention to quality and deadlines.",
+
+    "digital_construction": "Digital Construction & PMIS Solutions",
+    "digital_construction_description": "Expert guidance to optimize costs, timelines, and construction strategies.",
+
+    "performance_management": "Performance & Change Management",
+    "performance_management_description": "Integrated approach combining design and construction for seamless delivery.",
+
+    "projects_title": "Top Projects",
+    "projects_description": "Discover our portfolio of exceptional construction projects that showcase our expertise, innovation, and commitment to delivering world-class developments.",
+
+    "view_all": "View All",
+
+    "trusted_clients": "Our Trusted Clients",
+
+    "clients_title": "What Our Clients Say",
+
+    "testimonial_1": "The team provided exceptional service and completed our project ahead of schedule with outstanding quality.",
+    "testimonial_2": "Professional, reliable, and always delivering on their promises. Highly recommend for any construction project.",
+    "testimonial_3": "Working with this team was a pleasure. Their attention to detail and commitment to excellence is unmatched."
+  },
+   "About": {
+    "page_title": "About",
+
+    "company_name": "Arab Takting Management",
+
+    "description": "We are a group of experts dedicated to transforming construction companies from disorder into high-performing, efficient organizations using TAKT methodology and proven management transformation practices.",
+
+    "mission_title": "Our Mission",
+    "mission_description": "To elevate construction professionals from zero to hero by implementing TAKT methodology and management transformation practices that eliminate chaos, reduce delays, and create predictable, high-performing project delivery systems.",
+
+    "vision_title": "Our Vision",
+    "vision_description": "A construction industry where every project is delivered on time, within budget, and with exceptional quality through systematic planning, continuous improvement, and operational excellence.",
+
+    "story_title": "Our Story",
+    "story_subtitle": "Our Story Background",
+
+    "story_paragraph_1": "Today, construction projects struggle with delays, poor communication, and daily operational chaos. We experienced these challenges firsthand and knew there had to be a better way.",
+
+    "story_paragraph_2": "After years of research and implementation across hundreds of projects, we discovered that TAKT planning methodology combined with systematic management transformation could revolutionize how construction companies operate.",
+
+    "story_paragraph_3": "Just In Takt was founded to share this proven approach with construction companies ready to transform their operations and achieve consistent, predictable results.",
+
+    "values_title": "Our Values",
+
+    "excellence_title": "Excellence",
+    "excellence_description": "We pursue the highest standards in everything we do, continuously improving our methodologies and delivering exceptional results.",
+
+    "integrity_title": "Integrity",
+    "integrity_description": "We operate with honesty and transparency, building trust through consistent actions and delivering on our commitments.",
+
+    "collaboration_title": "Collaboration",
+    "collaboration_description": "We work closely with our clients as partners, sharing knowledge and empowering teams to achieve sustainable transformation.",
+
+    "leadership_title": "Our Leadership Team",
+
+    "leader_name": "Tamer Reda",
+    "leader_position": "Chief Executive Officer",
+    "leader_quote": "TaktBuild Solutions revolutionized our project timelines. Their TAKT management approach brought unprecedented predictability.",
+
+    "cta_title": "Ready to transform your operations?",
+    "cta_description": "Let's discuss how we can help your construction company achieve operational excellence.",
+
+    "contact_button": "Get In Touch"
+  },
+   "Services": {
+    "title": "Our Services",
+    "description": "We help construction companies achieve operational excellence through TAKT methodology and management transformation practices. Our comprehensive services are designed to transform the way you plan, execute, and deliver construction projects.",
+
+    "time_schedules_title": "Time Schedules",
+    "time_schedules_subtitle": "TAKT-Based Scheduling",
+    "time_schedules_description": "ATM develops TAKT-based time schedules that transform traditional scheduling into highly efficient, location-based, flow-oriented execution plans.",
+
+    "building_core_team_title": "Building Core Team",
+    "building_core_team_subtitle": "Project Core Alignment",
+    "building_core_team_description": "ATM supports the formation and alignment of a project core team capable of executing and maintaining TAKT execution.",
+
+    "lean_transformation_title": "Lean Transformation",
+    "lean_transformation_subtitle": "Structured Lean Journey",
+    "lean_transformation_description": "ATM leads a structured Lean transformation journey that shifts project teams from reactive firefighting to system-driven, collaborative execution.",
+
+    "simulation_games_title": "Simulation Games",
+    "simulation_games_subtitle": "Simplifying TAKT Concepts",
+    "simulation_games_description": "ATM translates complex TAKT concepts into simple, visual, and interactive experiences that everyone can understand.",
+
+    "on_site_implementation_title": "On-Site Implementation",
+    "on_site_implementation_subtitle": "Structured Site Execution",
+    "on_site_implementation_description": "Through structured site routines, TAKT establishes discipline, clarity, and flow. It helps teams know what work, when to work, and how to hand over work without interruption or congestion.",
+
+    "elevation_training_title": "Elevation Training Programs",
+    "elevation_training_subtitle": "Empowering Teams",
+    "elevation_training_description": "Without elevation training, TAKT remains theoretical. With it, TAKT becomes a scalable, repeatable production system led by empowered team.",
+
+    "digitalization_title": "Digitalization",
+    "digitalization_subtitle": "Construction Digital Transformation",
+    "digitalization_description": "ATM implements digital systems that enhance discipline, clarity, and workflow efficiency on construction sites.",
+
+    "why_choose_us_title": "Why Choose Us?",
+
+    "proven_methodology_title": "Proven Methodology",
+    "proven_methodology_description": "Our TAKT-based approach has delivered measurable results across hundreds of construction projects, reducing delays and improving predictability.",
+
+    "expert_team_title": "Expert Team",
+    "expert_team_description": "Our consultants bring decades of construction industry experience combined with deep expertise in lean methodologies and operational transformation.",
+
+    "fast_implementation_title": "Fast Implementation",
+    "fast_implementation_description": "We focus on rapid deployment and quick wins, ensuring you see tangible benefits early while building toward comprehensive transformation.",
+
+    "trusted_clients_title": "Our Trusted Clients",
+
+    "technology_partners_title": "Technology Partners",
+    "technology_partners_description": "Powered by cutting-edge construction technology and software solutions.",
+
+    "cta_title": "Ready to transform your operations?",
+    "cta_description": "Schedule a strategy session with our experts to discover how TAKT methodology can revolutionize your construction projects.",
+    "cta_button": "Book a Strategy Session"
+  },
+  "Portfolio": {
+    "title": "Our Portfolio",
+    "description": "Explore our successful TAKT implementations across diverse construction projects. Each project represents a transformation story of improved efficiency and predictability.",
+
+    "filter_all": "All",
+    "filter_commercial": "Commercial",
+    "filter_residential": "Residential",
+    "filter_infrastructure": "Infrastructure",
+    "filter_industrial": "Industrial",
+
+    "view_project": "View Project",
+
+    "projects": [
+      {
+        "title": "Downtown Business Center",
+        "category": "Commercial",
+        "year": "2025",
+        "location": "New York, NY"
+      },
+      {
+        "title": "Riverside Luxury Apartments",
+        "category": "Residential",
+        "year": "2024",
+        "location": "Austin, TX"
+      },
+      {
+        "title": "Metro Transit Hub",
+        "category": "Infrastructure",
+        "year": "2025",
+        "location": "Chicago, IL"
+      },
+      {
+        "title": "Tech Manufacturing Facility",
+        "category": "Industrial",
+        "year": "2024",
+        "location": "San Jose, CA"
+      },
+      {
+        "title": "Greenfield Office Campus",
+        "category": "Commercial",
+        "year": "2025",
+        "location": "Seattle, WA"
+      },
+      {
+        "title": "Skyline Residential Tower",
+        "category": "Residential",
+        "year": "2026",
+        "location": "Miami, FL"
+      }
+    ],
+
+    "testimonials_title": "What Our Clients Say",
+
+    "testimonial_1_name": "Sarah",
+    "testimonial_1_text": "The team provided exceptional service and completed our project ahead of schedule with outstanding quality.",
+    "testimonial_1_company": "BuildTech",
+
+    "testimonial_2_name": "Michael",
+    "testimonial_2_text": "Professional, reliable, and always delivering on their promises. Highly recommend for any construction project.",
+    "testimonial_2_company": "UrbanDev",
+
+    "testimonial_3_name": "Emily",
+    "testimonial_3_text": "Working with this team was a pleasure. Their attention to detail and commitment to excellence is unmatched.",
+    "testimonial_3_company": "SkyHigh"
+  },
+   "PortfolioDetails": {
+    "location": "Location",
+    "budget": "Budget",
+    "duration": "Duration",
+    "services_title": "Services Provided",
+    "features_title": "Key Features",
+    "results_title": "Project Results",
+    "related_title": "Related Projects",
+    "cta_title": "Ready to Transform Your Project?",
+    "cta_button": "Get In Touch"
+  },
+  "Resources": {
+    "title": "Resources & Insights",
+    "description": "Expert insights, best practices, and practical guidance on TAKT methodology, construction management, and operational transformation.",
+
+    "featured_label": "Featured",
+    "featured_category": "TAKT Planning",
+
+    "featured_title": "The Complete Guide to TAKT Planning in Construction",
+    "featured_description": "Learn how TAKT planning methodology can transform your construction projects from chaotic to predictable, with proven strategies and real-world examples.",
+
+    "latest_title": "Latest Articles",
+
+    "read_article": "Read Article",
+    "read_more": "Read More",
+
+    "min_read": "min read"
+  },
+  "Contact": {
+    "title": "Get In Touch",
+    "description": "Ready to transform your construction operations? We're here to help. Reach out to discuss your project and discover how TAKT can work for you.",
+
+    "email_title": "Email Us",
+    "email": "info@justintakt.com",
+    "email_note": "We'll respond within 24 hours",
+
+    "phone_title": "Call Us",
+    "phone": "+1 (555) 123-4567",
+    "phone_note": "Mon-Fri, 9am-6pm EST",
+
+    "location_title": "Visit Us",
+    "address_line1": "123 Construction Plaza",
+    "address_line2": "New York, NY 10001",
+
+    "form_title": "Send Us A Message",
+
+    "first_name": "First Name *",
+    "first_name_placeholder": "John",
+
+    "last_name": "Last Name *",
+    "last_name_placeholder": "Doe",
+
+    "email_address": "Email Address *",
+    "email_placeholder": "john.doe@company.com",
+
+    "phone_number": "Phone Number *",
+    "phone_placeholder": "+966 123 456 789",
+
+    "company": "Company",
+    "company_placeholder": "Your Company Name",
+
+    "subject": "Subject *",
+    "subject_placeholder": "How can we help?",
+
+    "message": "Message *",
+    "message_placeholder": "Tell us about your project...",
+
+    "send_message": "Send Message"
+  },
+  "Events": {
+    "title": "Upcoming Events",
+    "subtitle": "Reserve your spot at our next learning opportunity",
+
+    "description": "Join our workshops, webinars, and conferences to deepen your understanding of TAKT methodology and connect with construction industry leaders worldwide.",
+
+    "impact_title": "Our Impact in Numbers",
+    "impact_description": "Building a global community of construction excellence",
+
+    "attendees": "Total Attendees",
+    "attendees_desc": "Professionals trained in TAKT methodology",
+
+    "events_hosted": "Events Hosted",
+    "events_hosted_desc": "Workshops, webinars, and conferences worldwide",
+
+    "satisfaction_rate": "Satisfaction Rate",
+    "satisfaction_rate_desc": "Average rating from attendee feedback",
+
+    "countries_reached": "Countries Reached",
+    "countries_reached_desc": "Global impact across construction markets",
+
+    "certified_professionals": "Certified Professionals",
+    "certified_professionals_desc": "TAKT practitioners and experts certified",
+
+    "avg_response_time": "Average Response Time",
+    "avg_response_time_desc": "Quick support for all event inquiries",
+
+    "past_events_title": "Past Events Coverage",
+    "past_events_description": "Highlights from our recent successful events",
+
+    "newsletter_title": "Don't Miss Our Next Event",
+    "newsletter_description": "Subscribe to our newsletter to receive updates about upcoming events, exclusive offers, and the latest insights in construction excellence.",
+
+    "email_placeholder": "Enter your email",
+    "subscribe": "Subscribe Now"
+  },
+  "EventDetails": {
+    "about_title": "About This Event",
+
+    "what_you_will_learn_title": "What You'll Learn",
+    "who_should_attend_title": "Who Should Attend",
+
+    "you_might_also_like_title": "You Might Also Like"
+  },
+
+  "EventRegister": {
+    "back_to_events": "Back to Events",
+    "title": "Event Registration",
+    "description": "Complete the form below to secure your spot. We'll send you a confirmation email with all the details.",
+
+    "your_information_title": "Your Information",
+    "personal_details_title": "Personal Details",
+
+    "first_name": "First Name *",
+    "last_name": "Last Name *",
+    "email_address": "Email Address *",
+    "phone_number": "Phone Number *",
+
+    "professional_details_title": "Professional Details",
+    "company_name": "Company Name *",
+    "job_title": "Job Title *",
+
+    "event_details_title": "Event Details",
+    "number_of_attendees": "Number of Attendees *",
+    "dietary_restrictions": "Dietary Restrictions",
+    "special_requests": "Special Requests or Questions",
+
+    "terms_text": "I agree to the terms and conditions and understand the cancellation policy. I consent to receiving event-related communications.",
+
+    "complete_registration": "Complete Registration",
+
+    "event_summary_title": "Event Summary",
+    "cancellation_policy_title": "Cancellation Policy",
+    "cancellation_policy_text": "Full refund if canceled 7+ days before the event. 50% refund if canceled 3–7 days before."
+  },
+  "EventSuccess": {
+    "title": "Registration Complete!",
+    "message": "Thank you, John Doe. Your registration has been successfully submitted. We've sent a confirmation email to",
+
+    "what_happens_next_title": "What happens next?",
+
+    "step_1": "Check your email for confirmation",
+    "step_2": "Add the event to your calendar",
+    "step_3": "Receive a reminder 48h before",
+
+    "browse_more": "Browse More",
+    "close": "Close",
+    "share": "Share with colleagues"
+  },
+  "PodcastSubscribe": {
+    "title": "Just In Takt Podcast",
+    "subtitle": "Subscribe & Never Miss an Episode",
+    "description": "Get the latest insights on TAKT planning, construction innovation, and industry best practices delivered to your favorite podcast app every week.",
+
+    "feature_weekly": "Weekly Episodes",
+    "feature_weekly_desc": "New episodes every Tuesday",
+
+    "feature_guests": "Expert Guests",
+    "feature_guests_desc": "Industry leaders and innovators",
+
+    "feature_adfree": "Ad-Free",
+    "feature_adfree_desc": "Pure content, no interruptions",
+
+    "feature_notes": "Show Notes",
+    "feature_notes_desc": "Detailed notes and resources",
+
+    "platform_title": "Choose Your Platform",
+    "platform_subtitle": "Listen on your favorite podcast app",
+
+    "apple_desc": "Listen on iPhone, iPad, Mac, and Apple Watch",
+    "spotify_desc": "Stream on desktop, mobile, and web",
+    "youtube_desc": "Watch video episodes on YouTube",
+
+    "subscribe_button": "Subscribe",
+
+    "email_title": "Get Episode Updates via Email",
+    "email_description": "Prefer email? Subscribe to our newsletter and get episode summaries, show notes, and exclusive content delivered to your inbox every week.",
+
+    "email_placeholder": "Enter your email address",
+    "email_subscribe": "Subscribe",
+    "privacy_note": "No spam. Unsubscribe anytime. We respect your privacy.",
+
+    "about_title": "About the Podcast",
+    "about_description": "The Just In Takt Podcast brings you weekly conversations with construction industry leaders, innovators, and practitioners who are transforming how we build. From TAKT planning fundamentals to cutting-edge digital tools, we cover everything you need to know to achieve operational excellence.",
+
+    "about_point_1": "45-60 minute episodes",
+    "about_point_2": "Expert interviews and case studies",
+    "about_point_3": "Actionable insights and takeaways",
+    "about_point_4": "Available on all major platforms",
+
+    "contact_title": "Connect With Us",
+    "contact_description": "Have questions, feedback, or topic suggestions? We'd love to hear from you! Join our community and be part of the conversation.",
+
+    "email_label": "Email Us",
+    "email": "podcast@justintakt.com",
+
+    "contact_form": "Contact Form",
+    "contact_button": "Send us a message",
+
+    "browse_episodes": "Browse Episodes"
+  },
+   "Training": {
+    "title": "Training & Certification",
+    "description": "Develop your skills with comprehensive courses designed by industry experts. From TAKT fundamentals to advanced implementation strategies.",
+
+    "search_placeholder": "Search courses...",
+
+    "filter_all": "All",
+    "filter_beginner": "Beginner",
+    "filter_intermediate": "Intermediate",
+    "filter_advanced": "Advanced",
+
+    "coming_soon_title": "Coming Soon Courses",
+    "coming_soon_description": "Explore upcoming courses that will be available soon. Stay tuned for new content and advanced training opportunities.",
+
+    "corporate_title": "Corporate Training Programs",
+    "corporate_description": "Custom training solutions for teams. Get tailored curriculum, dedicated support, and group certification programs.",
+
+    "request_corporate_training": "Request Corporate Training"
+  },
+   "Dashboard": {
+    "title": "My Dashboard",
+    "welcome": "Welcome back, John!",
+
+    "back_home": "Back to Homepage",
+
+    "member_since": "Member since January 2024",
+
+    "edit_profile": "Edit Profile",
+
+    "stats_courses": "Courses Enrolled",
+    "stats_completed": "Completed",
+    "stats_events": "Events Registered",
+    "stats_resources": "Resources Saved",
+
+    "my_orders": "My Orders",
+    "my_orders_desc": "View purchases & invoices",
+
+    "wishlist": "Wishlist",
+    "wishlist_desc": "Saved items & favorites",
+
+    "notifications": "Notifications",
+    "new_updates": "new updates",
+
+    "active_courses_title": "Active Courses",
+    "view_all": "View All",
+    "progress": "Progress",
+    "continue": "Continue",
+
+    "upcoming_events_title": "Upcoming Events",
+
+    "recent_activity_title": "Recent Activity",
+
+    "security_settings": "Security Settings"
+  },
+  "ProfileSettings": {
+    "title": "Profile Settings",
+    "description": "Manage your personal information and preferences",
+
+    "profile_photo": "Profile Photo",
+    "upload_photo": "Upload New Photo",
+    "upload_hint": "JPG, PNG or GIF. Max size 2MB",
+
+    "personal_info_title": "Personal Information",
+    "edit": "Edit",
+
+    "full_name": "Full Name",
+    "email_address": "Email Address",
+    "phone_number": "Phone Number",
+    "company": "Company",
+    "job_title": "Job Title",
+    "country": "Country",
+    "bio": "Bio",
+
+    "bio_placeholder": "Tell us about yourself...",
+
+    "communication_title": "Communication Preferences",
+
+    "email_notifications": "Email Notifications",
+    "email_notifications_desc": "Receive updates about courses and events",
+
+    "marketing_communications": "Marketing Communications",
+    "marketing_communications_desc": "Receive news about new resources and offers",
+
+    "weekly_digest": "Weekly Digest",
+    "weekly_digest_desc": "Get a weekly summary of your activity"
+  },
+  "SecuritySettings": {
+    "title": "Security Settings",
+    "description": "Manage your account security and login preferences",
+
+    "change_password_title": "Change Password",
+    "last_changed": "Last changed 30 days ago",
+    "update_password": "Update Password",
+
+    "password_tip": "Tip: Use a strong password with at least 8 characters, including uppercase, lowercase, numbers, and special characters.",
+
+    "two_factor_title": "Two-Factor Authentication",
+    "two_factor_disabled": "Disabled",
+    "two_factor_description": "Add an extra layer of security to your account with 2FA",
+    "enable_2fa": "Enable 2FA",
+
+    "security_recommendation": "Security Recommendation: Enable two-factor authentication to protect your account from unauthorized access.",
+
+    "active_sessions_title": "Active Sessions",
+    "active_sessions_count": "active sessions",
+    "sign_out_all": "Sign Out All",
+
+    "revoke": "Revoke",
+    "current": "Current",
+    "active_now": "Active now",
+
+    "login_history_title": "Login History",
+    "login_history_description": "Recent login activity on your account",
+
+    "success": "Success",
+    "failed": "Failed"
+  },
+  "Orders": {
+    "title": "My Orders",
+    "description": "View your purchases, invoices, and order history",
+
+    "order": "Order",
+    "completed": "Completed",
+    "pending": "Pending",
+
+    "order_placed_on": "Order placed on",
+
+    "invoice": "Invoice",
+    "view_details": "View Details",
+
+    "payment_method": "Payment Method",
+    "total": "Total"
+  },
+  "Wishlist": {
+    "title": "My Wishlist",
+    "saved_items": "saved items",
+
+    "course": "Course",
+    "event": "Event",
+    "resource": "Resource",
+
+    "weeks": "weeks",
+
+    "enroll_now": "Enroll Now"
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "unread": "unread notifications",
+
+    "settings": "Settings",
+    "mark_all_read": "Mark All as Read",
+    "clear_all": "Clear All",
+
+    "new_module": "New Module Available",
+    "event_reminder": "Event Reminder",
+    "purchase_confirmation": "Purchase Confirmation",
+    "welcome": "Welcome to Just In Takt!",
+    "course_update": "Course Update"
+  }
+}
