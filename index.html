@@ -11,6 +11,8 @@
    <link rel="stylesheet" href="./dist/output.css">
   <link rel="stylesheet" href="./global.css">
   <!-- <link rel="stylesheet" href="./test.css"> -->
+ 
+
 </head>
 
 <body>
@@ -62,7 +64,7 @@
           </li>
         </ul>
 
-        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 action-group">
           <a href="/events"
             class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -90,6 +92,29 @@
             </svg>
             Training
           </a>
+          <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 30%;
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+  
         </div>
 
        <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
@@ -141,7 +166,28 @@
          class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
         Training
       </a>
+ <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 45%;
+      white-space: nowrap;
+    "
+  >
 
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
     </div>
 
   </div>
@@ -184,7 +230,7 @@
   }
 </style>
 
-<button
+<!-- <button
 style="cursor: pointer;"
   onclick="window.location.href='.././accountdashboard.html'"
   class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
@@ -194,29 +240,9 @@ style="cursor: pointer;"
     alt="profile"
     class="w-8 h-8 icon-theme transition duration-300"
   />
-</button>
+</button> -->
 
-  <!-- LOGIN / SIGNUP -->
-  <div
-    onclick="window.location.href='/auth.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-    "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
-
-    <span class="opacity-40">|</span>
-
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
-    </div>
-
-  </div>
+  
 
 </div>
 
@@ -1187,16 +1213,7 @@ style="cursor: pointer;"
   <script src="./js/language.js"></script>
   <script src="./js/theme.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const btn = document.getElementById("mobile-menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-
-});
 </script>
 </body>
 

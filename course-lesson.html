@@ -14,14 +14,31 @@
     <link rel="stylesheet" href="./dist/output.css">
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        * { font-family: 'Inter', sans-serif; }
+
+        body:not(:has(#theme-toggle:checked)) [class*="dark:"] {
+          color: revert !important;
+          background-color: revert !important;
+          border-color: revert !important;
+          box-shadow: revert !important;
+          filter: none !important;
+          background-image: none !important;
+        }
+
+        body:not(:has(#theme-toggle:checked)) .dark\:invert {
+          filter: none !important;
+        }
+
+        /* Light mode border colors for cards and sections */
+        body:not(:has(#theme-toggle:checked)) .border-gray-100 {
+          border-color: #f3f4f6 !important;
         }
     </style>
 </head>
-<body class="bg-[#f6f6f7]">
+<body class="bg-[#f6f6f7] text-gray-900 dark:bg-[#121212] dark:text-white">
     <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
-     <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+     <!-- ══ HEADER ══ -->
+    <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
     <div class="max-w-400 mx-auto">
       <nav id="main-nav"
         class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
@@ -31,9 +48,9 @@
           <a href="../" aria-label="Arab Talk Home">
            <img
   class="site-logo"
-  src="./images/lightmodelogo.png"
-  data-light="./images/lightmodelogo.png"
-  data-dark="./images/Darkmode.png"
+  src="/images/lightmodelogo.png"
+  data-light="/images/lightmodelogo.png"
+  data-dark="/images/Darkmode.png"
   alt="Logo">
           </a>
         </div>
@@ -66,7 +83,7 @@
           </li>
         </ul>
 
-        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 action-group">
           <a href="/events"
             class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -94,6 +111,29 @@
             </svg>
             Training
           </a>
+          <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 30%;
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+  
         </div>
 
        <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
@@ -145,7 +185,24 @@
          class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
         Training
       </a>
+ <div
+    onclick="window.location.href='/profile.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 45%;
+      white-space: nowrap;
+    "
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
 
+    <span class="opacity-40">|</span>
+
+    <div class="font-medium">
+        Profile
+    </div>
+</div>
     </div>
 
   </div>
@@ -188,7 +245,7 @@
   }
 </style>
 
-<button
+<!-- <button
 style="cursor: pointer;"
   onclick="window.location.href='.././accountdashboard.html'"
   class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
@@ -198,29 +255,9 @@ style="cursor: pointer;"
     alt="profile"
     class="w-8 h-8 icon-theme transition duration-300"
   />
-</button>
+</button> -->
 
-  <!-- LOGIN / SIGNUP -->
-  <div
-    onclick="window.location.href='/auth.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-    "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
-
-    <span class="opacity-40">|</span>
-
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
-    </div>
-
-  </div>
+  
 
 </div>
 
@@ -233,34 +270,34 @@ style="cursor: pointer;"
     <!-- Header -->
     <div class="flex items-start justify-between mb-6">
         <div class="flex gap-4 items-start">
-            <button class="w-11 h-11 bg-white rounded-full shadow-sm flex items-center justify-center">
+            <button class="w-11 h-11 bg-white text-gray-900 rounded-full shadow-sm flex items-center justify-center dark:bg-[#1f2937] dark:text-white">
                 <img src="images/rowback.svg" alt="Back" class="">
             </button>
 
             <div>
-                <h1 class="text-2xl font-bold text-gray-900">
+                <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
                     TAKT Planning Fundamentals
                 </h1>
 
-                <p class="text-sm text-gray-500 mt-1">
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
                     12 of 32 lessons completed • 4h 30min total time
                 </p>
             </div>
         </div>
 
-        <button class="hidden md:block px-5 py-2 bg-white rounded-full shadow-sm text-sm font-medium">
+<button class="hidden md:block px-5 py-2 bg-white text-gray-900 rounded-full shadow-sm text-sm font-medium dark:bg-[#1f2937] dark:text-white">
             My Dashboard
         </button>
     </div>
 
     <!-- Progress -->
-    <div class="bg-white rounded-3xl p-5 shadow-sm mb-6">
+    <div class="bg-white rounded-3xl p-5 shadow-sm mb-6 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
         <div class="flex justify-between items-center mb-3">
-            <span class="text-sm font-semibold">Course Progress</span>
-            <span class="font-semibold text-sm">45%</span>
+            <span class="text-sm font-semibold text-gray-900 dark:text-white">Course Progress</span>
+            <span class="font-semibold text-sm text-gray-900 dark:text-white">45%</span>
         </div>
 
-        <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+        <div class="w-full bg-gray-200 dark:bg-white/10 h-2 rounded-full overflow-hidden">
             <div
                 class="h-full w-[45%] rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400">
             </div>
@@ -294,9 +331,9 @@ style="cursor: pointer;"
             </div>
 
             <!-- Tabs -->
-            <div class="bg-white rounded-3xl shadow-sm mt-6">
+            <div class="bg-white rounded-3xl shadow-sm mt-6 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
 
-                <div class="border-b border-gray-200 px-6 py-5 ">
+                <div class="border-b border-gray-100 px-6 py-5 dark:border-white/10">
                     <div class="flex gap-8">
                         <button
                             class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full text-sm">
@@ -320,7 +357,7 @@ style="cursor: pointer;"
                         Lesson Overview
                     </h3>
 
-                    <p class="text-gray-600 leading-8">
+                    <p class="text-gray-600 dark:text-gray-300 leading-8">
                         In this lesson, you'll learn the fundamental concepts of
                         TAKT planning and how it differs from traditional
                         construction scheduling methods. We'll explore
@@ -330,10 +367,10 @@ style="cursor: pointer;"
 
                     <!-- Objectives -->
                     <div
-                        class="bg-gray-50 rounded-2xl p-6 mt-8 border border-gray-100">
+                        class="bg-gray-50 rounded-2xl p-6 mt-8 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
 
                         <h4
-                            class="text-xs uppercase tracking-wider font-bold mb-5 text-gray-700">
+                            class="text-xs uppercase tracking-wider font-bold mb-5 text-gray-700 dark:text-white">
                             Learning Objectives
                         </h4>
 
@@ -382,12 +419,12 @@ style="cursor: pointer;"
                     <div
                         class="flex flex-col sm:flex-row gap-4 justify-between mt-8">
 
-                       <button class="px-5 py-3 bg-white border border-gray-300 rounded-full text-sm font-medium flex items-center gap-2">
+                       <button class="px-5 py-3 bg-white text-gray-900 border border-gray-100 rounded-full text-sm font-medium flex items-center gap-2 dark:bg-black dark:text-white dark:border-transparent">
   <img src="images/rowback.svg" alt="Back" class="w-4 h-4">
   Previous Lesson
 </button>
 
-                       <button class="px-8 py-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500 text-white font-medium flex items-center justify-between gap-4">
+                       <button style="cursor: pointer;" onClick="window.location.href='/certificate.html'" class="px-8 py-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500 text-white font-medium flex items-center justify-between gap-4">
   <span>Mark Complete & Continue</span>
   <img src="images/rowright.svg" alt="Next" class="w-3 h-3">
 </button>
@@ -401,15 +438,15 @@ style="cursor: pointer;"
         <!-- Sidebar -->
         <div class="xl:col-span-4">
 
-            <div class="bg-white rounded-3xl shadow-sm p-4">
+            <div class="bg-white rounded-3xl shadow-sm p-4 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
 
                 <div class="flex items-center gap-3 mb-5">
                     <div
-                        class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                        class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center">
                         ☰
                     </div>
 
-                    <h3 class="font-bold">
+                    <h3 class="font-bold text-gray-900 dark:text-white">
                         Course Content
                     </h3>
                 </div>
@@ -418,12 +455,12 @@ style="cursor: pointer;"
                 <div class="border border-gray-100 rounded-2xl overflow-hidden mb-4">
 
                     <div
-                        class="flex items-center justify-between p-4 bg-gray-50">
+                        class="flex items-center justify-between p-4 bg-gray-50 dark:bg-[#111827]">
                         <div>
-                            <h4 class="font-semibold text-sm">
+                            <h4 class="font-semibold text-sm text-gray-900 dark:text-white">
                                 Introduction to TAKT Planning
                             </h4>
-                            <span class="text-xs text-gray-500">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">
                                 5 lessons
                             </span>
                         </div>
@@ -447,28 +484,28 @@ style="cursor: pointer;"
 
                         <div class="flex gap-3 items-center px-3 py-2">
                             <span ><img src="images/truegreen.svg" alt="Completed" class="w-5 h-5" /></span>
-                            <span class="text-sm text-gray-600">
+                            <span class="text-sm text-gray-600 dark:text-gray-300">
                                 History and Evolution
                             </span>
                         </div>
 
                         <div class="flex gap-3 items-center px-3 py-2">
                             <span ><img src="images/truegreen.svg" alt="Completed" class="w-5 h-5" /></span>
-                            <span class="text-sm text-gray-600">
+                            <span class="text-sm text-gray-600 dark:text-gray-300">
                                 Benefits and Applications
                             </span>
                         </div>
 
                         <div class="flex gap-3 items-center px-3 py-2">
-                            <span class="text-gray-300"><img src="images/lock.svg" alt="Locked" class="w-5 h-5" /></span>
-                            <span class="text-sm text-gray-400">
+                            <span class="text-gray-300 dark:text-gray-500"><img src="images/lock.svg" alt="Locked" class="w-5 h-5" /></span>
+                            <span class="text-sm text-gray-400 dark:text-gray-500">
                                 Key Principles
                             </span>
                         </div>
 
                         <div class="flex gap-3 items-center px-3 py-2">
-                            <span class="text-gray-300"><img src="images/lock.svg" alt="Locked" class="w-5 h-5" /></span>
-                            <span class="text-sm text-gray-400">
+                            <span class="text-gray-300 dark:text-gray-500"><img src="images/lock.svg" alt="Locked" class="w-5 h-5" /></span>
+                            <span class="text-sm text-gray-400 dark:text-gray-500">
                                 Industry Use Cases
                             </span>
                         </div>
@@ -477,12 +514,12 @@ style="cursor: pointer;"
                 </div>
 
                 <div
-                    class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center mb-3">
+                    class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center mb-3 dark:border-white/10">
                     <div>
-                        <h4 class="font-semibold text-sm">
+                        <h4 class="font-semibold text-sm text-gray-900 dark:text-white">
                             TAKT Planning Fundamentals
                         </h4>
-                        <span class="text-xs text-gray-500">
+                        <span class="text-xs text-gray-500 dark:text-gray-400">
                             6 lessons
                         </span>
                     </div>
@@ -491,12 +528,12 @@ style="cursor: pointer;"
                 </div>
 
                 <div
-                    class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center">
+                    class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center dark:border-white/10">
                     <div>
-                        <h4 class="font-semibold text-sm">
+                        <h4 class="font-semibold text-sm text-gray-900 dark:text-white">
                             Practical Implementation
                         </h4>
-                        <span class="text-xs text-gray-500">
+                        <span class="text-xs text-gray-500 dark:text-gray-400">
                             3 lessons
                         </span>
                     </div>
@@ -506,16 +543,16 @@ style="cursor: pointer;"
 
                 <!-- Certificate Card -->
                 <div
-                    class="bg-gray-50 rounded-2xl p-4 mt-8">
+                    class="bg-gray-50 rounded-2xl p-4 mt-8 dark:bg-[#111827]">
 
                     <div class="flex gap-3 items-start">
                         <div
-                            class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                            class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-500/20 flex items-center justify-center">
                             <img src="images/Complete.svg" alt="Complete" class="w-5 h-5">
                         </div>
 
                         <div>
-                            <h5 class="font-semibold text-sm">
+                            <h5 class="font-semibold text-sm text-gray-900 dark:text-white">
                                 Complete all lessons to earn your certificate
                             </h5>
                         </div>
@@ -530,7 +567,7 @@ style="cursor: pointer;"
                         </div>
 
                         <div
-                            class="flex justify-end mt-2 text-xs text-gray-500">
+                            class="flex justify-end mt-2 text-xs text-gray-500 dark:text-gray-400">
                             45% COMPLETE
                         </div>
                     </div>

@@ -4,7 +4,33 @@
  * Handles: scroll-triggered reveals, counter animations, nav transparency,
  * draggable carousel, stagger effects, and dynamic element upgrades.
  */
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
 
+  if (btn && menu) {
+    // Initialize ARIA
+    btn.setAttribute("aria-controls", "mobile-menu");
+    btn.setAttribute("aria-expanded", String(!menu.classList.contains("hidden")));
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isHidden = menu.classList.toggle("hidden");
+      // aria-expanded should be true when menu is visible
+      btn.setAttribute("aria-expanded", String(!isHidden));
+    });
+
+    // Close menu when a link inside it is clicked (good UX on mobile)
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (!menu.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  }
+});
 (function () {
   "use strict";
 

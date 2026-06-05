@@ -9,14 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../dist/output.css" />
-<link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../global.css">
 <!-- <link rel="stylesheet" href="../test.css"> -->
 </head>
 
 <body class="section-white overflow-x-hidden">
   <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
 
- <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+<!-- ══ HEADER ══ -->
+    <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
     <div class="max-w-400 mx-auto">
       <nav id="main-nav"
         class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
@@ -24,7 +25,12 @@
 
         <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
           <a href="../" aria-label="Arab Talk Home">
-            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+           <img
+  class="site-logo"
+  src="/images/lightmodelogo.png"
+  data-light="/images/lightmodelogo.png"
+  data-dark="/images/Darkmode.png"
+  alt="Logo">
           </a>
         </div>
 
@@ -56,7 +62,7 @@
           </li>
         </ul>
 
-        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 action-group">
           <a href="/events"
             class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -84,9 +90,32 @@
             </svg>
             Training
           </a>
+          <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 30%;
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+  
         </div>
 
-        <button class="xl:hidden p-2 t-heading">
+       <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12" />
@@ -95,6 +124,69 @@
           </svg>
         </button>
       </nav>
+      <!-- Mobile Menu (Tablet + Mobile only) -->
+<div id="mobile-menu"
+     class="lg:hidden hidden mt-4">
+
+  <div
+    class="rounded-3xl
+           bg-white dark:bg-[#111827]
+           border border-gray-200 dark:border-white/10
+           shadow-2xl
+           overflow-hidden">
+
+    <!-- Links -->
+    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+
+      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
+      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
+      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
+      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
+      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
+      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+
+    </ul>
+
+    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
+    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+
+      <a href="/events"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
+        Events
+      </a>
+
+      <a href="/podcast"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#f05041] text-white rounded-full font-bold shadow-xl">
+        Podcast
+      </a>
+
+      <a href="/training"
+         class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
+        Training
+      </a>
+ <div
+    onclick="window.location.href='/profile.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 45%;
+      white-space: nowrap;
+    "
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
+
+    <span class="opacity-40">|</span>
+
+    <div class="font-medium">
+        Profile
+    </div>
+</div>
+    </div>
+
+  </div>
+
+</div>
 
        <div class="mt-2 flex items-center justify-between px-4">
 
@@ -132,7 +224,7 @@
   }
 </style>
 
-<button
+<!-- <button
 style="cursor: pointer;"
   onclick="window.location.href='.././accountdashboard.html'"
   class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
@@ -142,29 +234,9 @@ style="cursor: pointer;"
     alt="profile"
     class="w-8 h-8 icon-theme transition duration-300"
   />
-</button>
+</button> -->
 
-  <!-- LOGIN / SIGNUP -->
-  <div
-    onclick="window.location.href='/auth.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-    "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
-
-    <span class="opacity-40">|</span>
-
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
-    </div>
-
-  </div>
+  
 
 </div>
 
@@ -308,16 +380,19 @@ style="cursor: pointer;"
     </section>
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pb-24 section-white">
       <div class="mb-12">
-        <h2 class="text-4xl md:text-6xl font-[700] uppercase tracking-tighter text-black mb-4"></h2>
+        <h2 class="text-4xl md:text-6xl font-[700] uppe rcase tracking-tighter text-black mb-4"></h2>
         <p class="text-gray-600 font-medium"></p>
       </div>
 
-      <div
-        class="w-full h-[400px] md:h-[600px] rounded-[60px] overflow-hidden bg-gray-100 shadow-inner border border-gray-100 relative">
+      <div class="w-full h-[400px] md:h-[600px] rounded-[60px] overflow-hidden bg-gray-100 shadow-inner border border-gray-100">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14498.115849841893!2d46.78745034638361!3d24.70870950345107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03c4bc60ee31%3A0xa227c37f10ae17d9!2z2KfZhNmF2YbYp9ix2Iwg2KfZhNix2YrYp9i2IDE0MjIz!5e0!3m2!1sen!2ssa!4v1715694321000!5m2!1sen!2ssa"
-          class="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-          style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          src="https://www.openstreetmap.org/export/embed.html?bbox=31.473241%2C24.70870950345107%2C46.78745034638361%2C30.054915&layer=mapnik"
+          class="w-full h-full"
+          style="border:0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Map showing the two requested locations">
         </iframe>
       </div>
     </section>

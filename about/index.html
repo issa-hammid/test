@@ -8,15 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../dist/output.css">
+
 <!-- <link rel="stylesheet" href="../test.css"> -->
 </head>
 
 <body class="overflow-x-hidden">
   <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
 
-  <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+  <!-- ══ HEADER ══ -->
+    <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
     <div class="max-w-400 mx-auto">
       <nav id="main-nav"
         class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
@@ -24,7 +26,12 @@
 
         <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
           <a href="../" aria-label="Arab Talk Home">
-            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+           <img
+  class="site-logo"
+  src="/images/lightmodelogo.png"
+  data-light="/images/lightmodelogo.png"
+  data-dark="/images/Darkmode.png"
+  alt="Logo">
           </a>
         </div>
 
@@ -40,7 +47,7 @@
             <a href="../" class="hover:opacity-70 transition-opacity nav-link">Home</a>
           </li>
           <li>
-            <a href="/about" class="hover:opacity-70 transition-opacity nav-link ">About Us</a>
+            <a href="/about" class="hover:opacity-70 transition-opacity nav-link">About Us</a>
           </li>
           <li>
             <a href="/services" class="hover:opacity-70 transition-opacity nav-link">Our Services</a>
@@ -56,7 +63,7 @@
           </li>
         </ul>
 
-        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 action-group">
           <a href="/events"
             class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -84,65 +91,14 @@
             </svg>
             Training
           </a>
-        </div>
-
-        <button class="xl:hidden p-2 t-heading">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </button>
-      </nav>
-
-       <div class="mt-2 flex items-center justify-between px-4">
-
- <div class="theme-pill relative">
-  <input type="checkbox" id="theme-toggle" class="hidden" />
-
-  <label for="theme-toggle" class="toggle-label label-light cursor-pointer" aria-label="Light mode">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
-    </svg>
-  </label>
-
-  <label for="theme-toggle" class="toggle-label label-dark cursor-pointer" aria-label="Dark mode">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
-    </svg>
-  </label>
-</div>
-
-  <!-- Login Button -->
-  <div class="flex items-center gap-3">
-
-  <!-- PROFILE -->
- <style>
-  body:has(#theme-toggle:checked) .icon-theme {
-    filter: invert(1);
-  }
-</style>
-
-<button
-style="cursor: pointer;"
-  onclick="window.location.href='.././accountdashboard.html'"
-  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
->
-  <img
-    src="/images/profile.png"
-    alt="profile"
-    class="w-8 h-8 icon-theme transition duration-300"
-  />
-</button>
-
-  <!-- LOGIN / SIGNUP -->
+          <!-- LOGIN / SIGNUP -->
   <div
     onclick="window.location.href='/auth.html'"
     class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
     style="
       background: rgba(0, 0, 0, 0.16);
       border-color: rgba(255, 255, 255, 0.19);
+      width: 30%;
     "
   >
 
@@ -157,6 +113,131 @@ style="cursor: pointer;"
     </div>
 
   </div>
+  
+        </div>
+
+       <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu (Tablet + Mobile only) -->
+<div id="mobile-menu"
+     class="lg:hidden hidden mt-4">
+
+  <div
+    class="rounded-3xl
+           bg-white dark:bg-[#111827]
+           border border-gray-200 dark:border-white/10
+           shadow-2xl
+           overflow-hidden">
+
+    <!-- Links -->
+    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+
+      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
+      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
+      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
+      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
+      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
+      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+
+    </ul>
+
+    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
+    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+
+      <a href="/events"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
+        Events
+      </a>
+
+      <a href="/podcast"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#f05041] text-white rounded-full font-bold shadow-xl">
+        Podcast
+      </a>
+
+      <a href="/training"
+         class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
+        Training
+      </a>
+ <div
+    onclick="window.location.href='/profile.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 45%;
+      white-space: nowrap;
+    "
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
+
+    <span class="opacity-40">|</span>
+
+    <div class="font-medium">
+        Profile
+    </div>
+</div>
+    </div>
+
+  </div>
+
+</div>
+
+       <div class="mt-2 flex items-center justify-between px-4">
+
+  <!-- Theme Toggle -->
+  <div class="theme-pill">
+    <label for="theme-toggle" class="toggle-label label-light" aria-label="Light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    </label>
+
+    <label for="theme-toggle" class="toggle-label label-dark" aria-label="Dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3c.28 0 .42.34.22.54A7 7 0 1 0 20.46 12c.2-.2.54-.06.54.22v.57Z" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <div class="flex items-center gap-3">
+
+  <!-- PROFILE -->
+ <style>
+  body:has(#theme-toggle:checked) .icon-theme {
+    filter: invert(1);
+  }
+</style>
+
+<!-- <button
+style="cursor: pointer;"
+  onclick="window.location.href='.././accountdashboard.html'"
+  class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
+>
+  <img
+    src="/images/profile.png"
+    alt="profile"
+    class="w-8 h-8 icon-theme transition duration-300"
+  />
+</button> -->
+
+  
 
 </div>
 

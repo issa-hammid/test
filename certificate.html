@@ -18,11 +18,25 @@
 
   <style>
     * { font-family: 'Inter', sans-serif; }
+
+    body:not(:has(#theme-toggle:checked)) [class*="dark:"] {
+      color: revert !important;
+      background-color: revert !important;
+      border-color: revert !important;
+      box-shadow: revert !important;
+      filter: none !important;
+      background-image: none !important;
+    }
+
+    body:not(:has(#theme-toggle:checked)) .dark\:invert {
+      filter: none !important;
+    }
   </style>
 </head>
-<body class=" text-gray-900">
+<body class="bg-white text-gray-900 dark:bg-[#121212] dark:text-white overflow-x-hidden">
     <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
-   <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+   <!-- ══ HEADER ══ -->
+    <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
     <div class="max-w-400 mx-auto">
       <nav id="main-nav"
         class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
@@ -32,9 +46,9 @@
           <a href="../" aria-label="Arab Talk Home">
            <img
   class="site-logo"
-  src="./images/lightmodelogo.png"
-  data-light="./images/lightmodelogo.png"
-  data-dark="./images/Darkmode.png"
+  src="/images/lightmodelogo.png"
+  data-light="/images/lightmodelogo.png"
+  data-dark="/images/Darkmode.png"
   alt="Logo">
           </a>
         </div>
@@ -67,7 +81,7 @@
           </li>
         </ul>
 
-        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 action-group">
           <a href="/events"
             class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -95,6 +109,29 @@
             </svg>
             Training
           </a>
+          <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 30%;
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+  
         </div>
 
        <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
@@ -129,6 +166,7 @@
 
     </ul>
 
+    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
     <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
 
       <a href="/events"
@@ -145,7 +183,24 @@
          class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
         Training
       </a>
+ <div
+    onclick="window.location.href='/profile.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 45%;
+      white-space: nowrap;
+    "
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
 
+    <span class="opacity-40">|</span>
+
+    <div class="font-medium">
+        Profile
+    </div>
+</div>
     </div>
 
   </div>
@@ -188,7 +243,7 @@
   }
 </style>
 
-<button
+<!-- <button
 style="cursor: pointer;"
   onclick="window.location.href='.././accountdashboard.html'"
   class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
@@ -198,29 +253,9 @@ style="cursor: pointer;"
     alt="profile"
     class="w-8 h-8 icon-theme transition duration-300"
   />
-</button>
+</button> -->
 
-  <!-- LOGIN / SIGNUP -->
-  <div
-    onclick="window.location.href='/auth.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-    "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
-
-    <span class="opacity-40">|</span>
-
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
-    </div>
-
-  </div>
+  
 
 </div>
 
@@ -230,33 +265,28 @@ style="cursor: pointer;"
 
   <main class="max-w-5xl mx-auto px-6 py-16 text-center">
     
-   <section class="min-h-screen  py-10 px-4">
-    <div class="max-w-6xl mx-auto">
-
-        <!-- Success Header -->
+   <section class="min-h-screen bg-white dark:bg-[#121212] py-10 px-4">
         <div class="text-center my-12">
+    
+    <div class="w-16 h-16 mx-auto rounded-full bg-amber-400 flex items-center justify-center shadow-lg dark:shadow-black/30 mb-5">
+        <img src="./images/Congratulations.svg" alt="Success" class="w-6 h-6">
+    </div>
 
-            <div
-                class="w-16 h-16 mx-auto rounded-full bg-amber-400 flex items-center justify-center shadow-lg mb-5">
-                <img src="./images/Congratulations.svg" alt="Success" class="w-6 h-6">
-            </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">
+        Congratulations! 🎉
+    </h1>
 
-            <h1
-                class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Congratulations! 🎉
-            </h1>
+    <p class="text-gray-500 dark:text-gray-400 text-sm md:text-base transition-colors duration-300">
+        You've successfully completed TAKT Planning Fundamentals
+    </p>
 
-            <p class="text-gray-500 text-sm md:text-base">
-                You've successfully completed TAKT Planning Fundamentals
-            </p>
-
-        </div>
+</div>
 
         <!-- Certificate -->
         <div class="flex justify-center mb-10">
 
             <div
-                class=" p-3 md:p-4 w-full max-w-4xl">
+                class="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-3 md:p-4 w-full max-w-4xl">
 
                 <img
                     src="./images/certificate.png"
@@ -279,119 +309,73 @@ style="cursor: pointer;"
             </button>
 
             <button
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 hover:bg-gray-50 transition text-sm flex items-center gap-2">
+                class="px-6 py-3 rounded-full bg-white dark:bg-[rgba(255,255,255,0.05)] border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition text-gray-900 dark:text-white text-sm flex items-center gap-2">
 
-                <img src="./images/share.svg" alt="Share" class="w-4 h-4">
+                <img src="./images/share.svg" alt="Share" class="w-4 h-4 dark:invert">
 
                 Share Achievement
             </button>
 
             <button
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 hover:bg-gray-50 transition text-sm flex items-center gap-2">
+                class="px-6 py-3 rounded-full bg-white dark:bg-[rgba(255,255,255,0.05)] border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition text-gray-900 dark:text-white text-sm flex items-center gap-2">
 
-               <img src="./images/viewall.svg" alt="View" class="w-4 h-4">
+               <img src="./images/viewall.svg" alt="View" class="w-4 h-4 dark:invert">
 
                 View All Certificates
             </button>
 
         </div>
 
-        <!-- Achievements -->
-        <div class="text-center mb-10">
+      <div class="text-center mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+        Your Achievements
+    </h2>
+</div>
 
-            <h2
-                class="text-2xl md:text-3xl font-bold text-gray-900">
-                Your Achievements
-            </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
 
+    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+        <div class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 mx-auto flex items-center justify-center mb-4">
+            <img src="./images/time.svg" alt="Time" class="dark:invert">
         </div>
+        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">8h 30m</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Course Duration</p>
+    </div>
 
-        <!-- Stats -->
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
-
-            <!-- Card -->
-            <div
-                class="bg-white rounded-2xl shadow-md p-6 text-center">
-
-                <div
-                    class="w-10 h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-4">
-                    <img src="./images/time.svg" alt="Time" class="">
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-900">
-                    8h 30m
-                </h3>
-
-                <p class="text-gray-500 text-sm mt-1">
-                    Course Duration
-                </p>
-            </div>
-
-            <!-- Card -->
-            <div
-                class="bg-white rounded-2xl shadow-md p-6 text-center">
-
-                <div
-                    class="w-10 h-10 rounded-full bg-red-100 mx-auto flex items-center justify-center mb-4">
-                    <img src="./images/complet.svg" alt="Lessons" class="">
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-900">
-                    32
-                </h3>
-
-                <p class="text-gray-500 text-sm mt-1">
-                    Lessons Completed
-                </p>
-            </div>
-
-            <!-- Card -->
-            <div
-                class="bg-white rounded-2xl shadow-md p-6 text-center">
-
-                <div
-                    class="w-10 h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-4">
-                    <img src="./images/star.svg" alt="Score" class="">
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-900">
-                    95%
-                </h3>
-
-                <p class="text-gray-500 text-sm mt-1">
-                    Final Score
-                </p>
-            </div>
-
-            <!-- Card -->
-            <div
-                class="bg-white rounded-2xl shadow-md p-6 text-center">
-
-                <div
-                    class="w-10 h-10 rounded-full bg-green-100 mx-auto flex items-center justify-center mb-4">
-                    🏆
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-900">
-                    Advanced
-                </h3>
-
-                <p class="text-gray-500 text-sm mt-1">
-                    Skill Level
-                </p>
-            </div>
-
+    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+        <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 mx-auto flex items-center justify-center mb-4">
+            <img src="./images/complet.svg" alt="Lessons" class="dark:invert">
         </div>
+        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">32</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Lessons Completed</p>
+    </div>
+
+    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+        <div class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 mx-auto flex items-center justify-center mb-4">
+            <img src="./images/star.svg" alt="Score" class="dark:invert">
+        </div>
+        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">95%</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Final Score</p>
+    </div>
+
+    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+        <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 mx-auto flex items-center justify-center mb-4">
+            <span class="text-xl">🏆</span>
+        </div>
+        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">Advanced</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Skill Level</p>
+    </div>
+
+</div>
 
         <!-- Skills -->
         <div class="flex justify-center">
 
             <div
-                class="bg-white rounded-3xl shadow-lg p-8 w-full max-w-3xl">
+                class="bg-white dark:bg-[rgba(255,255,255,0.05)] dark:border-white/10 rounded-3xl shadow-lg p-8 w-full max-w-3xl">
 
                 <h3
-                    class="text-xl font-bold text-gray-900 mb-8 text-left">
+                    class="text-xl font-bold text-gray-900 dark:text-white mb-8 text-left">
                     Skills You've Mastered
                 </h3>
 
@@ -470,7 +454,7 @@ style="cursor: pointer;"
 
             <!-- Course Card -->
             <div
-                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
+            <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
 
                 <div
                     class="h-40 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-400">
@@ -484,12 +468,12 @@ style="cursor: pointer;"
                     </span>
 
                     <h3
-                        class="text-2xl font-bold text-gray-900 leading-tight mb-3">
+                        class="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-3">
                         Advanced TAKT Implementation
                     </h3>
 
                     <div
-                        class="flex items-center gap-2 text-gray-500 text-sm mb-5">
+                        class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mb-5">
 
                         <svg xmlns="http://www.w3.org/2000/svg"
                              class="w-4 h-4"
@@ -520,7 +504,7 @@ style="cursor: pointer;"
 
             <!-- Course Card -->
             <div
-                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
+            <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
 
                 <div
                     class="h-40 bg-gradient-to-r from-orange-500 to-red-400">
@@ -534,12 +518,12 @@ style="cursor: pointer;"
                     </span>
 
                     <h3
-                        class="text-2xl font-bold text-gray-900 leading-tight mb-3">
+                        class="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-3">
                         Lean Construction Principles
                     </h3>
 
                     <div
-                        class="flex items-center gap-2 text-gray-500 text-sm mb-5">
+                        class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mb-5">
 
                         <svg xmlns="http://www.w3.org/2000/svg"
                              class="w-4 h-4"
@@ -569,8 +553,8 @@ style="cursor: pointer;"
             </div>
 
             <!-- Course Card -->
-            <div
-                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
+            
+            <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
 
                 <div
                     class="h-40 bg-gradient-to-r from-green-500 to-emerald-500">
@@ -584,12 +568,12 @@ style="cursor: pointer;"
                     </span>
 
                     <h3
-                        class="text-2xl font-bold text-gray-900 leading-tight mb-3">
+                        class="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-3">
                         Digital Tools for Construction
                     </h3>
 
                     <div
-                        class="flex items-center gap-2 text-gray-500 text-sm mb-5">
+                        class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mb-5">
 
                         <svg xmlns="http://www.w3.org/2000/svg"
                              class="w-4 h-4"
@@ -624,17 +608,17 @@ style="cursor: pointer;"
         <div class="flex justify-center">
 
             <div
-                class="w-full max-w-5xl rounded-[32px] bg-gradient-to-r from-[#F6EFD5] to-[#F7E5D8] shadow-xl px-6 md:px-12 py-16 md:py-20">
+                class="w-full max-w-5xl rounded-[32px] bg-gradient-to-r from-[#F6EFD5] to-[#F7E5D8] dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:shadow-black/40 shadow-xl px-6 md:px-12 py-16 md:py-20">
 
                 <div class="text-center">
 
                     <h2
-                        class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                         Ready for Your Next Challenge?
                     </h2>
 
                     <p
-                        class="text-gray-600 max-w-2xl mx-auto leading-8 mb-10">
+                        class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-8 mb-10">
                         Explore our full catalog of courses and continue
                         building your expertise in modern construction
                         management.
@@ -651,7 +635,7 @@ style="cursor: pointer;"
                         </button>
 
                         <button
-                            class="px-8 py-4 rounded-full bg-white border border-gray-200 text-gray-900 font-semibold hover:bg-gray-50 transition">
+                            class="px-8 py-4 rounded-full bg-white dark:bg-[rgba(255,255,255,0.05)] dark:border-white/10 border border-gray-200 text-gray-900 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition">
 
                             Go to Dashboard
 

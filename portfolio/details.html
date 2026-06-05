@@ -15,7 +15,8 @@
 <body class="bg-[#FBF9F4] ">
  <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
 
-  <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+ <!-- ══ HEADER ══ -->
+    <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
     <div class="max-w-400 mx-auto">
       <nav id="main-nav"
         class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
@@ -23,7 +24,12 @@
 
         <div class="flex items-center gap-4 shrink-0 hover:scale-105 transition-transform duration-300">
           <a href="../" aria-label="Arab Talk Home">
-            <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-8 md:h-10 w-auto" />
+           <img
+  class="site-logo"
+  src="/images/lightmodelogo.png"
+  data-light="/images/lightmodelogo.png"
+  data-dark="/images/Darkmode.png"
+  alt="Logo">
           </a>
         </div>
 
@@ -55,7 +61,7 @@
           </li>
         </ul>
 
-        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 action-group">
           <a href="/events"
             class="flex items-center justify-center gap-2 px-4 xl:px-5 2xl:px-8 py-2.5 bg-[#00c93a] text-white rounded-full text-[12px] xl:text-[13px] 2xl:text-[15px] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -83,9 +89,32 @@
             </svg>
             Training
           </a>
+          <!-- LOGIN / SIGNUP -->
+  <div
+    onclick="window.location.href='/auth.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 30%;
+    "
+  >
+
+    <div class="hover:opacity-80 transition font-medium">
+      Log In
+    </div>
+
+    <span class="opacity-40">|</span>
+
+    <div class="hover:opacity-80 transition font-medium">
+      Sign Up
+    </div>
+
+  </div>
+  
         </div>
 
-        <button class="xl:hidden p-2 t-heading">
+       <button id="mobile-menu-btn" class="lg:hidden xl:hidden p-2 t-heading">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12" />
@@ -94,6 +123,69 @@
           </svg>
         </button>
       </nav>
+      <!-- Mobile Menu (Tablet + Mobile only) -->
+<div id="mobile-menu"
+     class="lg:hidden hidden mt-4">
+
+  <div
+    class="rounded-3xl
+           bg-white dark:bg-[#111827]
+           border border-gray-200 dark:border-white/10
+           shadow-2xl
+           overflow-hidden">
+
+    <!-- Links -->
+    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+
+      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
+      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
+      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
+      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
+      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
+      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+
+    </ul>
+
+    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
+    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+
+      <a href="/events"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
+        Events
+      </a>
+
+      <a href="/podcast"
+         class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#f05041] text-white rounded-full font-bold shadow-xl">
+        Podcast
+      </a>
+
+      <a href="/training"
+         class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
+        Training
+      </a>
+ <div
+    onclick="window.location.href='/profile.html'"
+    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+    style="
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(255, 255, 255, 0.19);
+      width: 45%;
+      white-space: nowrap;
+    "
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
+
+    <span class="opacity-40">|</span>
+
+    <div class="font-medium">
+        Profile
+    </div>
+</div>
+    </div>
+
+  </div>
+
+</div>
 
        <div class="mt-2 flex items-center justify-between px-4">
 
@@ -131,7 +223,7 @@
   }
 </style>
 
-<button
+<!-- <button
 style="cursor: pointer;"
   onclick="window.location.href='.././accountdashboard.html'"
   class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition shrink-0"
@@ -141,29 +233,9 @@ style="cursor: pointer;"
     alt="profile"
     class="w-8 h-8 icon-theme transition duration-300"
   />
-</button>
+</button> -->
 
-  <!-- LOGIN / SIGNUP -->
-  <div
-    onclick="window.location.href='/auth.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-    "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
-
-    <span class="opacity-40">|</span>
-
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
-    </div>
-
-  </div>
+  
 
 </div>
 

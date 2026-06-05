@@ -104,35 +104,21 @@
   const logos = document.querySelectorAll(".site-logo");
 
   function applyTheme(theme) {
-
-  if (theme === "dark") {
-    document.documentElement.classList.add("dark");
+    const isDark = theme === "dark";
+    document.documentElement.classList.toggle("dark", isDark);
 
     if (themeToggle) {
-      themeToggle.checked = true;
+      themeToggle.checked = isDark;
     }
 
     logos.forEach(logo => {
-      logo.src = logo.dataset.dark;
+      logo.src = isDark ? logo.dataset.dark : logo.dataset.light;
     });
-
-  } else {
-
-    document.documentElement.classList.remove("dark");
-
-    if (themeToggle) {
-      themeToggle.checked = false;
-    }
-
-    logos.forEach(logo => {
-      logo.src = logo.dataset.light;
-    });
-
   }
-}
 
-  const savedTheme = localStorage.getItem("atm-theme") || "dark";
-  applyTheme(savedTheme);
+  const savedTheme = localStorage.getItem("atm-theme");
+  const defaultTheme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  applyTheme(defaultTheme);
 
   document.addEventListener("DOMContentLoaded", () => {
     if (themeToggle) {

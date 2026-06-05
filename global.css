@@ -695,3 +695,46 @@ body:has(#theme-toggle:checked) .badge-project {
     background-color: #5c4d00;
     color: #ffde7a;
 }
+.nav-link.active {
+  position: relative;
+  opacity: 1 !important;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #fb923c;
+  border-radius: 50%;
+}
+ @media (max-width:1180px) {
+      #main-nav ul { display: none !important; }
+      #main-nav .action-group { display: none !important; }
+      #mobile-menu-btn { display: block !important; }
+    }
+ @media (max-width:1450px) {
+      #main-nav a[href="/events"],
+      #main-nav a[href="/podcast"],
+      #main-nav a[href="/training"] {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 11px !important;
+      }
+      #main-nav a[href="/events"] svg,
+      #main-nav a[href="/podcast"] svg,
+      #main-nav a[href="/training"] svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+      /* Target auth control by its onclick to avoid changing markup */
+      #main-nav [onclick*="/auth.html"] {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 11px !important;
+        min-width: 0 !important;
+      }
+    }
