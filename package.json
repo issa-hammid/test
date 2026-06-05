@@ -2,8 +2,8 @@
   "name": "frontend-prototype",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./tailwind-input.css -o ./dist/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./tailwind-input.css -o ./dist/output.css"
+    "dev": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./tailwind-input.css -o ./dist/output.css --watch",
+    "build": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./tailwind-input.css -o ./dist/output.css"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
