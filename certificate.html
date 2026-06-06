@@ -19,24 +19,24 @@
   <style>
     * { font-family: 'Inter', sans-serif; }
 
-    body:not(:has(#theme-toggle:checked)) [class*="dark:"] {
+    /* body:not(:has(#theme-toggle:checked)) [class*="dark:"] {
       color: revert !important;
       background-color: revert !important;
       border-color: revert !important;
       box-shadow: revert !important;
       filter: none !important;
       background-image: none !important;
-    }
+    } */
 
     body:not(:has(#theme-toggle:checked)) .dark\:invert {
       filter: none !important;
     }
   </style>
 </head>
-<body class="bg-white text-gray-900 dark:bg-[#121212] dark:text-white overflow-x-hidden">
+<body class="overflow-x-hidden">
     <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
    <!-- ══ HEADER ══ -->
-    <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
+   <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
     <div class="max-w-400 mx-auto">
       <nav id="main-nav"
         class="w-full h-20 rounded-full px-4 lg:px-5 xl:px-8 flex items-center justify-between gap-4 backdrop-blur-xl"
@@ -111,26 +111,23 @@
           </a>
           <!-- LOGIN / SIGNUP -->
   <div
-    onclick="window.location.href='/auth.html'"
+    onclick="window.location.href='/profile.html'"
     class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
     style="
       background: rgba(0, 0, 0, 0.16);
       border-color: rgba(255, 255, 255, 0.19);
-      width: 30%;
+      width: 45%;
+      white-space: nowrap;
     "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
 
     <span class="opacity-40">|</span>
 
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
+    <div class="font-medium">
+        Profile
     </div>
-
-  </div>
+</div>
   
         </div>
 
@@ -265,170 +262,160 @@ style="cursor: pointer;"
 
   <main class="max-w-5xl mx-auto px-6 py-16 text-center">
     
-   <section class="min-h-screen bg-white dark:bg-[#121212] py-10 px-4">
-        <div class="text-center my-12">
-    
-    <div class="w-16 h-16 mx-auto rounded-full bg-amber-400 flex items-center justify-center shadow-lg dark:shadow-black/30 mb-5">
-        <img src="./images/Congratulations.svg" alt="Success" class="w-6 h-6">
+ <!-- <section class="min-h-screen section-white py-10 px-4"> -->
+ <section class="min-h-screen  py-10 px-4">
+
+  <div class="text-center my-12">
+
+    <div class="w-16 h-16 mx-auto rounded-full bg-amber-400 flex items-center justify-center shadow-lg mb-5">
+      <img src="./images/Congratulations.svg" alt="Success" class="w-6 h-6">
     </div>
 
-    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">
-        Congratulations! 🎉
+    <h1 class="text-3xl md:text-4xl font-bold t-heading mb-3 transition-colors duration-300">
+      Congratulations! 🎉
     </h1>
 
-    <p class="text-gray-500 dark:text-gray-400 text-sm md:text-base transition-colors duration-300">
-        You've successfully completed TAKT Planning Fundamentals
+    <p class="t-muted text-sm md:text-base transition-colors duration-300">
+      You've successfully completed TAKT Planning Fundamentals
     </p>
 
-</div>
+  </div>
 
-        <!-- Certificate -->
-        <div class="flex justify-center mb-10">
+  <!-- Certificate -->
+  <div class="flex justify-center mb-10">
 
-            <div
-                class="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-3 md:p-4 w-full max-w-4xl">
+    <div class="card rounded-3xl shadow-xl p-3 md:p-4 w-full max-w-4xl">
 
-                <img
-                    src="./images/certificate.png"
-                    alt="Certificate"
-                    class="w-full h-auto rounded-2xl object-contain">
-            </div>
+      <img src="./images/certificate.png" alt="Certificate" class="w-full h-auto rounded-2xl object-contain">
 
-        </div>
+    </div>
 
-        <!-- Actions -->
-        <div
-            class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-20">
+  </div>
 
-            <button
-                class="px-6 py-3 rounded-full bg-yellow-400 hover:bg-yellow-500 transition font-semibold text-sm flex items-center gap-2">
+  <!-- Actions -->
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-20">
 
-                <img src="./images/download.svg" alt="Download" class="w-4 h-4">
+    <button class="px-6 py-3 rounded-full bg-yellow-400 hover:bg-yellow-500 transition font-semibold text-sm flex items-center gap-2 text-black">
 
-                Download Certificate
-            </button>
+      <img src="./images/download.svg" alt="Download" class="w-4 h-4">
+      Download Certificate
+    </button>
 
-            <button
-                class="px-6 py-3 rounded-full bg-white dark:bg-[rgba(255,255,255,0.05)] border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition text-gray-900 dark:text-white text-sm flex items-center gap-2">
+    <button class="px-6 py-3 rounded-full card hover:bg-gray-50 transition t-heading text-sm flex items-center gap-2">
 
-                <img src="./images/share.svg" alt="Share" class="w-4 h-4 dark:invert">
+      <img src="./images/share.svg" alt="Share" class="w-4 h-4">
+      Share Achievement
+    </button>
 
-                Share Achievement
-            </button>
+    <button class="px-6 py-3 rounded-full card hover:bg-gray-50 transition t-heading text-sm flex items-center gap-2">
 
-            <button
-                class="px-6 py-3 rounded-full bg-white dark:bg-[rgba(255,255,255,0.05)] border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition text-gray-900 dark:text-white text-sm flex items-center gap-2">
+      <img src="./images/viewall.svg" alt="View" class="w-4 h-4">
+      View All Certificates
+    </button>
 
-               <img src="./images/viewall.svg" alt="View" class="w-4 h-4 dark:invert">
+  </div>
 
-                View All Certificates
-            </button>
-
-        </div>
-
-      <div class="text-center mb-10">
-    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
-        Your Achievements
+  <!-- Title -->
+  <div class="text-center mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold t-heading transition-colors duration-300">
+      Your Achievements
     </h2>
-</div>
+  </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+  <!-- Stats -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
 
-    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-        <div class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 mx-auto flex items-center justify-center mb-4">
-            <img src="./images/time.svg" alt="Time" class="dark:invert">
-        </div>
-        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">8h 30m</h3>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Course Duration</p>
+    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+      <div class="w-10 h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-4">
+        <img src="./images/time.svg" alt="Time">
+      </div>
+      <h3 class="text-3xl font-bold t-heading">8h 30m</h3>
+      <p class="t-muted text-sm mt-1">Course Duration</p>
     </div>
 
-    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-        <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 mx-auto flex items-center justify-center mb-4">
-            <img src="./images/complet.svg" alt="Lessons" class="dark:invert">
-        </div>
-        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">32</h3>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Lessons Completed</p>
+    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+      <div class="w-10 h-10 rounded-full bg-red-100 mx-auto flex items-center justify-center mb-4">
+        <img src="./images/complet.svg" alt="Lessons">
+      </div>
+      <h3 class="text-3xl font-bold t-heading">32</h3>
+      <p class="t-muted text-sm mt-1">Lessons Completed</p>
     </div>
 
-    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-        <div class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 mx-auto flex items-center justify-center mb-4">
-            <img src="./images/star.svg" alt="Score" class="dark:invert">
-        </div>
-        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">95%</h3>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Final Score</p>
+    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+      <div class="w-10 h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-4">
+        <img src="./images/star.svg" alt="Score">
+      </div>
+      <h3 class="text-3xl font-bold t-heading">95%</h3>
+      <p class="t-muted text-sm mt-1">Final Score</p>
     </div>
 
-    <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-        <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 mx-auto flex items-center justify-center mb-4">
-            <span class="text-xl">🏆</span>
-        </div>
-        <h3 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">Advanced</h3>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Skill Level</p>
+    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
+      <div class="w-10 h-10 rounded-full bg-green-100 mx-auto flex items-center justify-center mb-4">
+        <span class="text-xl">🏆</span>
+      </div>
+      <h3 class="text-3xl font-bold t-heading">Advanced</h3>
+      <p class="t-muted text-sm mt-1">Skill Level</p>
     </div>
 
-</div>
+  </div>
 
-        <!-- Skills -->
-        <div class="flex justify-center">
+  <!-- Skills -->
+  <div class="flex justify-center">
 
-            <div
-                class="bg-white dark:bg-[rgba(255,255,255,0.05)] dark:border-white/10 rounded-3xl shadow-lg p-8 w-full max-w-3xl">
+    <div class="card rounded-3xl shadow-lg p-8 w-full max-w-3xl">
 
-                <h3
-                    class="text-xl font-bold text-gray-900 dark:text-white mb-8 text-left">
-                    Skills You've Mastered
-                </h3>
+      <h3 class="text-xl font-bold t-heading mb-8 text-left">
+        Skills You've Mastered
+      </h3>
 
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5 t-body">
 
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>TAKT Planning Methodology</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Zone-Based Scheduling</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Workflow Optimization</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Resource Allocation</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Visual Management Systems</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Project Coordination</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Digital Planning Tools</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <img src="./images/truewhite.svg" alt="Check" class="">
-                        <span>Performance Tracking</span>
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>TAKT Planning Methodology</span>
         </div>
 
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Zone-Based Scheduling</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Workflow Optimization</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Resource Allocation</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Visual Management Systems</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Project Coordination</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Digital Planning Tools</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="./images/truewhite.svg" alt="Check">
+          <span>Performance Tracking</span>
+        </div>
+
+      </div>
+
     </div>
+
+  </div>
+
 </section>
 <!-- Continue Learning Journey -->
 <section class="py-16 md:py-24">
@@ -436,173 +423,136 @@ style="cursor: pointer;"
     <div class="max-w-7xl mx-auto px-4">
 
         <!-- Heading -->
-        <div class="text-center mb-12">
+       <div class="text-center mb-12">
 
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Continue Your Learning Journey
-            </h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-heading)] mb-4 transition-colors duration-300">
+        Continue Your Learning Journey
+    </h2>
 
-            <p class="text-gray-500 max-w-xl mx-auto">
-                Build on your new skills with these recommended courses
-            </p>
+    <p class="text-[var(--text-muted)] max-w-xl mx-auto transition-colors duration-300">
+        Build on your new skills with these recommended courses
+    </p>
 
-        </div>
+</div>
 
         <!-- Courses -->
-        <div
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20">
 
-            <!-- Course Card -->
-            <div
-            <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
+    <!-- Course Card 1 -->
+    <div class="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
 
-                <div
-                    class="h-40 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-400">
-                </div>
+        <div class="h-40 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-400"></div>
 
-                <div class="p-6">
+        <div class="p-6">
 
-                    <span
-                        class="inline-flex px-3 py-1 rounded-full bg-black text-white text-xs font-medium mb-4">
-                        Advanced
-                    </span>
+            <span class="inline-flex px-3 py-1 rounded-full bg-black text-white text-xs font-medium mb-4">
+                Advanced
+            </span>
 
-                    <h3
-                        class="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-3">
-                        Advanced TAKT Implementation
-                    </h3>
+            <h3 class="text-2xl font-bold text-[var(--text-heading)] leading-tight mb-3">
+                Advanced TAKT Implementation
+            </h3>
 
-                    <div
-                        class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mb-5">
+            <div class="flex items-center gap-2 text-[var(--text-muted)] text-sm mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-4 h-4"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             class="w-4 h-4"
-                             fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-
-                        12 hours
-                    </div>
-
-                    <button
-                        class="text-red-500 font-medium hover:text-red-600 transition flex items-center gap-2">
-
-                        Explore Course
-
-                        <img src="./images/row-red.svg" alt="Arrow" class="">
-
-                    </button>
-
-                </div>
-
+                12 hours
             </div>
 
-            <!-- Course Card -->
-            <div
-            <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
-
-                <div
-                    class="h-40 bg-gradient-to-r from-orange-500 to-red-400">
-                </div>
-
-                <div class="p-6">
-
-                    <span
-                        class="inline-flex px-3 py-1 rounded-full bg-red-400 text-white text-xs font-medium mb-4">
-                        Intermediate
-                    </span>
-
-                    <h3
-                        class="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-3">
-                        Lean Construction Principles
-                    </h3>
-
-                    <div
-                        class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mb-5">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             class="w-4 h-4"
-                             fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-
-                        10 hours
-                    </div>
-
-                    <button
-                        class="text-red-500 font-medium hover:text-red-600 transition flex items-center gap-2">
-
-                        Explore Course
-
-                        <img src="./images/row-red.svg" alt="Arrow" class="">
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Course Card -->
-            
-            <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
-
-                <div
-                    class="h-40 bg-gradient-to-r from-green-500 to-emerald-500">
-                </div>
-
-                <div class="p-6">
-
-                    <span
-                        class="inline-flex px-3 py-1 rounded-full bg-green-500 text-white text-xs font-medium mb-4">
-                        Beginner
-                    </span>
-
-                    <h3
-                        class="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-3">
-                        Digital Tools for Construction
-                    </h3>
-
-                    <div
-                        class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mb-5">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             class="w-4 h-4"
-                             fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-
-                        6 hours
-                    </div>
-
-                    <button
-                        class="text-red-500 font-medium hover:text-red-600 transition flex items-center gap-2">
-
-                        Explore Course
-
-                        <img src="./images/row-red.svg" alt="Arrow" class="">
-
-                    </button>
-
-                </div>
-
-            </div>
+            <button class="text-red-500 font-medium hover:text-red-600 transition flex items-center gap-2">
+                Explore Course
+                <img src="./images/row-red.svg" alt="Arrow">
+            </button>
 
         </div>
+    </div>
+
+    <!-- Course Card 2 -->
+    <div class="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
+
+        <div class="h-40 bg-gradient-to-r from-orange-500 to-red-400"></div>
+
+        <div class="p-6">
+
+            <span class="inline-flex px-3 py-1 rounded-full bg-red-400 text-white text-xs font-medium mb-4">
+                Intermediate
+            </span>
+
+            <h3 class="text-2xl font-bold text-[var(--text-heading)] leading-tight mb-3">
+                Lean Construction Principles
+            </h3>
+
+            <div class="flex items-center gap-2 text-[var(--text-muted)] text-sm mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-4 h-4"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+
+                10 hours
+            </div>
+
+            <button class="text-red-500 font-medium hover:text-red-600 transition flex items-center gap-2">
+                Explore Course
+                <img src="./images/row-red.svg" alt="Arrow">
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Course Card 3 -->
+    <div class="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-left">
+
+        <div class="h-40 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+
+        <div class="p-6">
+
+            <span class="inline-flex px-3 py-1 rounded-full bg-green-500 text-white text-xs font-medium mb-4">
+                Beginner
+            </span>
+
+            <h3 class="text-2xl font-bold text-[var(--text-heading)] leading-tight mb-3">
+                Digital Tools for Construction
+            </h3>
+
+            <div class="flex items-center gap-2 text-[var(--text-muted)] text-sm mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-4 h-4"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+
+                6 hours
+            </div>
+
+            <button class="text-red-500 font-medium hover:text-red-600 transition flex items-center gap-2">
+                Explore Course
+                <img src="./images/row-red.svg" alt="Arrow">
+            </button>
+
+        </div>
+    </div>
+
+</div>
 
         <!-- CTA Section -->
         <div class="flex justify-center">

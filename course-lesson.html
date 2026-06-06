@@ -16,23 +16,7 @@
     <style>
         * { font-family: 'Inter', sans-serif; }
 
-        body:not(:has(#theme-toggle:checked)) [class*="dark:"] {
-          color: revert !important;
-          background-color: revert !important;
-          border-color: revert !important;
-          box-shadow: revert !important;
-          filter: none !important;
-          background-image: none !important;
-        }
-
-        body:not(:has(#theme-toggle:checked)) .dark\:invert {
-          filter: none !important;
-        }
-
-        /* Light mode border colors for cards and sections */
-        body:not(:has(#theme-toggle:checked)) .border-gray-100 {
-          border-color: #f3f4f6 !important;
-        }
+      
     </style>
 </head>
 <body class="bg-[#f6f6f7] text-gray-900 dark:bg-[#121212] dark:text-white">
@@ -111,28 +95,24 @@
             </svg>
             Training
           </a>
-          <!-- LOGIN / SIGNUP -->
-  <div
-    onclick="window.location.href='/auth.html'"
+          <div
+    onclick="window.location.href='/profile.html'"
     class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
     style="
       background: rgba(0, 0, 0, 0.16);
       border-color: rgba(255, 255, 255, 0.19);
-      width: 30%;
+      width: 45%;
+      white-space: nowrap;
     "
-  >
-
-    <div class="hover:opacity-80 transition font-medium">
-      Log In
-    </div>
+>
+    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
 
     <span class="opacity-40">|</span>
 
-    <div class="hover:opacity-80 transition font-medium">
-      Sign Up
+    <div class="font-medium">
+        Profile
     </div>
-
-  </div>
+</div>
   
         </div>
 
@@ -268,27 +248,29 @@ style="cursor: pointer;"
 <div class="max-w-7xl mx-auto p-4 md:p-6 mt-40">
 
     <!-- Header -->
-    <div class="flex items-start justify-between mb-6">
-        <div class="flex gap-4 items-start">
-            <button class="w-11 h-11 bg-white text-gray-900 rounded-full shadow-sm flex items-center justify-center dark:bg-[#1f2937] dark:text-white">
-                <img src="images/rowback.svg" alt="Back" class="">
-            </button>
+   <div class="flex items-start justify-between mb-6">
+  <div class="flex gap-4 items-start">
 
-            <div>
-                <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
-                    TAKT Planning Fundamentals
-                </h1>
+    <button class="w-11 h-11 bg-white text-gray-900 rounded-full shadow-sm flex items-center justify-center dark:bg-[#1f2937] dark:text-white">
+      <img src="images/rowback.svg" alt="Back">
+    </button>
 
-                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                    12 of 32 lessons completed • 4h 30min total time
-                </p>
-            </div>
-        </div>
+    <div>
+      <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
+        TAKT Planning Fundamentals
+      </h1>
 
-<button class="hidden md:block px-5 py-2 bg-white text-gray-900 rounded-full shadow-sm text-sm font-medium dark:bg-[#1f2937] dark:text-white">
-            My Dashboard
-        </button>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        12 of 32 lessons completed • 4h 30min total time
+      </p>
     </div>
+
+  </div>
+
+  <button class="hidden md:block px-5 py-2 bg-white text-gray-900 rounded-full shadow-sm text-sm font-medium dark:bg-[#1f2937] dark:text-white">
+    My Dashboard
+  </button>
+</div>
 
     <!-- Progress -->
     <div class="bg-white rounded-3xl p-5 shadow-sm mb-6 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
