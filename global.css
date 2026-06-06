@@ -738,3 +738,39 @@ body:has(#theme-toggle:checked) .badge-project {
         min-width: 0 !important;
       }
     }
+
+
+    /* ================================
+   LIGHT MODE FIX (FORCED OVERRIDE)
+   ================================ */
+
+/* إصلاح النصوص اللي بتضل أبيض */
+body:not(:has(#theme-toggle:checked)) {
+  color: #111827;
+}
+
+/* أي عنصر Tailwind ظل أبيض غصب عنه */
+body:not(:has(#theme-toggle:checked)) .text-white {
+  color: #111827 !important;
+}
+
+/* إصلاح أي خلفية داكنة بالغلط */
+body:not(:has(#theme-toggle:checked)) .bg-black,
+body:not(:has(#theme-toggle:checked)) .bg-gray-900,
+body:not(:has(#theme-toggle:checked)) .bg-gray-800 {
+  background-color: #ffffff !important;
+}
+
+/* إصلاح السكاشن اللي بتضل غامقة */
+body:not(:has(#theme-toggle:checked)) .card,
+body:not(:has(#theme-toggle:checked)) .section-gray,
+body:not(:has(#theme-toggle:checked)) .section-white {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+/* إصلاح أي عنصر مستخدم variables غلط */
+body:not(:has(#theme-toggle:checked)) * {
+  --text-heading: #111827;
+  --text-body: #374151;
+}

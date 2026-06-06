@@ -127,25 +127,54 @@
 
   <div
     class="rounded-3xl
-           bg-white dark:bg-[#111827]
-           border border-gray-200 dark:border-white/10
+           bg-[var(--bg-card)]
+           border border-[var(--border-card)]
            shadow-2xl
            overflow-hidden">
 
     <!-- Links -->
-    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+    <ul class="flex flex-col text-[var(--text-heading)] font-bold">
 
-      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
-      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
-      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
-      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
-      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
-      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+      <li>
+        <a href="../" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/about" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          About Us
+        </a>
+      </li>
+
+      <li>
+        <a href="/services" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Our Services
+        </a>
+      </li>
+
+      <li>
+        <a href="/portfolio" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Portfolio
+        </a>
+      </li>
+
+      <li>
+        <a href="/resources" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Resources
+        </a>
+      </li>
+
+      <li>
+        <a href="/contact" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Contact Us
+        </a>
+      </li>
 
     </ul>
 
-    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
-    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+    <!-- Buttons -->
+    <div class="p-4 border-t border-[var(--border-card)] flex flex-col gap-3">
 
       <a href="/events"
          class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
@@ -161,24 +190,26 @@
          class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
         Training
       </a>
- <div
-    onclick="window.location.href='/profile.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-      width: 45%;
-      white-space: nowrap;
-    "
->
-    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
 
-    <span class="opacity-40">|</span>
+      <div
+        onclick="window.location.href='/profile.html'"
+        class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-[var(--text-heading)] backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+        style="
+          background: var(--bg-card);
+          border-color: var(--border-card);
+          width: 45%;
+          white-space: nowrap;
+        "
+      >
+        <img src="/images/user.svg" alt="Profile" class="w-5 h-5">
 
-    <div class="font-medium">
-        Profile
-    </div>
-</div>
+        <span class="opacity-40">|</span>
+
+        <div class="font-medium">
+          Profile
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -619,7 +650,14 @@ style="cursor: pointer;"
       </div>
       <div class="flex flex-col md:flex-row justify-between items-center gap-8">
         <div class="shrink-0 hover:scale-110 transition-transform cursor-pointer">
-          <img src="../images/Layer_2.svg" alt="ATM Logo" class="site-logo h-14 w-auto" />
+          <a href="../" aria-label="Arab Talk Home">
+           <img
+  class="site-logo"
+  src="/images/lightmodelogo.png"
+  data-light="/images/lightmodelogo.png"
+  data-dark="/images/Darkmode.png"
+  alt="Logo">
+          </a>
         </div>
         <div class="text-center md:text-right">
           <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">

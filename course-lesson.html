@@ -13,13 +13,27 @@
     <!-- <link rel="stylesheet" href="./styles.css"> -->
     <link rel="stylesheet" href="./dist/output.css">
 
-    <style>
-        * { font-family: 'Inter', sans-serif; }
+     <style>
+  * { font-family: 'Inter', sans-serif; }
 
-      
-    </style>
+  body:not(:has(#theme-toggle:checked)) .dark\:invert {
+    filter: none !important;
+  }
+
+  /* Light mode border colors for cards and sections */
+  body:not(:has(#theme-toggle:checked)) .border-gray-100 {
+    border-color: #f3f4f6 !important;
+  }
+  :root {
+  --video-bg: #000;
+}
+
+body:has(#theme-toggle:checked) {
+  --video-bg: #000;
+}
+</style>
 </head>
-<body class="bg-[#f6f6f7] text-gray-900 dark:bg-[#121212] dark:text-white">
+<body class="bg-[#f6f6f7] text-gray-900 dark:bg-[#121212]">
     <input type="checkbox" id="theme-toggle" class="hidden" autocomplete="off" />
      <!-- ══ HEADER ══ -->
     <header class="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 mb-6 opacity-0 animate-fade-in" dir="ltr">
@@ -125,31 +139,60 @@
           </svg>
         </button>
       </nav>
-      <!-- Mobile Menu (Tablet + Mobile only) -->
+    <!-- Mobile Menu (Tablet + Mobile only) -->
 <div id="mobile-menu"
      class="lg:hidden hidden mt-4">
 
   <div
     class="rounded-3xl
-           bg-white dark:bg-[#111827]
-           border border-gray-200 dark:border-white/10
+           bg-[var(--bg-card)]
+           border border-[var(--border-card)]
            shadow-2xl
            overflow-hidden">
 
     <!-- Links -->
-    <ul class="flex flex-col text-[#1a1a1a] dark:text-white font-bold">
+    <ul class="flex flex-col text-[var(--text-heading)] font-bold">
 
-      <li><a href="../" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Home</a></li>
-      <li><a href="/about" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">About Us</a></li>
-      <li><a href="/services" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Our Services</a></li>
-      <li><a href="/portfolio" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Portfolio</a></li>
-      <li><a href="/resources" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Resources</a></li>
-      <li><a href="/contact" class="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-white/5">Contact Us</a></li>
+      <li>
+        <a href="../" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/about" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          About Us
+        </a>
+      </li>
+
+      <li>
+        <a href="/services" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Our Services
+        </a>
+      </li>
+
+      <li>
+        <a href="/portfolio" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Portfolio
+        </a>
+      </li>
+
+      <li>
+        <a href="/resources" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Resources
+        </a>
+      </li>
+
+      <li>
+        <a href="/contact" class="block px-6 py-4 hover:bg-[var(--bg-section)]">
+          Contact Us
+        </a>
+      </li>
 
     </ul>
 
-    <!-- Buttons (نفس ألوانك الأصلية 100%) -->
-    <div class="p-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-3">
+    <!-- Buttons -->
+    <div class="p-4 border-t border-[var(--border-card)] flex flex-col gap-3">
 
       <a href="/events"
          class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#00c93a] text-white rounded-full font-bold shadow-xl">
@@ -165,24 +208,26 @@
          class="btn-dark w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full font-bold shadow-xl">
         Training
       </a>
- <div
-    onclick="window.location.href='/profile.html'"
-    class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-white backdrop-blur-md cursor-pointer hover:opacity-90 transition"
-    style="
-      background: rgba(0, 0, 0, 0.16);
-      border-color: rgba(255, 255, 255, 0.19);
-      width: 45%;
-      white-space: nowrap;
-    "
->
-    <img src="/images/user.svg" alt="Profile" class="w-5 h-5 invert">
 
-    <span class="opacity-40">|</span>
+      <div
+        onclick="window.location.href='/profile.html'"
+        class="h-10 flex items-center gap-3 px-5 rounded-full border text-sm text-[var(--text-heading)] backdrop-blur-md cursor-pointer hover:opacity-90 transition"
+        style="
+          background: var(--bg-card);
+          border-color: var(--border-card);
+          width: 45%;
+          white-space: nowrap;
+        "
+      >
+        <img src="/images/user.svg" alt="Profile" class="w-5 h-5">
 
-    <div class="font-medium">
-        Profile
-    </div>
-</div>
+        <span class="opacity-40">|</span>
+
+        <div class="font-medium">
+          Profile
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -256,7 +301,7 @@ style="cursor: pointer;"
     </button>
 
     <div>
-      <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
+      <h1 class="text-2xl font-bold text-[var(--text-heading)]">
         TAKT Planning Fundamentals
       </h1>
 
@@ -267,24 +312,24 @@ style="cursor: pointer;"
 
   </div>
 
-  <button class="hidden md:block px-5 py-2 bg-white text-gray-900 rounded-full shadow-sm text-sm font-medium dark:bg-[#1f2937] dark:text-white">
-    My Dashboard
-  </button>
+  <button class="hidden md:block px-5 py-2 bg-[var(--bg-card)] text-[var(--text-heading)] rounded-full shadow-sm text-sm font-medium border border-[var(--border-card)] transition-colors duration-300">
+  My Dashboard
+</button>
 </div>
 
     <!-- Progress -->
-    <div class="bg-white rounded-3xl p-5 shadow-sm mb-6 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
-        <div class="flex justify-between items-center mb-3">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Course Progress</span>
-            <span class="font-semibold text-sm text-gray-900 dark:text-white">45%</span>
-        </div>
+<div class="bg-[var(--bg-card)] rounded-3xl p-5 shadow-sm mb-6 border border-[var(--border-card)]">
 
-        <div class="w-full bg-gray-200 dark:bg-white/10 h-2 rounded-full overflow-hidden">
-            <div
-                class="h-full w-[45%] rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400">
-            </div>
-        </div>
+    <div class="flex justify-between items-center mb-3">
+        <span class="text-sm font-semibold text-[var(--text-heading)]">Course Progress</span>
+        <span class="font-semibold text-sm text-[var(--text-heading)]">45%</span>
     </div>
+
+    <div class="w-full bg-[var(--border-card)] h-2 rounded-full overflow-hidden">
+        <div class="h-full w-[45%] rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400"></div>
+    </div>
+
+</div>
 
     <!-- Main Layout -->
     <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
@@ -293,7 +338,7 @@ style="cursor: pointer;"
         <div class="xl:col-span-8">
 
             <!-- Video -->
-            <div class="bg-black rounded-3xl overflow-hidden relative aspect-video">
+            <div class="bg-[var(--video-bg)] rounded-3xl overflow-hidden relative aspect-video">
 
                 <div class="absolute inset-0 flex items-center justify-center">
                     <button
@@ -313,114 +358,105 @@ style="cursor: pointer;"
             </div>
 
             <!-- Tabs -->
-            <div class="bg-white rounded-3xl shadow-sm mt-6 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
+            <div class="bg-[var(--bg-card)] rounded-3xl shadow-sm mt-6 border border-[var(--border-card)]">
 
-                <div class="border-b border-gray-100 px-6 py-5 dark:border-white/10">
-                    <div class="flex gap-8">
-                        <button
-                            class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full text-sm">
-                            Overview
-                        </button>
+    <!-- Tabs -->
+    <div class="border-b border-[var(--border-card)] px-6 py-5">
 
-                        <button class="text-gray-500 text-sm">
-                            Notes
-                        </button>
+        <div class="flex gap-8">
 
-                        <button class="text-gray-500 text-sm">
-                            Resources
-                        </button>
-                    </div>
+            <button class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full text-sm">
+                Overview
+            </button>
+
+            <button class="text-[var(--text-muted)] text-sm">
+                Notes
+            </button>
+
+            <button class="text-[var(--text-muted)] text-sm">
+                Resources
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="p-6">
+
+        <!-- Lesson Overview -->
+        <h3 class="font-bold text-lg mb-4 text-[var(--text-heading)]">
+            Lesson Overview
+        </h3>
+
+        <p class="text-[var(--text-body)] leading-8">
+            In this lesson, you'll learn the fundamental concepts of
+            TAKT planning and how it differs from traditional
+            construction scheduling methods. We'll explore
+            real-world examples and discuss how TAKT creates
+            predictable workflows.
+        </p>
+
+        <!-- Objectives -->
+        <div class="bg-[var(--bg-section)] rounded-2xl p-6 mt-8 border border-[var(--border-card)]">
+
+            <h4 class="text-xs uppercase tracking-wider font-bold mb-5 text-[var(--text-heading)]">
+                Learning Objectives
+            </h4>
+
+            <div class="space-y-4">
+
+                <div class="flex gap-3 items-center">
+                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
+
+                    <span class="text-sm text-[var(--text-body)]">
+                        Understand the core principles of TAKT planning
+                    </span>
                 </div>
 
-                <div class="p-6">
+                <div class="flex gap-3 items-center">
+                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
 
-                    <!-- Lesson Overview -->
-                    <h3 class="font-bold text-lg mb-4">
-                        Lesson Overview
-                    </h3>
-
-                    <p class="text-gray-600 dark:text-gray-300 leading-8">
-                        In this lesson, you'll learn the fundamental concepts of
-                        TAKT planning and how it differs from traditional
-                        construction scheduling methods. We'll explore
-                        real-world examples and discuss how TAKT creates
-                        predictable workflows.
-                    </p>
-
-                    <!-- Objectives -->
-                    <div
-                        class="bg-gray-50 rounded-2xl p-6 mt-8 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
-
-                        <h4
-                            class="text-xs uppercase tracking-wider font-bold mb-5 text-gray-700 dark:text-white">
-                            Learning Objectives
-                        </h4>
-
-                        <div class="space-y-4">
-
-                            <div class="flex gap-3 items-center">
-                                <div
-                                    class="">
-                                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
-                                </div>
-
-                                <span class="text-sm">
-                                    Understand the core principles of TAKT
-                                    planning
-                                </span>
-                            </div>
-
-                            <div class="flex gap-3 items-center">
-                                <div
-                                    class="">
-                                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
-                                </div>
-
-                                <span class="text-sm">
-                                    Identify key differences from traditional
-                                    methods
-                                </span>
-                            </div>
-
-                            <div class="flex gap-3 items-center">
-                                <div
-                                    class="">
-                                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
-                                </div>
-
-                                <span class="text-sm">
-                                    Recognize situations where TAKT planning is
-                                    beneficial
-                                </span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Footer Actions -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 justify-between mt-8">
-
-                       <button class="px-5 py-3 bg-white text-gray-900 border border-gray-100 rounded-full text-sm font-medium flex items-center gap-2 dark:bg-black dark:text-white dark:border-transparent">
-  <img src="images/rowback.svg" alt="Back" class="w-4 h-4">
-  Previous Lesson
-</button>
-
-                       <button style="cursor: pointer;" onClick="window.location.href='/certificate.html'" class="px-8 py-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500 text-white font-medium flex items-center justify-between gap-4">
-  <span>Mark Complete & Continue</span>
-  <img src="images/rowright.svg" alt="Next" class="w-3 h-3">
-</button>
-
-                    </div>
-
+                    <span class="text-sm text-[var(--text-body)]">
+                        Identify key differences from traditional methods
+                    </span>
                 </div>
+
+                <div class="flex gap-3 items-center">
+                    <img src="images/truewhite.svg" alt="Completed" class="w-5 h-5" />
+
+                    <span class="text-sm text-[var(--text-body)]">
+                        Recognize situations where TAKT planning is beneficial
+                    </span>
+                </div>
+
             </div>
+
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-between mt-8">
+
+            <button class="px-5 py-3 bg-[var(--bg-card)] text-[var(--text-heading)] border border-[var(--border-card)] rounded-full text-sm font-medium flex items-center gap-2">
+                <img src="images/rowback.svg" alt="Back" class="w-4 h-4">
+                Previous Lesson
+            </button>
+
+            <button class="cursor-pointer px-8 py-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500 text-white font-medium flex items-center justify-between gap-4">
+                <span>Mark Complete & Continue</span>
+                <img src="images/rowright.svg" alt="Next" class="w-3 h-3">
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
         </div>
 
         <!-- Sidebar -->
         <div class="xl:col-span-4">
 
-            <div class="bg-white rounded-3xl shadow-sm p-4 border border-gray-100 dark:bg-[#111827] dark:border-white/10">
+            <div class="bg-[var(--bg-card)] rounded-3xl shadow-sm p-4 border border-[var(--border-card)]">
 
                 <div class="flex items-center gap-3 mb-5">
                     <div
@@ -428,7 +464,7 @@ style="cursor: pointer;"
                         ☰
                     </div>
 
-                    <h3 class="font-bold text-gray-900 dark:text-white">
+                    <h3 class="font-bold text-[var(--text-heading)]">
                         Course Content
                     </h3>
                 </div>
@@ -436,24 +472,27 @@ style="cursor: pointer;"
                 <!-- Section -->
                 <div class="border border-gray-100 rounded-2xl overflow-hidden mb-4">
 
-                    <div
-                        class="flex items-center justify-between p-4 bg-gray-50 dark:bg-[#111827]">
-                        <div>
-                            <h4 class="font-semibold text-sm text-gray-900 dark:text-white">
-                                Introduction to TAKT Planning
-                            </h4>
-                            <span class="text-xs text-gray-500 dark:text-gray-400">
-                                5 lessons
-                            </span>
-                        </div>
+                    <div class="flex items-center justify-between p-4 bg-[var(--bg-section)]">
 
-                        <span><img src="images/rowup.svg" alt="Up" class="w-5 h-5" /></span>
-                    </div>
+    <div>
+        <h4 class="font-semibold text-sm text-[var(--text-heading)]">
+            Introduction to TAKT Planning
+        </h4>
+
+        <span class="text-xs text-[var(--text-muted)]">
+            5 lessons
+        </span>
+    </div>
+
+    <span>
+        <img src="images/rowup.svg" alt="Up" class="w-5 h-5" />
+    </span>
+
+</div>
 
                     <div class="p-3 space-y-2">
 
-                        <div
-                            class="bg-yellow-100 rounded-xl px-3 py-3 flex items-center gap-3">
+                        <div class="bg-yellow-100 rounded-xl px-3 py-3 flex items-center gap-3 text-black">
                             <span
                                 class="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center text-xs">
                                 <img src="images/play.svg" alt="Play" class="w-3 h-3" />
@@ -498,7 +537,7 @@ style="cursor: pointer;"
                 <div
                     class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center mb-3 dark:border-white/10">
                     <div>
-                        <h4 class="font-semibold text-sm text-gray-900 dark:text-white">
+                        <h4 class="font-semibold text-sm text-[var(--text-heading)]">
                             TAKT Planning Fundamentals
                         </h4>
                         <span class="text-xs text-gray-500 dark:text-gray-400">
@@ -512,7 +551,7 @@ style="cursor: pointer;"
                 <div
                     class="border border-gray-100 rounded-2xl p-4 flex justify-between items-center dark:border-white/10">
                     <div>
-                        <h4 class="font-semibold text-sm text-gray-900 dark:text-white">
+                        <h4 class="font-semibold text-sm text-[var(--text-heading)]">
                             Practical Implementation
                         </h4>
                         <span class="text-xs text-gray-500 dark:text-gray-400">
@@ -524,37 +563,35 @@ style="cursor: pointer;"
                 </div>
 
                 <!-- Certificate Card -->
-                <div
-                    class="bg-gray-50 rounded-2xl p-4 mt-8 dark:bg-[#111827]">
+               <div class="bg-[var(--bg-section)] rounded-2xl p-4 mt-8">
 
-                    <div class="flex gap-3 items-start">
-                        <div
-                            class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-500/20 flex items-center justify-center">
-                            <img src="images/Complete.svg" alt="Complete" class="w-5 h-5">
-                        </div>
+    <div class="flex gap-3 items-start">
 
-                        <div>
-                            <h5 class="font-semibold text-sm text-gray-900 dark:text-white">
-                                Complete all lessons to earn your certificate
-                            </h5>
-                        </div>
-                    </div>
+        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+            <img src="images/Complete.svg" alt="Complete" class="w-5 h-5">
+        </div>
 
-                    <div class="mt-5">
-                        <div
-                            class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div
-                                class="h-full w-[45%] bg-yellow-400 rounded-full">
-                            </div>
-                        </div>
+        <div>
+            <h5 class="font-semibold text-sm text-[var(--text-heading)]">
+                Complete all lessons to earn your certificate
+            </h5>
+        </div>
 
-                        <div
-                            class="flex justify-end mt-2 text-xs text-gray-500 dark:text-gray-400">
-                            45% COMPLETE
-                        </div>
-                    </div>
+    </div>
 
-                </div>
+    <div class="mt-5">
+
+        <div class="w-full h-2 bg-[var(--border-card)] rounded-full overflow-hidden">
+            <div class="h-full w-[45%] bg-yellow-400 rounded-full"></div>
+        </div>
+
+        <div class="flex justify-end mt-2 text-xs text-[var(--text-muted)]">
+            45% COMPLETE
+        </div>
+
+    </div>
+
+</div>
 
             </div>
 
