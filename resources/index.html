@@ -250,6 +250,36 @@
   body:has(#theme-toggle:checked) .icon-theme {
     filter: invert(1);
   }
+
+  @media (max-width: 639px) {
+    .featured-resource-media {
+      width: 100%;
+      border-radius: 32px;
+    }
+
+    .featured-resource-image {
+      height: 300px;
+    }
+
+    .featured-resource-card {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      margin-top: 24px;
+      padding: 24px;
+      border-radius: 32px;
+    }
+
+    .featured-resource-tags,
+    .featured-resource-meta {
+      flex-wrap: wrap;
+    }
+
+    .featured-resource-meta {
+      font-size: 13px;
+    }
+  }
 </style>
 
 <!-- <button
@@ -276,7 +306,7 @@ style="cursor: pointer;"
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pt-10 pb-16">
       <div class="flex flex-col md:flex-row gap-y-6 gap-x-16 mb-20 border-b t-divider pb-10">
         <h1
-          class="t-hero text-[60px] md:text-[80px] lg:text-[100px] font-[600] leading-[0.85] tracking-tighter shrink-0 opacity-0 animate-fade-up">
+          class="t-hero text-[60px] md:text-[80px] lg:text-[100px] font-[600] leading-[0.85]  shrink-0 opacity-0 animate-fade-up">
           Resources<br />& Insights
         </h1>
         <p
@@ -288,17 +318,17 @@ style="cursor: pointer;"
       </div>
 
       <div class="relative w-full opacity-0 animate-fade-up delay-200 group">
-        <div class="w-[75%] rounded-[40px] overflow-hidden shadow-2xl relative">
+        <div class="featured-resource-media w-[75%] rounded-[40px] overflow-hidden shadow-2xl relative">
           <div
             class="w-full h-full scale-110 group-[.is-visible]:scale-100 transition-transform duration-[1.5s] ease-out">
             <img src="../images/featured-resource.svg" alt="TAKT Planning Guide"
-              class="w-full h-[420px] md:h-[520px] object-cover transition-transform duration-[800ms] ease-out hover:scale-105" />
+              class="featured-resource-image w-full h-[420px] md:h-[520px] object-cover transition-transform duration-[800ms] ease-out hover:scale-105" />
           </div>
         </div>
 
         <div
-          class="absolute bottom-0 right-0 z-10 w-[52%] story-glass-2 backdrop-blur-2xl rounded-[40px] p-8 md:p-10 shadow-2xl premium-hover-lift">
-          <div class="flex gap-3 mb-6">
+          class="featured-resource-card absolute bottom-0 right-0 z-10 w-[52%] story-glass-2 backdrop-blur-2xl rounded-[40px] p-8 md:p-10 shadow-2xl premium-hover-lift">
+          <div class="featured-resource-tags flex gap-3 mb-6">
             <span
               class="px-4 py-1.5 bg-[#FFB82E] text-black text-[12px] font-bold rounded-full shadow-sm">Featured</span>
             <span
@@ -316,7 +346,7 @@ style="cursor: pointer;"
           </p>
 
           <div class="flex flex-col gap-3 pt-3 border-t t-divider">
-            <div class="flex items-center gap-2 text-[14px] t-muted tracking-wider">
+            <div class="featured-resource-meta flex items-center gap-2 text-[14px] t-muted tracking-wider">
               <span>Michael Rodriguez</span>
               <span class="opacity-40">•</span>
               <span>February 15, 2026</span>
@@ -334,7 +364,7 @@ style="cursor: pointer;"
     </section>
 
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 py-24 section-white">
-      <h2 class="t-heading text-5xl md:text-7xl font-bold tracking-tighter mb-16 opacity-0 animate-fade-up">
+      <h2 class="t-heading text-5xl md:text-7xl font-bold  mb-16 opacity-0 animate-fade-up">
         Latest Articles
       </h2>
 
@@ -556,7 +586,7 @@ style="cursor: pointer;"
         </div>
 
         <div class="text-center md:text-right">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter t-heading">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold  t-heading">
             Building More Profitable Companies
           </h2>
         </div>

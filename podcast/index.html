@@ -251,6 +251,35 @@
   body:has(#theme-toggle:checked) .icon-theme {
     filter: invert(1);
   }
+
+  @media (max-width: 639px) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .podcast-hero-title {
+      font-size: 42px;
+      line-height: 0.95;
+      overflow-wrap: anywhere;
+    }
+
+    .podcast-player-actions {
+      flex-wrap: wrap;
+    }
+
+    .podcast-player-actions > button {
+      flex: 1 1 100%;
+      min-width: 0;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .podcast-player-card {
+      padding: 20px;
+      border-radius: 32px;
+    }
+  }
 </style>
 
 <!-- <button
@@ -288,7 +317,7 @@ style="cursor: pointer;"
             The Just In Takt Podcast
           </span>
         </div>
-        <h1 class="text-6xl md:text-6xl font-[700] t-heading mb-6 leading-[0.85]">
+        <h1 class="podcast-hero-title text-6xl md:text-6xl font-[700] t-heading mb-6 leading-[0.85]">
           Construction Conversations
         </h1>
         <p class="max-w-3xl mx-auto t-muted font-medium text-lg leading-relaxed">
@@ -319,11 +348,11 @@ style="cursor: pointer;"
         <div
           class="absolute inset-0 md:inset-auto md:right-12 md:top-12 md:bottom-12 flex items-center justify-center md:justify-end px-4">
           <div
-            class="w-full max-w-[650px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[45px] p-8 md:p-12 shadow-2xl flex flex-col justify-between h-full max-h-[520px]">
+            class="podcast-player-card w-full max-w-[650px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[45px] p-8 md:p-12 shadow-2xl flex flex-col justify-between h-full max-h-[520px]">
             <audio id="podcast-audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
             <div>
-              <h2 class="text-xl md:text-2xl font-[700] text-white mb-4 tracking-tighter leading-tight">
+              <h2 class="text-xl md:text-2xl font-[700] text-white mb-4 er leading-tight">
                 The Future of Construction Technology
               </h2>
               <p class="text-white/60 text-sm md:text-base font-[400] mb-8 leading-relaxed">
@@ -385,7 +414,7 @@ style="cursor: pointer;"
                   </svg>
                 </button>
               </div>
-              <div class="flex items-center gap-3 mt-10">
+              <div class="podcast-player-actions flex items-center gap-3 mt-10">
                 <button
                   class="flex-[2] py-4 bg-white/5 hover:bg-white/10 text-white text-[12px] font-[600] rounded-full transition-all flex items-center justify-center gap-2">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -427,7 +456,7 @@ style="cursor: pointer;"
 
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 py-24 bg-[var(--bg-page)] transition-colors duration-400">
       <div class="flex items-center justify-between mb-16 opacity-0 animate-fade-up delay-100">
-        <h2 class="text-4xl md:text-5xl font-[700] t-heading tracking-tighter">
+        <h2 class="text-4xl md:text-5xl font-[700] t-heading ">
           Recent Episodes
         </h2>
 
@@ -438,7 +467,7 @@ style="cursor: pointer;"
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
-          <span class="text-xs font-[600] t-muted">1 / 2</span>
+          <span class="text-xs font-[600] t-muted">1/2</span>
           <button
             class="w-10 h-10 border border-[var(--border-card)] rounded-full flex items-center justify-center t-heading hover:bg-[var(--bg-section)] transition-colors">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -716,7 +745,7 @@ style="cursor: pointer;"
     <section class="max-w-[1400px] mx-auto px-6 py-12 bg-[var(--bg-page)] transition-colors duration-400">
       <div class="opacity-0 animate-fade-up delay-200">
         <div class="w-full section-gray rounded-[45px] py-20 px-6 text-center shadow-sm">
-          <h2 class="text-5xl md:text-4xl font-[700] t-heading tracking-tighter mb-6">
+          <h2 class="text-5xl md:text-4xl font-[700] t-heading er mb-6">
             Never Miss an Episode
           </h2>
 
@@ -804,7 +833,7 @@ style="cursor: pointer;"
           </a>
         </div>
         <div class="text-center md:text-right">
-          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">Building More
+          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase er">Building More
             Profitable Companies</h2>
         </div>
       </div>

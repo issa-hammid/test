@@ -1,4 +1,13 @@
 /* ── ANIMATIONS ── */
+html,
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
 @keyframes fadeUp {
     0% {
         opacity: 0;

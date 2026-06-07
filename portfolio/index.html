@@ -250,6 +250,25 @@
   body:has(#theme-toggle:checked) .icon-theme {
     filter: invert(1);
   }
+
+  .testimonials-slider {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .testimonials-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-card {
+      flex-basis: calc((100% - 4rem) / 3);
+    }
+  }
 </style>
 
 <!-- <button
@@ -275,7 +294,7 @@ style="cursor: pointer;"
   <main class="relative w-full max-w-400 mx-auto mt-32 md:mt-40 lg:mt-48">
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 text-center mb-16">
       <h1
-        class="t-hero text-[60px] md:text-[60px] lg:text-[100px] font-[700] uppercase leading-[0.85] tracking-tighter mb-8 opacity-0 animate-fade-up delay-100">
+        class="t-hero text-[60px] md:text-[60px] lg:text-[100px] font-[700] uppercase leading-[0.85]  mb-8 opacity-0 animate-fade-up delay-100">
         Our Portfolio
       </h1>
       <p
@@ -433,17 +452,18 @@ style="cursor: pointer;"
     <section class="section-gray py-16 md:py-20 px-4 md:px-12 lg:px-24">
       <div class="max-w-400 mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
-          <h2 class="t-heading text-4xl md:text-5xl font-[700] uppercase tracking-tighter opacity-0 animate-fade-up">
+          <h2 class="t-heading text-4xl md:text-5xl font-[700] uppercase  opacity-0 animate-fade-up">
             What Our Clients Say
           </h2>
           <div class="flex gap-3 opacity-0 animate-fade-in delay-200">
-            <button class="scroll-btn w-12 h-12 rounded-full flex items-center justify-center">
+            <button id="testimonials-prev" class="scroll-btn w-12 h-12 rounded-full flex items-center justify-center" aria-label="Previous testimonials">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="m15 18-6-6 6-6" />
               </svg>
             </button>
             <button
-              class="w-12 h-12 rounded-full bg-[#f8bf2c] text-black flex items-center justify-center shadow-md hover:brightness-105 hover:-translate-y-1 hover:shadow-lg transition-all">
+              id="testimonials-next"
+              class="w-12 h-12 rounded-full bg-[#f8bf2c] text-black flex items-center justify-center shadow-md hover:brightness-105 hover:-translate-y-1 hover:shadow-lg transition-all" aria-label="Next testimonials">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="m9 18 6-6-6-6" />
               </svg>
@@ -458,8 +478,8 @@ style="cursor: pointer;"
           </symbol>
         </svg>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift">
+        <div id="testimonials-slider" class="testimonials-slider flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+          <div class="testimonial-card stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift snap-start">
             <div class="p-3">
               <div>
                 <div class="flex gap-1 mb-6">
@@ -498,7 +518,7 @@ style="cursor: pointer;"
             </div>
           </div>
 
-          <div class="stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift">
+          <div class="testimonial-card stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift snap-start">
             <div class="p-3">
               <div>
                 <div class="flex gap-1 mb-6">
@@ -537,7 +557,7 @@ style="cursor: pointer;"
             </div>
           </div>
 
-          <div class="stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift">
+          <div class="testimonial-card stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift snap-start">
             <div class="p-3">
               <div>
                 <div class="flex gap-1 mb-6">
@@ -573,6 +593,123 @@ style="cursor: pointer;"
                     Emily Rodriguez
                   </p>
                   <p class="t-body text-[13px]">SkyHigh</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift snap-start">
+            <div class="p-3">
+              <div>
+                <div class="flex gap-1 mb-6">
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                </div>
+                <h4 class="t-heading text-xl font-bold mb-3">David</h4>
+                <p class="t-body text-[15px] leading-relaxed mb-8">
+                  Their planning process helped our site teams coordinate faster
+                  and avoid delays during critical delivery phases.
+                </p>
+              </div>
+              <div class="flex items-center gap-4 border-t t-divider pt-4">
+                <div
+                  class="reviewer-avatar w-12 h-12 rounded-full flex items-center justify-center font-bold text-base">
+                  DK
+                </div>
+                <div>
+                  <p class="t-heading font-semibold text-sm">David Kim</p>
+                  <p class="t-body text-[13px]">PrimeWorks</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift snap-start">
+            <div class="p-3">
+              <div>
+                <div class="flex gap-1 mb-6">
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                </div>
+                <h4 class="t-heading text-xl font-bold mb-3">Nora</h4>
+                <p class="t-body text-[15px] leading-relaxed mb-8">
+                  Clear reporting, disciplined execution, and practical
+                  recommendations made a visible difference for our projects.
+                </p>
+              </div>
+              <div class="flex items-center gap-4 border-t t-divider pt-4">
+                <div
+                  class="reviewer-avatar w-12 h-12 rounded-full flex items-center justify-center font-bold text-base">
+                  NA
+                </div>
+                <div>
+                  <p class="t-heading font-semibold text-sm">Nora Ali</p>
+                  <p class="t-body text-[13px]">MetroBuild</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card stagger-item card h-full rounded-[35px] p-8 flex flex-col justify-between premium-hover-lift snap-start">
+            <div class="p-3">
+              <div>
+                <div class="flex gap-1 mb-6">
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                  <svg class="star-icon" width="15" height="14">
+                    <use href="#star" />
+                  </svg>
+                </div>
+                <h4 class="t-heading text-xl font-bold mb-3">Omar</h4>
+                <p class="t-body text-[15px] leading-relaxed mb-8">
+                  The collaboration was smooth from the first workshop through
+                  implementation, with strong support at every step.
+                </p>
+              </div>
+              <div class="flex items-center gap-4 border-t t-divider pt-4">
+                <div
+                  class="reviewer-avatar w-12 h-12 rounded-full flex items-center justify-center font-bold text-base">
+                  OH
+                </div>
+                <div>
+                  <p class="t-heading font-semibold text-sm">Omar Hassan</p>
+                  <p class="t-body text-[13px]">ConstructPro</p>
                 </div>
               </div>
             </div>
@@ -660,7 +797,7 @@ style="cursor: pointer;"
           </a>
         </div>
         <div class="text-center md:text-right">
-          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">
+          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase ">
             Building More Profitable Companies
           </h2>
         </div>
@@ -672,6 +809,28 @@ style="cursor: pointer;"
   </footer>
   <script src="../js/animations.js"></script>
   <script src="../js/theme.js"></script>
+  <script>
+    const testimonialsSlider = document.getElementById("testimonials-slider");
+    const testimonialsPrev = document.getElementById("testimonials-prev");
+    const testimonialsNext = document.getElementById("testimonials-next");
+
+    function scrollTestimonials(direction) {
+      if (!testimonialsSlider) return;
+      const firstCard = testimonialsSlider.querySelector(".card");
+      const gap = parseFloat(getComputedStyle(testimonialsSlider).columnGap) || 0;
+      const scrollAmount = firstCard
+        ? firstCard.getBoundingClientRect().width + gap
+        : testimonialsSlider.clientWidth;
+
+      testimonialsSlider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth",
+      });
+    }
+
+    testimonialsPrev?.addEventListener("click", () => scrollTestimonials(-1));
+    testimonialsNext?.addEventListener("click", () => scrollTestimonials(1));
+  </script>
 </body>
 
 </html>

@@ -324,27 +324,30 @@ style="cursor: pointer;"
   </div>
 
   <!-- Actions -->
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-20">
+<div class="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 mb-20">
 
-    <button class="px-6 py-3 rounded-full bg-yellow-400 hover:bg-yellow-500 transition font-semibold text-sm flex items-center gap-2 text-black">
+  <button
+    class="w-full sm:w-auto px-6 py-3 rounded-full bg-yellow-400 hover:bg-yellow-500 transition font-semibold text-sm flex items-center justify-center gap-2 text-black">
 
-      <img src="./images/download.svg" alt="Download" class="w-4 h-4">
-      Download Certificate
-    </button>
+    <img src="./images/download.svg" alt="Download" class="w-4 h-4">
+    Download Certificate
+  </button>
 
-    <button class="px-6 py-3 rounded-full card hover:bg-gray-50 transition t-heading text-sm flex items-center gap-2">
+  <button
+    class="w-full sm:w-auto px-6 py-3 rounded-full card hover:bg-gray-50 transition t-heading text-sm flex items-center justify-center gap-2">
 
-      <img src="./images/share.svg" alt="Share" class="w-4 h-4">
-      Share Achievement
-    </button>
+    <img src="./images/share.svg" alt="Share" class="w-4 h-4">
+    Share Achievement
+  </button>
 
-    <button class="px-6 py-3 rounded-full card hover:bg-gray-50 transition t-heading text-sm flex items-center gap-2">
+  <button
+    class="w-full sm:w-auto px-6 py-3 rounded-full card hover:bg-gray-50 transition t-heading text-sm flex items-center justify-center gap-2">
 
-      <img src="./images/viewall.svg" alt="View" class="w-4 h-4">
-      View All Certificates
-    </button>
+    <img src="./images/viewall.svg" alt="View" class="w-4 h-4">
+    View All Certificates
+  </button>
 
-  </div>
+</div>
 
   <!-- Title -->
   <div class="text-center mb-10">
@@ -354,41 +357,57 @@ style="cursor: pointer;"
   </div>
 
   <!-- Stats -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-14">
 
-    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-      <div class="w-10 h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-4">
-        <img src="./images/time.svg" alt="Time">
-      </div>
-      <h3 class="text-3xl font-bold t-heading">8h 30m</h3>
-      <p class="t-muted text-sm mt-1">Course Duration</p>
+  <div class="card rounded-2xl shadow-md p-4 sm:p-6 text-center transition-colors duration-300">
+    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-3 sm:mb-4">
+      <img src="./images/time.svg" alt="Time">
     </div>
-
-    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-      <div class="w-10 h-10 rounded-full bg-red-100 mx-auto flex items-center justify-center mb-4">
-        <img src="./images/complet.svg" alt="Lessons">
-      </div>
-      <h3 class="text-3xl font-bold t-heading">32</h3>
-      <p class="t-muted text-sm mt-1">Lessons Completed</p>
-    </div>
-
-    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-      <div class="w-10 h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-4">
-        <img src="./images/star.svg" alt="Score">
-      </div>
-      <h3 class="text-3xl font-bold t-heading">95%</h3>
-      <p class="t-muted text-sm mt-1">Final Score</p>
-    </div>
-
-    <div class="card rounded-2xl shadow-md p-6 text-center transition-colors duration-300">
-      <div class="w-10 h-10 rounded-full bg-green-100 mx-auto flex items-center justify-center mb-4">
-        <span class="text-xl">🏆</span>
-      </div>
-      <h3 class="text-3xl font-bold t-heading">Advanced</h3>
-      <p class="t-muted text-sm mt-1">Skill Level</p>
-    </div>
-
+    <h3 class="text-xl sm:text-3xl font-bold t-heading leading-tight break-words">
+      8h 30m
+    </h3>
+    <p class="t-muted text-xs sm:text-sm mt-1">
+      Course Duration
+    </p>
   </div>
+
+  <div class="card rounded-2xl shadow-md p-4 sm:p-6 text-center transition-colors duration-300">
+    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-red-100 mx-auto flex items-center justify-center mb-3 sm:mb-4">
+      <img src="./images/complet.svg" alt="Lessons">
+    </div>
+    <h3 class="text-xl sm:text-3xl font-bold t-heading leading-tight break-words">
+      32
+    </h3>
+    <p class="t-muted text-xs sm:text-sm mt-1">
+      Lessons Completed
+    </p>
+  </div>
+
+  <div class="card rounded-2xl shadow-md p-4 sm:p-6 text-center transition-colors duration-300">
+    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-100 mx-auto flex items-center justify-center mb-3 sm:mb-4">
+      <img src="./images/star.svg" alt="Score">
+    </div>
+    <h3 class="text-xl sm:text-3xl font-bold t-heading leading-tight break-words">
+      95%
+    </h3>
+    <p class="t-muted text-xs sm:text-sm mt-1">
+      Final Score
+    </p>
+  </div>
+
+  <div class="card rounded-2xl shadow-md p-4 sm:p-6 text-center transition-colors duration-300">
+    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-green-100 mx-auto flex items-center justify-center mb-3 sm:mb-4">
+      <span class="text-lg sm:text-xl">🏆</span>
+    </div>
+    <h3 class="text-xl sm:text-3xl font-bold t-heading leading-tight break-words">
+      Advanced
+    </h3>
+    <p class="t-muted text-xs sm:text-sm mt-1">
+      Skill Level
+    </p>
+  </div>
+
+</div>
 
   <!-- Skills -->
   <div class="flex justify-center">
@@ -609,6 +628,8 @@ style="cursor: pointer;"
                         class="flex flex-col sm:flex-row justify-center gap-4">
 
                         <button
+                        style="cursor: pointer;"
+                        onclick="window.location.href='/training.html'"
                             class="px-8 py-4 rounded-full bg-black text-white font-semibold hover:bg-gray-900 transition">
 
                             Browse All Courses
@@ -616,6 +637,8 @@ style="cursor: pointer;"
                         </button>
 
                         <button
+                        style="cursor: pointer;"
+                        onclick="window.location.href='/accountdashboard.html'"
                             class="px-8 py-4 rounded-full bg-white dark:bg-[rgba(255,255,255,0.05)] dark:border-white/10 border border-gray-200 text-gray-900 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition">
 
                             Go to Dashboard

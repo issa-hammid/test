@@ -275,7 +275,7 @@ style="cursor: pointer;"
     <section class="mb-8 px-4 md:px-12 lg:px-24">
       <div class="text-center mb-12">
         <h1
-          class="text-6xl md:text-[60px] font-[700] tracking-tighter t-heading mb-4 opacity-0 animate-fade-up delay-100">
+          class="text-4xl md:text-[60px] font-[700] er t-heading mb-4 opacity-0 animate-fade-up delay-100">
           Upcoming Events
         </h1>
         <p class="t-muted font-medium text-lg opacity-0 animate-fade-up delay-200">
@@ -633,7 +633,7 @@ style="cursor: pointer;"
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 py-24 section-white">
       <div class="text-center mb-16">
         <h2
-          class="text-5xl md:text-[60px] font-[700] tracking-tighter t-heading mb-4 opacity-0 animate-fade-up delay-100">
+          class="text-5xl md:text-[60px] font-[700] er t-heading mb-4 opacity-0 animate-fade-up delay-100">
           Events & Community
         </h2>
         <p class="max-w-3xl mx-auto t-body font-medium text-lg leading-relaxed opacity-0 animate-fade-up delay-200">
@@ -782,7 +782,7 @@ style="cursor: pointer;"
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 py-24 bg-[var(--bg-page)] transition-colors duration-400">
       <div class="text-center mb-16">
         <h2
-          class="text-5xl md:text-[36px] font-[700] tracking-tighter text-[var(--text-heading)] mb-4 opacity-0 animate-fade-up delay-100">
+          class="text-5xl md:text-[36px] font-[700] er text-[var(--text-heading)] mb-4 opacity-0 animate-fade-up delay-100">
           Past Events Coverage
         </h2>
         <p class="text-[var(--text-muted)] font-medium opacity-0 animate-fade-up delay-200">
@@ -945,7 +945,7 @@ style="cursor: pointer;"
           </div>
           <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
             <div>
-              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4 tracking-tighter leading-tight">
+              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4 er leading-tight">
                 Global Construction Leadership Forum
               </h3>
               <div class="space-y-2 mb-6 text-[var(--text-muted)]">
@@ -1017,7 +1017,7 @@ style="cursor: pointer;"
           </div>
           <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-between">
             <div>
-              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4 tracking-tighter leading-tight">
+              <h3 class="text-2xl font-[700] text-[var(--text-heading)] mb-4 er leading-tight">
                 Building Excellence Networking Event
               </h3>
               <div class="space-y-2 mb-6 text-[var(--text-muted)]">
@@ -1084,37 +1084,43 @@ style="cursor: pointer;"
 
     <section class="max-w-400 mx-auto px-4 md:px-12 lg:px-24 pb-24 bg-[var(--bg-page)] transition-colors duration-400">
 
-      <div class="w-full opacity-0 animate-fade-up delay-300">
+  <div class="w-full opacity-0 animate-fade-up delay-300">
 
-        <div
-          class="w-full theme-newsletter bg-gradient-to-br from-[#E9F7EF] to-white rounded-[60px] p-12 md:p-20 text-center border border-[var(--border-card)] shadow-sm premium-hover-lift">
+    <div
+      class="w-full theme-newsletter bg-gradient-to-br from-[#E9F7EF] to-white rounded-[60px] p-8 md:p-20 text-center border border-[var(--border-card)] shadow-sm premium-hover-lift">
 
-          <h2 class="text-4xl md:text-[36px] font-[700] text-[var(--text-heading)] mb-6 tracking-tighter">
-            Don't Miss Our Next Event
-          </h2>
-          <p
-            class="max-w-2xl mx-auto text-[var(--text-muted)] text-[16px] md:text-[18px] leading-relaxed font-medium mb-12">
-            Subscribe to our newsletter to receive updates about upcoming
-            events, exclusive offers, and the latest insights in construction
-            excellence.
-          </p>
+      <h2 class="text-3xl md:text-[36px] font-[700] text-[var(--text-heading)] mb-5 md:mb-6">
+        Don't Miss Our Next Event
+      </h2>
 
-          <form class="flex flex-col md:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
-            <div class="w-full md:flex-1">
-              <input type="email" placeholder="Enter your email"
-                class="w-full bg-white border border-gray-200 rounded-full px-6 py-4 text-gray-800 placeholder-gray-500 focus:outline-none focus:border-[#FFB82E] transition-colors"
-                required />
-            </div>
-            <button type="submit"
-              class="w-full md:w-auto px-10 py-5 bg-[#00c93a] text-white rounded-full text-[16px] font-bold shadow-lg premium-button-hover active:scale-95 whitespace-nowrap">
-              Subscribe Now
-            </button>
-          </form>
+      <p
+        class="max-w-2xl mx-auto text-[var(--text-muted)] text-[15px] md:text-[18px] leading-relaxed font-medium mb-8 md:mb-12">
+        Subscribe to our newsletter to receive updates about upcoming
+        events, exclusive offers, and the latest insights in construction
+        excellence.
+      </p>
 
+      <!-- FORM -->
+      <form class="flex flex-row md:flex-row items-center justify-center gap-3 md:gap-4 max-w-2xl mx-auto">
+
+        <div class="w-full md:flex-1">
+          <input type="email" placeholder="Enter your email"
+            class="w-full bg-white border border-gray-200 rounded-full px-4 md:px-6 py-3 md:py-4 text-gray-800 placeholder-gray-500 focus:outline-none focus:border-[#FFB82E] transition-colors"
+            required />
         </div>
 
-      </div>
-    </section>
+        <button type="submit"
+          class="h-[44px] md:h-auto px-5 md:px-10 py-3 md:py-5 bg-[#00c93a] text-white rounded-full text-[13px] md:text-[16px] font-bold shadow-lg premium-button-hover active:scale-95 whitespace-nowrap">
+          Subscribe Now
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
   </main>
 
   <footer class="w-full max-w-400 mx-auto px-4 pt-8 pb-4">
@@ -1197,7 +1203,7 @@ style="cursor: pointer;"
           </a>
         </div>
         <div class="text-center md:text-right">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-[600] tracking-tighter t-heading">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-[600] er t-heading">
             Building More Profitable Companies
           </h2>
         </div>

@@ -274,48 +274,62 @@ style="cursor: pointer;"
   <main class="relative w-full max-w-400 mx-auto mt-32 md:mt-40 lg:mt-48">
 
     <section class="py-24 px-4 md:px-12 lg:px-8 bg-[var(--bg-page)] transition-colors duration-400">
-      <div class="max-w-[1400px] mx-auto text-center mb-16 opacity-0 animate-fade-up delay-100">
-        <h2 class="text-5xl md:text-7xl font-[700] t-heading tracking-tight mb-8">
-          Training & Certification
-        </h2>
-        <p class="max-w-3xl mx-auto t-muted text-xl font-medium leading-relaxed">
-          Develop your skills with comprehensive courses designed by industry
-          experts. <br />
-          From TAKT fundamentals to advanced implementation strategies.
-        </p>
-      </div>
+     <!-- HEADER -->
+<div class="max-w-[1400px] mx-auto text-center mb-10 md:mb-16 opacity-0 animate-fade-up delay-100">
 
-      <div
-        class="max-w-[1200px] mx-auto bg-[var(--bg-card)] border border-[var(--border-card)] rounded-full p-3 flex flex-col md:flex-row items-center gap-4 mb-20 shadow-sm opacity-0 animate-fade-up delay-200">
-        <div class="relative flex-1 w-full pl-6">
-          <svg class="absolute left-6 top-1/2 -translate-y-1/2 t-muted" width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input type="text" placeholder="Search courses..."
-            class="w-full py-3 pl-10 border-none focus:ring-0 t-heading font-medium bg-transparent placeholder-gray-400" />
-        </div>
+  <h2 class="text-2xl md:text-6xl font-[700] t-heading mb-4 md:mb-8 leading-tight">
+    Training & Certification
+  </h2>
 
-        <div class="flex items-center gap-2 pr-2">
-          <button
-            class="px-8 py-3 bg-[var(--text-heading)] text-[var(--bg-page)] rounded-full text-sm font-bold transition-all">
-            All
-          </button>
-          <button
-            class="px-8 py-3 bg-transparent t-muted hover:t-heading rounded-full text-sm font-bold border border-transparent hover:border-[var(--border-card)] transition-all">
-            Beginner
-          </button>
-          <button
-            class="px-8 py-3 bg-transparent t-muted hover:t-heading rounded-full text-sm font-bold border border-transparent hover:border-[var(--border-card)] transition-all">
-            Intermediate
-          </button>
-          <button
-            class="px-8 py-3 bg-transparent t-muted hover:t-heading rounded-full text-sm font-bold border border-transparent hover:border-[var(--border-card)] transition-all">
-            Advanced
-          </button>
-        </div>
-      </div>
+  <p class="max-w-3xl mx-auto t-muted text-[15px] md:text-xl font-medium leading-relaxed px-2 md:px-0">
+    Develop your skills with comprehensive courses designed by industry
+    experts. From TAKT fundamentals to advanced implementation strategies.
+  </p>
+
+</div>
+
+<!-- SEARCH + FILTER -->
+<div
+  class="max-w-[1200px] mx-auto bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl md:rounded-full p-3 flex flex-col md:flex-row items-stretch md:items-center gap-3 mb-20 shadow-sm opacity-0 animate-fade-up delay-200">
+
+  <!-- SEARCH -->
+  <div class="relative flex-1 w-full">
+    <svg class="absolute left-4 top-1/2 -translate-y-1/2 t-muted" width="18" height="18"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+
+    <input type="text" placeholder="Search courses..."
+      class="w-full py-3 pl-10 pr-4 border-none focus:ring-0 t-heading font-medium bg-transparent placeholder-gray-400 text-sm md:text-base" />
+  </div>
+
+  <!-- FILTERS (MOBILE SCROLL) -->
+  <div class="flex items-center gap-2 overflow-x-auto md:overflow-visible w-full md:w-auto pr-1">
+
+    <button
+      class="px-4 md:px-8 py-2 md:py-3 bg-[var(--text-heading)] text-[var(--bg-page)] rounded-full text-xs md:text-sm font-bold whitespace-nowrap">
+      All
+    </button>
+
+    <button
+      class="px-4 md:px-8 py-2 md:py-3 bg-transparent t-muted hover:t-heading rounded-full text-xs md:text-sm font-bold border border-transparent hover:border-[var(--border-card)] whitespace-nowrap">
+      Beginner
+    </button>
+
+    <button
+      class="px-4 md:px-8 py-2 md:py-3 bg-transparent t-muted hover:t-heading rounded-full text-xs md:text-sm font-bold border border-transparent hover:border-[var(--border-card)] whitespace-nowrap">
+      Intermediate
+    </button>
+
+    <button
+      class="px-4 md:px-8 py-2 md:py-3 bg-transparent t-muted hover:t-heading rounded-full text-xs md:text-sm font-bold border border-transparent hover:border-[var(--border-card)] whitespace-nowrap">
+      Advanced
+    </button>
+
+  </div>
+
+</div>
 
       <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -719,26 +733,32 @@ style="cursor: pointer;"
       </div>
     </section>
 
-    <section class="bg-[var(--bg-page)] py-6 px-4 md:px-12 lg:px-8 mt-12 transition-colors duration-400">
-      <div class="opacity-0 animate-fade-up delay-200">
-        <div
-          class="w-full bg-[#111218] rounded-[50px] py-20 px-6 text-center shadow-xl border border-white/5 premium-hover-lift">
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Corporate Training Programs
-          </h2>
+   <section class="bg-[var(--bg-page)] py-6 px-4 md:px-12 lg:px-8 mt-12 transition-colors duration-400">
 
-          <p class="max-w-3xl mx-auto text-[#FFFFFFCC] text-xl mb-12">
-            Custom training solutions for teams. Get tailored curriculum,
-            dedicated support, and group certification programs.
-          </p>
+  <div class="opacity-0 animate-fade-up delay-200">
 
-          <a href="/corporate-request"
-            class="inline-flex items-center justify-center px-10 py-5 bg-[#ffb840] text-black text-lg font-bold rounded-full hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-[#ffb840]/20 no-underline">
-            Request Corporate Training
-          </a>
-        </div>
-      </div>
-    </section>
+    <div
+      class="w-full bg-[#111218] rounded-[50px] py-14 md:py-20 px-5 md:px-6 text-center shadow-xl border border-white/5 premium-hover-lift">
+
+      <h2 class="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">
+        Corporate Training Programs
+      </h2>
+
+      <p class="max-w-3xl mx-auto text-[#FFFFFFCC] text-[15px] md:text-xl leading-relaxed mb-8 md:mb-12">
+        Custom training solutions for teams. Get tailored curriculum,
+        dedicated support, and group certification programs.
+      </p>
+
+      <a href="/corporate-request"
+        class="inline-flex items-center justify-center px-6 md:px-10 py-3 md:py-5 bg-[#ffb840] text-black text-sm md:text-lg font-bold rounded-full hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-[#ffb840]/20 no-underline">
+        Request Corporate Training
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
   </main>
 
   <footer class="w-full max-w-400 mx-auto px-4 pt-8 pb-4">
@@ -799,7 +819,7 @@ style="cursor: pointer;"
           </a>
         </div>
         <div class="text-center md:text-right">
-          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter">Building More
+          <h2 class="t-heading text-2xl md:text-3xl lg:text-4xl font-bold uppercase ">Building More
             Profitable Companies</h2>
         </div>
       </div>
